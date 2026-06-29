@@ -10,7 +10,7 @@ const SimView = (() => {
   let playing = false, timer = null;
   let svg, wrap, seats = [];
   let policy = 'ssf';
-  const AUTOPLAY_MS = 3600, REVEAL_MS = 1100;
+  const AUTOPLAY_MS = 5200, REVEAL_MS = 1100;
   const BADGE_NOTE = { ssf: '(macro-avg 최상)', bk21: '(BK21 대표 시나리오)' };
 
   const fmtVal = (v, fmt, unit) => {
@@ -19,6 +19,19 @@ const SimView = (() => {
     if (fmt === 'pct') return (Math.round(v * 100) / 100) + (unit || '%');
     return v.toLocaleString('ko-KR') + (unit || '');
   };
+
+  // an agent's predictions for the phase, as compact non-breaking chips
+  function predChips(post, hv) {
+    const vm = DATA.var_meta || {};
+    const seen = new Set();
+    return Object.keys(post.values || {}).map(k => {
+      const m = vm[k] || { label: k, unit: '', fmt: 'count' };
+      if (seen.has(m.label)) return '';
+      seen.add(m.label);
+      const hot = k === hv.key;
+      return `<span class="pchip${hot ? ' hot' : ''}">${m.label} <b>${fmtVal(post.values[k], m.fmt, m.unit)}</b></span>`;
+    }).join('');
+  }
 
   async function init() {
     DATA = await fetch('data/simulation.json').then(r => r.json());
@@ -230,8 +243,8 @@ const SimView = (() => {
           const post = ph.agent_posts.find(p => p.agent === name);
           clearBubbles();
           showBubble(s, `${out ? '<span class="b-flag">이견</span>' : ''}` +
-            `<span class="b-val">${hv.label}: ${fmtVal(v, hv.fmt, hv.unit)}</span>` +
-            `<span class="b-rat">${post ? (post.rationale_ko || '') : ''}</span>`, out);
+            `<div class="b-name">${name} <span class="b-role">${s.a.type_ko}</span></div>` +
+            `<div class="b-chips">${post ? predChips(post, hv) : ''}</div>`, out);
         }, delay);
         delay += playing ? REVEAL_MS : 0;
       });
@@ -312,11 +325,11 @@ const SimView = (() => {
       <div class="dis-item">
         <div class="dis-head"><b>${d.agent}</b> <span class="dis-type">${d.type_ko}</span>
           <span class="dis-dir">${v.label} ${d.value} · ${d.direction}</span></div>
-        <div class="dis-persona">“${d.persona}”</div>
+        <div class="dis-persona">${d.persona}</div>
+        ${d.reason ? `<div class="dis-reason"><span class="dis-reason-tag">이견 근거 · 시나리오 발췌</span>“${d.reason}”</div>` : ''}
       </div>`).join('');
     box.innerHTML = `<div class="db-head">‘${v.label}’에 이견을 낸 참여자 <button class="db-back" id="dbBack">← 토의 요약</button></div>
-      <div class="dis-list">${items}</div>
-      <div class="dis-note">위 참여자들은 각자의 배경·관점 때문에 다수와 다른 값을 제시했고, 토의 과정에서 근거를 교환하며 합의값으로 수렴했습니다.</div>`;
+      <div class="dis-list">${items}</div>`;
     document.getElementById('dbBack').onclick = () => { row.classList.remove('open'); showSummary(curPh, curStep); };
   }
 
@@ -325,13 +338,10 @@ const SimView = (() => {
     curPh = ph; curStep = step;
     document.querySelectorAll('.vrow').forEach(r => r.classList.remove('open'));
     const box = document.getElementById('detailBox');
-    if (step.stage === 'initial') {
-      box.innerHTML = `<div class="db-head">개별 추정 단계</div>
-        <p class="db-text">각 참여자가 자신의 배경·관점에 따라 독립적으로 값을 제시하는 단계입니다. 값이 갈리는 변수와 이견을 낸 참여자(주황)를 확인하세요. 위 ‘이견’ 표시가 있는 결과 박스를 누르면 그 근거가 나타납니다.</p>`;
-    } else {
-      box.innerHTML = `<div class="db-head">${step.dir === 'bwd' ? 'Forward ↔ Backward 교차검증 요약' : '토의 · 합의 요약'}</div>
-        <p class="db-text">${ph.summary_ko || ''}</p>`;
-    }
+    box.innerHTML = `<div class="db-head">토의 · 합의 요약</div>
+      <p class="db-text">${ph.summary_ko || ''}</p>
+      ${ph.basis ? `<div class="db-sub">합의에 이른 근거 <span class="muted-sm">· 시나리오 발췌</span></div>
+        <blockquote class="db-quote">“${ph.basis}”</blockquote>` : ''}`;
   }
 
   /* ---------- playback ---------- */

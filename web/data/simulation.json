@@ -241,6 +241,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, with all participants calculating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW each), 200 fellowship slots, and a 30% regional quota (60 slots for regional institutions). Key themes included the policy's explicit stipulations and the goal of balanced national research capacity through regional allocation. No disagreements emerged, as all estimates and reasoning aligned with the stated policy context. The central tendency and range were identical across all predictions: total_annual_budget_krw = 26,000,000,000, fellowship_slots = 200, regional_quota_pct = 30.0.",
      "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed on the input estimates, with all participants calculating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW each), 200 fellowship slots, and a 30% regional quota (60 slots for regional institutions).",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -492,6 +493,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's fixed annual selection of 200 fellows, with applications estimated between 900 and 1200, reflecting a competitive acceptance rate of 16.7% to 22.2%. Consensus emerged that the 30% regional quota and eligibility restrictions narrow the applicant pool, while midterm evaluations emphasize process-oriented performance, leading to pass rates of 80% to 90% (160-180 fellows). Disagreement centered on application volume, with lower estimates citing burdensome requirements and regional quota discouraging Seoul-based applicants, and on midterm pass rates, with lower estimates highlighting risks from lab changes and weaker regional research environments. Central tendencies were approximately 1100 applications and 175 fellows passing midterm.",
      "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 구민혁이 900건로 가장 낮게, 김보람이 1,200건로 가장 높게 보아 갈렸지만, 토의 끝에 900건로 수렴했습니다. 이 과정에서 류수빈, 구민혁의 이견(이상치)이 흡수되었습니다. ‘단계평가 통과’은(는) 구민혁이 160명로 가장 낮게, 김보람이 180명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. 이 과정에서 구민혁의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 900건 ↔ backward 600건, 합의도 67%), 단계평가 통과(forward 160명 ↔ backward 140명, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the fellowship's fixed annual selection of 200 fellows, with applications estimated between 900 and 1200, reflecting a competitive acceptance rate of 16.7% to 22.2%.",
      "variables": [
       {
        "key": "applications_received",
@@ -538,14 +540,16 @@
          "type_ko": "평가위원",
          "value": "1,000건",
          "direction": "다수보다 높게",
-         "persona": "류수빈 씨는 인문학 전공자라는 배경을 무기로 딱딱한 정보 통신기술을 말랑말랑하게 풀어내어 학생들의 만족도가 높은 교수이며, 학계의 명예나 성과 경쟁보다는 정년 보장과 개인…"
+         "persona": "류수빈 씨는 인문학 전공자라는 배경을 무기로 딱딱한 정보 통신기술을 말랑말랑하게 풀어내어 학생들의 만족도가 높은 교수이며, 학계의 명예나 성과 경쟁보다는 정년 보장과 개인…",
+         "reason": "For applications, I estimate around 1000, slightly lower than the 1200 others suggest, because the eligibility criteria (domestic postdocs within 7 years of PhD or under 39, non-tenure-track) narrow the pool significantly, and the 30% regional quota may discourage some Seoul-based applicants who perceive lower chances."
         },
         {
          "agent": "구민혁",
          "type_ko": "박사후연구원",
          "value": "900건",
          "direction": "다수보다 낮게",
-         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다.",
+         "reason": "For applications, I estimate around 900, lower than the 1000-1200 others suggest."
         }
        ]
       },
@@ -594,7 +598,8 @@
          "type_ko": "박사후연구원",
          "value": "160명",
          "direction": "다수보다 낮게",
-         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다.",
+         "reason": "I expect about 20% of fellows to face challenges such as lab changes (allowed once per year, but I estimate 10-15% change labs within 3 years, potentially disrupting continuity) or insufficient progress, leading to a pass rate of 80%, so 160 pass."
         }
        ]
       },
@@ -766,6 +771,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group agreed that 200 fellows are active in the 2021-2022 window, based on the policy of annual selection. For stage_two_fellows, estimates ranged from 160 to 174, with the majority (three participants) converging on 174, reflecting an 87% pass rate from the Activities phase, while two participants proposed lower rates (85% and 80%) due to risks from lab changes and weaker regional research environments. For annual_reports_submitted, there was consensus on 400 reports, as only the first cohort of 200 fellows submits one report per year in the two-year window, with one outlier estimating 600 by incorrectly including the full cohort lifetime. Key causal mechanisms discussed included midterm evaluation pass rates, lab change disruptions, and regional infrastructure challenges affecting attrition.",
      "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘2단계 진입 펠로우’은(는) 구민혁이 160명로 가장 낮게, 김보람이 174명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. 이 과정에서 구민혁의 이견(이상치)이 흡수되었습니다. ‘연차보고서 제출’은(는) 박은지이 400건로 가장 낮게, 김보람이 600건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 김보람의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 2단계 진입 펠로우(forward 160명 ↔ backward 140명, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group agreed that 200 fellows are active in the 2021-2022 window, based on the policy of annual selection.",
      "variables": [
       {
        "key": "stage_two_fellows",
@@ -812,7 +818,8 @@
          "type_ko": "박사후연구원",
          "value": "160명",
          "direction": "다수보다 낮게",
-         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다.",
+         "reason": "For stage_two_fellows, I estimate 160, lower than the 170-174 others suggest."
         }
        ]
       },
@@ -902,7 +909,8 @@
          "type_ko": "박사후연구원",
          "value": "600건",
          "direction": "다수보다 높게",
-         "persona": "김보람 씨는 안산 공단의 투박한 연구소에서 전자제품 설계 도면을 그리며, 인문학적 통찰을 더해 사용자가 읽기 쉬운 기술 문서를 만드는 데 집착합니다."
+         "persona": "김보람 씨는 안산 공단의 투박한 연구소에서 전자제품 설계 도면을 그리며, 인문학적 통찰을 더해 사용자가 읽기 쉬운 기술 문서를 만드는 데 집착합니다.",
+         "reason": "However, the variable 'annual_reports_submitted' likely refers to the total across all years for the cohort, so for the full 5-year period, 200 fellows × 5 years = 1000 reports, but since only 174 complete the full 5 years, I estimate 600 reports total (accounting for dropouts after year 3)."
         }
        ]
       }
@@ -1033,6 +1041,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the early-stage challenges of the first cohort of 200 fellows, emphasizing that ramp-up time, lab changes (10-15% within 3 years), and weaker infrastructure at regional institutions (30% quota) would limit initial SCI(E) publication output. There was strong consensus on the regional participation rate (30%) and on a lower publication estimate of 340 (0.85 per fellow per year) and a 25% tenure-track transition rate, driven by competitive job markets and regional barriers. One dissenting voice estimated higher productivity (400 publications, 1 per fellow per year) and a 35% transition rate, assuming smoother early progress and policy prestige. Numeric predictions ranged from 340 to 400 for publications and 25% to 35% for tenure-track transition, with the majority converging on the lower end.",
      "summary_ko": "지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘정년트랙 전환율’은(는) 류수빈이 25%로 가장 낮게, 이상근이 35%로 가장 높게 보아 갈렸지만, 토의 끝에 20%로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. ‘SCI(E) 논문 수’은(는) 류수빈이 340편로 가장 낮게, 이상근이 400편로 가장 높게 보아 갈렸지만, 토의 끝에 370편로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 류수빈이 340편로 가장 낮게, 이상근이 400편로 가장 높게 보아 갈렸지만, 토의 끝에 370편로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 정년트랙 전환율(forward 20% ↔ backward 12.5%, 합의도 62%), SCI(E) 논문 수(forward 370편 ↔ backward 400편, 합의도 92%), SCI 논문 수(forward 370편 ↔ backward 400편, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the early-stage challenges of the first cohort of 200 fellows, emphasizing that ramp-up time, lab changes (10-15% within 3 years), and weaker infrastructure at regional institutions (30% quota) would limit initial SCI(E) publication output.",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -1079,7 +1088,8 @@
          "type_ko": "정책담당자",
          "value": "35%",
          "direction": "다수보다 높게",
-         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…",
+         "reason": "For tenure-track transition, I estimate a 35% rate within 2 years post-fellowship, based on the program's prestige and support, but tempered by the competitive academic job market and the fact that many fellows may need more time."
         }
        ]
       },
@@ -1128,7 +1138,8 @@
          "type_ko": "정책담당자",
          "value": "400편",
          "direction": "다수보다 높게",
-         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…",
+         "reason": "Thus, 200 fellows × 2 years = 400 publications. Each fellow is expected to produce about 1 SCI(E) publication per year, given the early stage of their fellowship and the typical ramp-up time for independent research."
         }
        ]
       },
@@ -1177,7 +1188,8 @@
          "type_ko": "정책담당자",
          "value": "400편",
          "direction": "다수보다 높게",
-         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…",
+         "reason": "Thus, 200 fellows × 2 years = 400 publications. Each fellow is expected to produce about 1 SCI(E) publication per year, given the early stage of their fellowship and the typical ramp-up time for independent research."
         }
        ]
       },
@@ -1359,6 +1371,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three long-term impact variables, estimating that approximately 20 former fellows (10% of the original 200) will hold tenure-track positions after 5–10 years, regional publication share will grow by 2.5 percentage points over a decade, and 30 former fellows will become independent PIs. Causal mechanisms centered on the 30% regional quota directing 60 fellows to regional institutions, where lower publication productivity (0.7 vs. 1.0 per year) and weaker infrastructure limit capacity growth, while the program's support for research independence enables non-tenure-track PI roles. All participants agreed that systemic barriers in the academic job market and regional research environments constrain the fellowship's long-term impact, with no disagreements in estimates or reasoning.",
      "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus on all three long-term impact variables, estimating that approximately 20 former fellows (10% of the original 200) will hold tenure-track positions after 5–10 years, regional publication share will grow by 2.5 percentage points over a decade, and 30 former fellows will become independent PIs.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -1669,6 +1682,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots reserved). They consistently cited the policy's explicit figures for per-fellow funding (100 million KRW direct costs + 30 million KRW indirect costs) and slot allocation, leading to full consensus on all numeric predictions. No disagreements emerged, as participants treated these values as fixed policy parameters rather than estimates. The central tendency is identical across all predictions, with no range in values.",
      "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed on the input variables, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots reserved).",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -1920,6 +1934,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group focused on the fellowship's fixed capacity of 200 selected fellows per year and the process-oriented midterm evaluation, which they expected to yield a 90% pass rate (180 out of 200). They estimated applications between 1,200 and 1,500, with a central tendency around 1,300–1,400, reflecting differing views on the eligible pool's size, including PhD candidates and regional applicants. All agreed on a 10% lab change rate during the first three years, citing policy allowances and typical mobility patterns. The main divergence was in application volume, driven by assumptions about competition and eligibility breadth.",
      "summary_ko": "단계평가 통과 · 최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 이은정이 1,200건로 가장 낮게, 문민철이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 문민철의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 1,300건 ↔ backward 4,000건, 합의도 32%), 단계평가 통과(forward 180명 ↔ backward 140명, 합의도 78%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the fellowship's fixed capacity of 200 selected fellows per year and the process-oriented midterm evaluation, which they expected to yield a 90% pass rate (180 out of 200).",
      "variables": [
       {
        "key": "applications_received",
@@ -1966,7 +1981,8 @@
          "type_ko": "정책담당자",
          "value": "1,500건",
          "direction": "다수보다 높게",
-         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
+         "reason": "Based on typical postdoc numbers in science and engineering fields, I estimate around 1500 applications, reflecting strong competition."
         }
        ]
       },
@@ -2179,6 +2195,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached strong consensus that 200 fellows are active in the 2021-2022 window, with 180 continuing to stage two based on a 90% midterm evaluation pass rate. Most participants estimated 400 annual reports submitted, aligning with the two-year simulation target (200 fellows × 2 years). One participant initially estimated 600 reports, likely covering a three-year period, but this was not adopted by others. The central tendency for all three variables is 200, 180, and 400, with no variation in numeric predictions across the group.",
      "summary_ko": "활동 중 펠로우 · 2단계 진입 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 박채연이 400건로 가장 낮게, 윤지영이 600건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 윤지영의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 400명, 합의도 50%), 연차보고서 제출(forward 400건 ↔ backward 800건, 합의도 50%), 2단계 진입 펠로우(forward 180명 ↔ backward 280명, 합의도 64%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus that 200 fellows are active in the 2021-2022 window, with 180 continuing to stage two based on a 90% midterm evaluation pass rate. Most participants estimated 400 annual reports submitted, aligning with the two-year simulation target (200 fellows × 2 years).",
      "variables": [
       {
        "key": "fellows_active",
@@ -2266,7 +2283,8 @@
          "type_ko": "평가위원",
          "value": "600건",
          "direction": "다수보다 높게",
-         "persona": "윤지영 씨는 수천 장의 생활기록부를 훑으며 행간에 숨은 학생의 거짓말과 진심을 가려내는 일에 능숙하지만, 입시철이 되면 쏟아지는 서류 뭉치에 압도되어 책상 위에 포스트잇을 무질서하게 붙여두는 습관이 있습니다."
+         "persona": "윤지영 씨는 수천 장의 생활기록부를 훑으며 행간에 숨은 학생의 거짓말과 진심을 가려내는 일에 능숙하지만, 입시철이 되면 쏟아지는 서류 뭉치에 압도되어 책상 위에 포스트잇을 무질서하게 붙여두는 습관이 있습니다.",
+         "reason": "Over the first three years, 200 fellows submit reports each year, totaling 600 reports. Given the ambiguity, I estimate 600 reports for the first three years, consistent with the active cohort."
         }
        ]
       },
@@ -2438,6 +2456,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group discussed the early-stage productivity of 200 fellows in their first two years, focusing on publication output, tenure-track transition, and regional participation. There was consensus that the 30% regional quota is a binding policy mandate, and that the tenure-track transition rate is low (10-15%) due to the program's early stage. Disagreement centered on publication productivity: some estimated 1.2 papers per fellow per year (480 total) based on chemistry/pharma experience, while others argued for 1.0 (400 total) due to a setup phase in engineering and diverse fields. The range for publications was 400-480, with a central tendency around 400, and tenure-track rates ranged from 10-15%.",
      "summary_ko": "지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘SCI(E) 논문 수’은(는) 이은정이 400편로 가장 낮게, 이시연이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 500편로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 이은정이 400편로 가장 낮게, 이시연이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 500편로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. ‘정년트랙 전환율’은(는) 이은정이 10%로 가장 낮게, 이시연이 15%로 가장 높게 보아 갈렸지만, 토의 끝에 10%로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 SCI(E) 논문 수(forward 500편 ↔ backward 600편, 합의도 83%), SCI 논문 수(forward 500편 ↔ backward 600편, 합의도 83%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the early-stage productivity of 200 fellows in their first two years, focusing on publication output, tenure-track transition, and regional participation. There was consensus that the 30% regional quota is a binding policy mandate, and that the tenure-track transition rate is low (10-15%) due to the program's early stage.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -2484,14 +2503,16 @@
          "type_ko": "박사후연구원",
          "value": "480편",
          "direction": "다수보다 낮게",
-         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다.",
+         "reason": "I estimate that during 2021-2022, the 200 active fellows will produce about 480 SCI(E) publications. Over two years, that's 200 * 1.2 * 2 = 480."
         },
         {
          "agent": "문민철",
          "type_ko": "정책담당자",
          "value": "480편",
          "direction": "다수보다 낮게",
-         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
+         "reason": "Based on typical postdoc productivity in science and engineering, I estimate 1.2 publications per fellow per year, yielding 480 SCI(E) publications over two years."
         }
        ]
       },
@@ -2540,14 +2561,16 @@
          "type_ko": "박사후연구원",
          "value": "480편",
          "direction": "다수보다 낮게",
-         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다.",
+         "reason": "I estimate that during 2021-2022, the 200 active fellows will produce about 480 SCI(E) publications. Over two years, that's 200 * 1.2 * 2 = 480."
         },
         {
          "agent": "문민철",
          "type_ko": "정책담당자",
          "value": "480편",
          "direction": "다수보다 낮게",
-         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
+         "reason": "Based on typical postdoc productivity in science and engineering, I estimate 1.2 publications per fellow per year, yielding 480 SCI(E) publications over two years."
         }
        ]
       },
@@ -2596,14 +2619,16 @@
          "type_ko": "박사후연구원",
          "value": "15%",
          "direction": "다수보다 높게",
-         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다.",
+         "reason": "I estimate 15% will secure a tenure-track position within 2 years after finishing, based on the competitive academic job market in Korea."
         },
         {
          "agent": "문민철",
          "type_ko": "정책담당자",
          "value": "15%",
          "direction": "다수보다 높게",
-         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
+         "reason": "The tenure-track transition rate is low at 15% because the program is early; most fellows haven't completed the 5-year period yet, and the academic job market is competitive."
         }
        ]
       },
@@ -2785,6 +2810,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, projecting that 10% of the 200 fellows (20) will secure tenure-track positions, regional publication share will increase by 2.5 percentage points over a decade, and 15% of fellows (30) will become independent principal investigators. Key causal mechanisms included the competitive Korean academic job market, structural barriers limiting tenure-track positions, and the time needed for regional research capacity to grow despite a 30% regional quota. All participants reasoned that the fellowship's early stage (2021-2022) and modest cohort size constrained long-term impact, with no disagreement on numeric values or underlying logic.",
      "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus on all three impact estimates, projecting that 10% of the 200 fellows (20) will secure tenure-track positions, regional publication share will increase by 2.5 percentage points over a decade, and 15% of fellows (30) will become independent principal investigators.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -3095,6 +3121,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, treating the policy's explicit numbers as ground truth: 200 fellowship slots, a 30% regional quota, and a total annual budget of 26 billion KRW (derived from 200 slots × 130 million KRW each, with a direct/indirect split of 100M + 30M per fellow). All participants converged on these values, citing the policy document directly. No disagreements emerged, as the estimates were considered fixed parameters rather than variables to be estimated. The central tendency and range were identical across all posts, with no variation in numeric predictions.",
      "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed on the input variables, treating the policy's explicit numbers as ground truth: 200 fellowship slots, a 30% regional quota, and a total annual budget of 26 billion KRW (derived from 200 slots × 130 million KRW each, with a direct/indirect split of 100M + 30M per fellow).",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -3346,6 +3373,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's competitive selection process, with a fixed annual target of 200 fellows, and focused on how eligibility restrictions (domestic only, non-tenure-track, PhD within 7 years or under 39) and application barriers (host institution consultation) shape the applicant pool. There was consensus that the midterm evaluation is process-oriented and supportive, leading to high pass rates, and that lab changes are allowed and moderately common. Disagreement centered on the total number of applications, ranging from 800 to 1,200, with a central tendency around 1,050, and on the midterm pass rate, ranging from 80% to 90% (160-180 fellows). Lab change estimates varied from 10% to 20% of fellows.",
      "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘단계평가 통과’은(는) 조덕균이 160명로 가장 낮게, 김상훈이 180명로 가장 높게 보아 갈렸지만, 토의 끝에 170명로 수렴했습니다. ‘지원서 접수’은(는) 조덕균이 800건로 가장 낮게, 김상훈이 1,200건로 가장 높게 보아 갈렸지만, 토의 끝에 1,050건로 수렴했습니다. 이 과정에서 김상훈, 조덕균의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 단계평가 통과(forward 173명 ↔ backward 256명, 합의도 68%), 지원서 접수(forward 1,060건 ↔ backward 1,200건, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the fellowship's competitive selection process, with a fixed annual target of 200 fellows, and focused on how eligibility restrictions (domestic only, non-tenure-track, PhD within 7 years or under 39) and application barriers (host institution consultation) shape the applicant pool.",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -3433,14 +3461,16 @@
          "type_ko": "정책담당자",
          "value": "1,200건",
          "direction": "다수보다 높게",
-         "persona": "김상훈 씨는 저탄소 콘크리트 배합 특허를 내기 위해 연구실 책상 위에 각종 시멘트 샘플을 쌓아두고 분석하며, 최신 BIM 소프트웨어로 구조 최적화 시뮬레이션을 돌리는 일에 몰두합니다."
+         "persona": "김상훈 씨는 저탄소 콘크리트 배합 특허를 내기 위해 연구실 책상 위에 각종 시멘트 샘플을 쌓아두고 분석하며, 최신 BIM 소프트웨어로 구조 최적화 시뮬레이션을 돌리는 일에 몰두합니다.",
+         "reason": "I estimate that the annual call will attract approximately 1,200 applications, given the program's prestige and the large pool of eligible postdocs in Korea."
         },
         {
          "agent": "조덕균",
          "type_ko": "박사후연구원",
          "value": "800건",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "I estimate about 800 applications, yielding a 25% acceptance rate, which is competitive but not as extreme as the 16-20% others suggest."
         }
        ]
       },
@@ -3612,6 +3642,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the 2021-2022 window, agreeing that 200 fellows are active as the first cohort starts in March 2021. They reached consensus on 170 fellows continuing to stage two (85% pass rate) and 400 annual reports (200 fellows × 2 years). One participant dissented, estimating 160 stage-two fellows and 1000 reports, the latter due to including multiple cohorts or a 5-year total, which others rejected as inconsistent with the simulation target. Predictions for fellows_active were unanimous at 200; stage_two_fellows ranged from 160 to 170 (median 170); annual_reports_submitted ranged from 400 to 1000 (median 400).",
      "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 김상훈이 400건로 가장 낮게, 조덕균이 1,000건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 조덕균의 이견(이상치)이 흡수되었습니다. ‘2단계 진입 펠로우’은(는) 조덕균이 160명로 가장 낮게, 김상훈이 170명로 가장 높게 보아 갈렸지만, 토의 끝에 170명로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 320명, 합의도 62%), 연차보고서 제출(forward 400건 ↔ backward 640건, 합의도 62%), 2단계 진입 펠로우(forward 170명 ↔ backward 256명, 합의도 66%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the 2021-2022 window, agreeing that 200 fellows are active as the first cohort starts in March 2021. They reached consensus on 170 fellows continuing to stage two (85% pass rate) and 400 annual reports (200 fellows × 2 years).",
      "variables": [
       {
        "key": "fellows_active",
@@ -3699,7 +3730,8 @@
          "type_ko": "박사후연구원",
          "value": "1,000건",
          "direction": "다수보다 높게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "However, the policy's 5-year cumulative total would be 200 fellows × 5 years = 1000 reports, but since the target window is 2021-2022, I must rescale."
         }
        ]
       },
@@ -3871,6 +3903,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on how the first cohort of 200 fellows (starting March 2021) drives outcomes in the 2021-2022 window, with the second cohort contributing only partially. There was consensus that midterm attrition reduces active fellows to about 170 and that the 30% regional quota is strictly enforced, though one participant estimated 28% due to applicant shortages. Disagreements centered on publication productivity per fellow-year (ranging from 0.6 to 1.5) and tenure-track transition rates (15% to 25%), with lower estimates reflecting regional constraints and longer engineering publication cycles, while higher estimates assumed policy support boosts output. Numeric predictions for total SCI(E) publications ranged from 320 to 480, with a central tendency around 360-400, and transition rates clustered near 20%.",
      "summary_ko": "‘정년트랙 전환율’은(는) 조덕균이 15%로 가장 낮게, 김종한이 25%로 가장 높게 보아 갈렸지만, 토의 끝에 18%로 수렴했습니다. 이 과정에서 조덕균, 김종한의 이견(이상치)이 흡수되었습니다. ‘SCI(E) 논문 수’은(는) 조덕균이 320편로 가장 낮게, 김종한이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 390편로 수렴했습니다. 이 과정에서 조덕균, 김종한, 정에스더의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 조덕균이 320편로 가장 낮게, 김종한이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 390편로 수렴했습니다. 이 과정에서 조덕균, 김종한, 정에스더의 이견(이상치)이 흡수되었습니다. ‘지역기관 참여 비율’은(는) 조덕균이 28%로 가장 낮게, 김종한이 30%로 가장 높게 보아 갈렸지만, 토의 끝에 30%로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 정년트랙 전환율(forward 16.8% ↔ backward 9.6%, 합의도 57%), SCI(E) 논문 수(forward 390편 ↔ backward 500편, 합의도 78%), SCI 논문 수(forward 390편 ↔ backward 500편, 합의도 78%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on how the first cohort of 200 fellows (starting March 2021) drives outcomes in the 2021-2022 window, with the second cohort contributing only partially.",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -3917,14 +3950,16 @@
          "type_ko": "박사후연구원",
          "value": "15%",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "The tenure-track transition rate will be low (15%) because regional fellows have fewer opportunities for stable positions; many will move to industry or stay as postdocs."
         },
         {
          "agent": "김종한",
          "type_ko": "평가위원",
          "value": "25%",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "The tenure-track transition rate is 25%, reflecting the policy's career support and continued research funding for those who secure positions, though competition remains high."
         }
        ]
       },
@@ -3973,21 +4008,24 @@
          "type_ko": "박사후연구원",
          "value": "320편",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "So total publications = (200 fellows * 0.6 pub/fellow-year * 1.8 years) + (200 * 0.6 * 0.8 years) = 216 + 96 = 312, rounded to 320. In my lab, we struggle to publish more than 1-2 SCI(E) papers per year per researcher due to equipment constraints and administrative burdens."
         },
         {
          "agent": "김종한",
          "type_ko": "평가위원",
          "value": "480편",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "This yields 200 fellows * 1.5 pub/fellow-year * 1.8 years = 540 publications, but I adjust downward to 480 to account for midterm attrition (170 continue to stage two) and the fact that some fellows may publish less due to lab changes or administrative burdens."
         },
         {
          "agent": "정에스더",
          "type_ko": "평가위원",
          "value": "400편",
          "direction": "다수보다 높게",
-         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다."
+         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다.",
+         "reason": "This yields 200 fellows * 1.5 pub/fellow-year * 1.8 years = 540, but I reduce to 400 because many fellows spend the first few months setting up labs and hiring students, and some publish less due to lab changes or administrative burdens."
         }
        ]
       },
@@ -4036,21 +4074,24 @@
          "type_ko": "박사후연구원",
          "value": "320편",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "So total publications = (200 fellows * 0.6 pub/fellow-year * 1.8 years) + (200 * 0.6 * 0.8 years) = 216 + 96 = 312, rounded to 320. In my lab, we struggle to publish more than 1-2 SCI(E) papers per year per researcher due to equipment constraints and administrative burdens."
         },
         {
          "agent": "김종한",
          "type_ko": "평가위원",
          "value": "480편",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "This yields 200 fellows * 1.5 pub/fellow-year * 1.8 years = 540 publications, but I adjust downward to 480 to account for midterm attrition (170 continue to stage two) and the fact that some fellows may publish less due to lab changes or administrative burdens."
         },
         {
          "agent": "정에스더",
          "type_ko": "평가위원",
          "value": "400편",
          "direction": "다수보다 높게",
-         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다."
+         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다.",
+         "reason": "This yields 200 fellows * 1.5 pub/fellow-year * 1.8 years = 540, but I reduce to 400 because many fellows spend the first few months setting up labs and hiring students, and some publish less due to lab changes or administrative burdens."
         }
        ]
       },
@@ -4232,6 +4273,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group discussed the long-term impact of the Sejong Science Fellowship on tenure-track transitions, regional publication share, and independent PI counts, focusing on causal mechanisms like the 30% regional quota, stable funding, and lab mobility. Consensus emerged that the independent PI count would exceed the tenure-track count due to non-tenure-track leadership roles, and that regional publication share growth would be modest. Disagreement centered on the magnitude of impact: some participants estimated higher outcomes (40 tenure-track, 2.5% regional growth, 50 PIs) based on policy support, while others predicted lower figures (20-30 tenure-track, 1.0-1.5% growth, 30-40 PIs) citing structural barriers for regional researchers and a competitive job market. Prediction ranges were: former_fellows_in_tenure_track 20-40 (central tendency ~30), regional_publication_share_growth 1.0-2.5% (~1.5%), independent_pi_count 30-50 (~40).",
      "summary_ko": "‘지역 논문 점유율 증가’은(는) 조덕균이 1%p로 가장 낮게, 김종한이 2.5%p로 가장 높게 보아 갈렸지만, 토의 끝에 1.5%p로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. ‘정년트랙 진입 펠로우’은(는) 조덕균이 20명로 가장 낮게, 김종한이 40명로 가장 높게 보아 갈렸지만, 토의 끝에 30명로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. ‘독립 연구책임자(PI) 수’은(는) 조덕균이 30명로 가장 낮게, 김종한이 50명로 가장 높게 보아 갈렸지만, 토의 끝에 40명로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지역 논문 점유율 증가(forward 1.56%p ↔ backward 1.8%p, 합의도 87%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the long-term impact of the Sejong Science Fellowship on tenure-track transitions, regional publication share, and independent PI counts, focusing on causal mechanisms like the 30% regional quota, stable funding, and lab mobility.",
      "variables": [
       {
        "key": "regional_publication_share_growth",
@@ -4278,21 +4320,24 @@
          "type_ko": "평가위원",
          "value": "2.5%p",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "The regional quota ensures 60 fellows from regional institutions; I estimate a 2.5 percentage-point increase in the share of national SCI(E) publications from regional institutions over a decade, as these fellows publish at a slightly lower rate than those in top-tier hubs but contribute to regional capacity."
         },
         {
          "agent": "송성진",
          "type_ko": "평가위원",
          "value": "2.5%p",
          "direction": "다수보다 높게",
-         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다.",
+         "reason": "The regional quota ensures 60 fellows from regional institutions; I estimate a 2.5 percentage-point increase in the share of national SCI(E) publications from regional institutions over a decade, as these fellows publish at a slightly lower rate than those in top-tier hubs but contribute to regional capacity."
         },
         {
          "agent": "조덕균",
          "type_ko": "박사후연구원",
          "value": "1%p",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "The prior phases show that 200 fellows start, 170 pass midterm, and the 30% regional quota is enforced. I estimate that only 10% of the 200 first-cohort fellows (20) will secure tenure-track positions within 5-10 years, which is lower than the 30-40 estimated by the evaluation panel members."
         }
        ]
       },
@@ -4341,21 +4386,24 @@
          "type_ko": "평가위원",
          "value": "40명",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "Given the policy's support structure—stable funding, mentoring, lab mobility—I expect that within 5-10 years after the fellowship, about 20% of the 200 first-cohort fellows (40) will secure tenure-track positions, reflecting the competitive academic job market but boosted by the policy's continued research funding for those who transition."
         },
         {
          "agent": "송성진",
          "type_ko": "평가위원",
          "value": "40명",
          "direction": "다수보다 높게",
-         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다.",
+         "reason": "Given the policy's support structure—stable funding, mentoring, lab mobility—I expect that within 5-10 years after the fellowship, about 20% of the 200 first-cohort fellows (40) will secure tenure-track positions, reflecting the competitive academic job market but boosted by the policy's continued research funding for those who transition."
         },
         {
          "agent": "조덕균",
          "type_ko": "박사후연구원",
          "value": "20명",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "The prior phases show that 200 fellows start, 170 pass midterm, and the 30% regional quota is enforced. I estimate that only 10% of the 200 first-cohort fellows (20) will secure tenure-track positions within 5-10 years, which is lower than the 30-40 estimated by the evaluation panel members."
         }
        ]
       },
@@ -4404,21 +4452,24 @@
          "type_ko": "평가위원",
          "value": "50명",
          "direction": "다수보다 높게",
-         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+         "reason": "For independent PI count, I estimate 50 former fellows leading independent research groups or projects, which is higher than the tenure-track count because some may lead projects in non-tenure-track settings (e.g., research institutes or industry labs)."
         },
         {
          "agent": "송성진",
          "type_ko": "평가위원",
          "value": "50명",
          "direction": "다수보다 높게",
-         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다.",
+         "reason": "For independent PI count, I estimate 50 former fellows leading independent research groups or projects, which is higher than the tenure-track count because some may lead projects in non-tenure-track settings (e.g., research institutes or industry labs)."
         },
         {
          "agent": "조덕균",
          "type_ko": "박사후연구원",
          "value": "30명",
          "direction": "다수보다 낮게",
-         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
+         "reason": "Independent PI count is 30, which is higher than tenure-track count because some fellows lead projects in non-tenure-track settings like government research institutes or industry labs, but still lower than others' estimates because many regional fellows may not have the resources to sustain independent groups."
         }
        ]
       }
@@ -4608,6 +4659,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, all deriving directly from explicit policy statements: a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). There was no disagreement, as every participant cited the same policy numbers and calculations. The central causal mechanism discussed was that these inputs—budget, slots, and regional quota—directly determine the program's capacity to support young scientists and strengthen regional research. All numeric predictions were identical, reflecting complete consensus on the policy's stated resource logic.",
      "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed on the input estimates, all deriving directly from explicit policy statements: a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). There was no disagreement, as every participant cited the same policy numbers and calculations.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -4859,6 +4911,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the Sejong Science Fellowship's competitive application process, with estimates for applications_received ranging from 1,200 to 1,500, centering around 1,300-1,400, driven by the program's generous funding (130M KRW/year), 30% regional quota, and broad eligibility. There was strong consensus that fellows_selected is fixed at 200 and that midterm_evaluations_passed would be 180 (90% pass rate), due to the process-oriented stage evaluation focusing on faithful performance. Disagreement centered on application volume: some expected higher numbers due to the program's attractiveness, while others cited the rigorous selection process as a deterrent. All agreed that lab changes are permitted but rare (about 10%), with minimal impact on midterm outcomes.",
      "summary_ko": "단계평가 통과 · 최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 김태희이 1,200건로 가장 낮게, 조혜진이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 조혜진의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 1,300건 ↔ backward 600건, 합의도 46%), 단계평가 통과(forward 180명 ↔ backward 160명, 합의도 89%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the Sejong Science Fellowship's competitive application process, with estimates for applications_received ranging from 1,200 to 1,500, centering around 1,300-1,400, driven by the program's generous funding (130M KRW/year), 30% regional quota, and broad eligibility.",
      "variables": [
       {
        "key": "applications_received",
@@ -4905,7 +4958,8 @@
          "type_ko": "평가위원",
          "value": "1,500건",
          "direction": "다수보다 높게",
-         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다."
+         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다.",
+         "reason": "I estimate applications_received at 1500, higher than 김태희's 1200, because the policy's generous funding and regional quota will attract many applicants from both metropolitan and regional institutions, especially given the broad eligibility (within 7 years of PhD or under 39)."
         }
        ]
       },
@@ -5118,6 +5172,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the active cohort math within the 2021-2022 window, with a clear consensus that only the first cohort of 200 fellows is fully active, as the second cohort starts in March 2022 with minimal activity. All participants agreed on fellows_active=200 and stage_two_fellows=180 (the expected 90% pass rate from the prior phase, though the midterm evaluation occurs after 2022). For annual_reports_submitted, the group converged on 600, calculated as 400 reports from the first cohort (200 fellows × 2 years) plus 200 reports from the second cohort (200 fellows × 1 year in 2022). One initial estimate of 960 was rejected as inconsistent with the window. The central tendency across all predictions is 200 for fellows_active, 180 for stage_two_fellows, and 600 for annual_reports_submitted.",
      "summary_ko": "2단계 진입 펠로우 · 활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 김태희이 600건로 가장 낮게, 조혜진이 960건로 가장 높게 보아 갈렸지만, 토의 끝에 600건로 수렴했습니다. 이 과정에서 조혜진의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 연차보고서 제출(forward 600건 ↔ backward 520건, 합의도 87%), 2단계 진입 펠로우(forward 180명 ↔ backward 160명, 합의도 89%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the active cohort math within the 2021-2022 window, with a clear consensus that only the first cohort of 200 fellows is fully active, as the second cohort starts in March 2022 with minimal activity.",
      "variables": [
       {
        "key": "annual_reports_submitted",
@@ -5164,7 +5219,8 @@
          "type_ko": "평가위원",
          "value": "960건",
          "direction": "다수보다 높게",
-         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다."
+         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다.",
+         "reason": "I reason from the prior phases: the program selects 200 fellows per year, and the midterm evaluation passes 180 (90% pass rate). In the Outputs phase, 'fellows_active' refers to the number of fellows currently conducting research at any time point within the 2021-2022 window."
         }
        ]
       },
@@ -5377,6 +5433,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached full consensus that only the first cohort of 200 fellows was fully active in the 2021-2022 window, leading to an estimated 600 SCI(E) publications based on an average productivity of 1.5 papers per fellow per year. All participants agreed on a 25% tenure-track transition rate, reasoning that most fellows were still early in the program, and a 30% regional institution participation rate, reflecting the binding policy quota. No disagreements emerged; all numeric predictions were identical across stakeholders.",
      "summary_ko": "SCI(E) 논문 수 · SCI 논문 수 · 정년트랙 전환율 · 지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus that only the first cohort of 200 fellows was fully active in the 2021-2022 window, leading to an estimated 600 SCI(E) publications based on an average productivity of 1.5 papers per fellow per year.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -5679,6 +5736,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, predicting that 50 former fellows (25% of the 200 active cohort) will secure tenure-track positions, regional publication share will grow by 5 percentage points due to the 30% quota, and 120 former fellows (60%) will become independent PIs. Key causal mechanisms included the cohort size (200 fellows in the first cohort), the 25% tenure-track transition rate from the Outcomes phase, and the binding regional quota. No disagreements emerged, as all participants independently arrived at identical numeric predictions based on the same cohort math and policy parameters. The central tendency and range were identical: former_fellows_in_tenure_track = 50, regional_publication_share_growth = 5.0, independent_pi_count = 120.",
      "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus on all three impact estimates, predicting that 50 former fellows (25% of the 200 active cohort) will secure tenure-track positions, regional publication share will grow by 5 percentage points due to the 30% quota, and 120 former fellows (60%) will become independent PIs.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -5989,6 +6047,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input values, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). Consensus was grounded in the policy's explicit resource logic, which specified the per-fellow funding split (100 million KRW direct costs, 30 million KRW indirect costs) and the regional allocation. No disagreements emerged, as participants consistently cited the same policy evidence and arithmetic. The central tendency and range were identical across all estimates, reflecting complete alignment on these inputs.",
      "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed on the input values, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots).",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -6240,6 +6299,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's selection and midterm evaluation processes, focusing on application volume, selection competitiveness, and attrition due to lab changes and strict evaluation criteria. There was consensus that 200 fellows would be selected annually, as per policy, and that applications would range from 1,200 to 1,500, with a central tendency around 1,300-1,400. Midterm evaluation pass rates varied from 155 to 170, with a central estimate near 160-165, reflecting differing views on attrition from lab changes and process-oriented compliance. Key causal mechanisms included the 30% regional quota boosting applications, strict eligibility capping the pool, and lab changes potentially disrupting progress and lowering pass rates.",
      "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘단계평가 통과’은(는) 이은미이 155명로 가장 낮게, 한아진이 170명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. ‘지원서 접수’은(는) 한아진이 1,200건로 가장 낮게, 김창희이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 김창희의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 단계평가 통과(forward 161명 ↔ backward 320명, 합의도 50%), 지원서 접수(forward 1,300건 ↔ backward 1,200건, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed the fellowship's selection and midterm evaluation processes, focusing on application volume, selection competitiveness, and attrition due to lab changes and strict evaluation criteria.",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -6327,7 +6387,8 @@
          "type_ko": "평가위원",
          "value": "1,500건",
          "direction": "다수보다 높게",
-         "persona": "김창희 씨는 대학 강단에서 건설 현장의 법적 리스크와 공학적 설계를 가르치며, 정년 퇴임 후에는 작은 가구 공방을 열어 손끝으로 직접 무언가를 만드는 삶을 준비합니다."
+         "persona": "김창희 씨는 대학 강단에서 건설 현장의 법적 리스크와 공학적 설계를 가르치며, 정년 퇴임 후에는 작은 가구 공방을 열어 손끝으로 직접 무언가를 만드는 삶을 준비합니다.",
+         "reason": "Based on my experience with national fellowship programs, I estimate around 1,500 applications, reflecting an acceptance rate of about 13.3%."
         }
        ]
       },
@@ -6499,6 +6560,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the first cohort of 200 fellows starting in March 2021, with all active through 2021-2022. There was consensus on fellows_active (200) and stage_two_fellows (155-160, with most agreeing on 160 based on 20% attrition from lab changes and strict evaluation). For annual_reports_submitted, most agreed on 800 (2 reports per fellow per year: annual plus mid-year), but one participant estimated 920, citing potential extra reports from lab changes. The central tendency for stage_two_fellows is 160, and for reports is 800, with the disagreement reflecting differing assumptions about reporting frequency.",
      "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘2단계 진입 펠로우’은(는) 이은미이 155명로 가장 낮게, 최규민이 160명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. ‘연차보고서 제출’은(는) 김창희이 800건로 가장 낮게, 최규민이 920건로 가장 높게 보아 갈렸지만, 토의 끝에 800건로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 400명, 합의도 50%), 2단계 진입 펠로우(forward 160명 ↔ backward 320명, 합의도 50%), 연차보고서 제출(forward 800건 ↔ backward 1,200건, 합의도 67%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the first cohort of 200 fellows starting in March 2021, with all active through 2021-2022. There was consensus on fellows_active (200) and stage_two_fellows (155-160, with most agreeing on 160 based on 20% attrition from lab changes and strict evaluation).",
      "variables": [
       {
        "key": "fellows_active",
@@ -6627,7 +6689,8 @@
          "type_ko": "박사후연구원",
          "value": "920건",
          "direction": "다수보다 높게",
-         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다.",
+         "reason": "I'll round to 920 to account for these extras."
         }
        ]
       }
@@ -6758,6 +6821,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the first cohort of 200 fellows active for about 1.8 years in 2021-2022, estimating an average of 1.5 SCI(E) publications per fellow per year. There was strong consensus on a tenure-track transition rate of 12.5% and full achievement of the 30% regional quota. Most participants adjusted the publication count downward from 540 to 480 due to lab changes and strict midterm evaluations, but one participant maintained the higher estimate of 540, arguing that stable funding and mentoring would sustain productivity. The range for SCI(E) publications was 480 to 540, with a central tendency around 480.",
      "summary_ko": "정년트랙 전환율 · 지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘SCI(E) 논문 수’은(는) 이은미이 480편로 가장 낮게, 최규민이 540편로 가장 높게 보아 갈렸지만, 토의 끝에 480편로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 이은미이 480편로 가장 낮게, 최규민이 540편로 가장 높게 보아 갈렸지만, 토의 끝에 480편로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 SCI(E) 논문 수(forward 480편 ↔ backward 600편, 합의도 80%), SCI 논문 수(forward 480편 ↔ backward 600편, 합의도 80%), 정년트랙 전환율(forward 12.5% ↔ backward 10%, 합의도 80%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the first cohort of 200 fellows active for about 1.8 years in 2021-2022, estimating an average of 1.5 SCI(E) publications per fellow per year. There was strong consensus on a tenure-track transition rate of 12.5% and full achievement of the 30% regional quota.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -6804,7 +6868,8 @@
          "type_ko": "박사후연구원",
          "value": "540편",
          "direction": "다수보다 높게",
-         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다.",
+         "reason": "This yields 200 fellows * 1.5 pubs/fellow/year * 1.8 years ≈ 540 publications. Therefore, I stick with my independent estimate of 540."
         }
        ]
       },
@@ -6853,7 +6918,8 @@
          "type_ko": "박사후연구원",
          "value": "540편",
          "direction": "다수보다 높게",
-         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다.",
+         "reason": "This yields 200 fellows * 1.5 pubs/fellow/year * 1.8 years ≈ 540 publications. Therefore, I stick with my independent estimate of 540."
         }
        ]
       },
@@ -7076,6 +7142,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group consistently estimated that 5-10 years post-fellowship, 25 former fellows would secure tenure-track positions (12.5% transition rate from 200 annual fellows), regional publication share would grow by 2.5 percentage points due to the 30% regional quota, and 40 former fellows would become independent PIs. All participants agreed these long-term outcomes would not be realized within the 2021-2022 window, as only the first cohort was active. No disagreements emerged; estimates were uniformly conservative, grounded in policy structure and typical career progression. The central tendency and range for all three variables were identical across participants: 25, 2.5%, and 40.",
      "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group consistently estimated that 5-10 years post-fellowship, 25 former fellows would secure tenure-track positions (12.5% transition rate from 200 annual fellows), regional publication share would grow by 2.5 percentage points due to the 30% regional quota, and 40 former fellows would become independent PIs.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -7384,6 +7451,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group reached full consensus on all three input variables, estimating total funding at 410.6 billion KRW, 19,000 graduate scholarship slots, and 1,200 postdoc positions. All participants accepted the total budget as a fixed policy input. For scholarship slots, they reasoned that roughly 70% of the 355.2 billion KRW education research group budget (after operating costs and postdoc salaries) would fund stipends averaging 1 million KRW per month, yielding about 20,700 slots, but adjusted downward to 19,000 to reflect the active cohort of ~12,600 students and multi-year support. For postdocs, they assumed about 10% of the research group budget (35.5 billion KRW) at a minimum salary of 3 million KRW per month, producing ~986 positions, rounded to 1,200. No disagreements emerged, though some participants derived their estimates from budget breakdowns while others used group counts, and a few noted that Hanyang University's specific share was not the focus at this national-level phase.",
      "summary_ko": "신진연구인력 정원 · 대학원생 연구장학금 정원 · 총 배정 예산은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 신진연구인력 정원(forward 1,200명 ↔ backward 6,400명, 합의도 19%), 대학원생 연구장학금 정원(forward 19,000명 ↔ backward 12,600명, 합의도 66%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all three input variables, estimating total funding at 410.6 billion KRW, 19,000 graduate scholarship slots, and 1,200 postdoc positions. All participants accepted the total budget as a fixed policy input.",
      "variables": [
       {
        "key": "postdoc_positions",
@@ -7635,6 +7703,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group reached full consensus on all activity estimates, citing the policy's explicit budget and schedule. Total funds disbursed were unanimously set at 408,080,000,000 KRW, based on the 70% March and 30% September installment plan. All participants agreed on 3 evaluation panels (annual, mid-term, compliance), 280 consulting sessions (the number of groups that opted in out of 578), and 205 compliance checks (targeting innovative talent training groups). No disagreements emerged, as each estimate was directly supported by the policy text and reinforced by cross-participant alignment. The central tendency for all four variables was a single value: 408,080,000,000 KRW, 3, 280, and 205 respectively.",
      "summary_ko": "총 집행 예산 · 평가 패널 구성 · 성과 컨설팅 실시 · 이행점검 실시은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus on all activity estimates, citing the policy's explicit budget and schedule. Total funds disbursed were unanimously set at 408,080,000,000 KRW, based on the 70% March and 30% September installment plan.",
      "variables": [
       {
        "key": "total_funds_disbursed",
@@ -7937,6 +8006,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached full consensus on all output estimates, predicting 19,000 graduate students supported, 1,200 postdoc researchers, 57,000 publications, and 9,500 international conference presentations. They reasoned that these outputs flow directly from the established inputs and activities, with each graduate student producing about 3 publications per year and about 50% presenting at one international conference annually. The high compliance rate (575 out of 578 groups submitting reports) was cited as ensuring thorough documentation. No disagreements emerged, as all participants independently arrived at the same numbers based on typical productivity in humanities, social sciences, and engineering fields.",
      "summary_ko": "지원 신진연구인력 · 논문 산출 · 국제학회 발표 · 지원 대학원생은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 지원 신진연구인력(forward 1,200명 ↔ backward 6,400명, 합의도 19%), 논문 산출(forward 57,000편 ↔ backward 23,750편, 합의도 42%), 국제학회 발표(forward 9,500건 ↔ backward 4,750건, 합의도 50%), 지원 대학원생(forward 17,720명 ↔ backward 13,880명, 합의도 78%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all output estimates, predicting 19,000 graduate students supported, 1,200 postdoc researchers, 57,000 publications, and 9,500 international conference presentations.",
      "variables": [
       {
        "key": "postdoc_researchers_supported",
@@ -8239,6 +8309,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached strong consensus on all outcome estimates, with unanimous predictions of an 86.3% employment rate, 15% international collaboration rate, and 82% full-time faculty lecture ratio. They reasoned that the program's solid research base (19,000 graduate students, 57,000 publications) supports these outcomes, but domestic industry focus limits international collaboration, and specialized courses still rely on part-time faculty. The employment rate slightly below the 87% policy target reflects a declining trend noted in the policy context. No disagreements emerged; all participants independently converged on the same values, citing similar causal mechanisms from inputs and outputs.",
      "summary_ko": "국제협력 비율 · BK21 참여 취업자 수(2022) · 전임교수 강의비율 · 국제공동연구 건수(2022) · 취업률은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 국제협력 비율(forward 15% ↔ backward 28%, 합의도 54%), BK21 참여 취업자 수(2022)(forward 16,400명 ↔ backward 15,000명, 합의도 91%), 전임교수 강의비율(forward 82% ↔ backward 75%, 합의도 91%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus on all outcome estimates, with unanimous predictions of an 86.3% employment rate, 15% international collaboration rate, and 82% full-time faculty lecture ratio.",
      "variables": [
       {
        "key": "international_collaboration_rate",
@@ -8592,6 +8663,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached strong consensus that sustained BK21 investment over a decade will gradually improve South Korea's global S&T talent competitiveness rank from about 10th to 8th, and increase high-impact publications per 1000 researchers from roughly 10 to 12.5. All participants estimated identical values (rank 8, publications 12.5), with no disagreement. Key causal mechanisms discussed include the gradual accumulation of a critical mass of trained talent (19,000 graduate students and 1,200 postdocs annually), slow cultural shifts in research integrity and collaboration, and the time needed for alumni to reach leadership positions. The group emphasized that impact is not immediate and is tempered by international competition and the early-career stage of many researchers.",
      "summary_ko": "국가 과학기술인재 경쟁력 순위 · 연구자 1천명당 고피인용 논문은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached strong consensus that sustained BK21 investment over a decade will gradually improve South Korea's global S&T talent competitiveness rank from about 10th to 8th, and increase high-impact publications per 1000 researchers from roughly 10 to 12.5. All participants estimated identical values (rank 8, publications 12.5), with no disagreement.",
      "variables": [
       {
        "key": "national_st_talent_competitiveness_rank",
@@ -8849,6 +8921,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group reached full consensus on all three input variables, anchoring estimates on the Ministry of Education's stated 2022 BK21 budget of 408,080 million KRW. They derived 19,000 graduate scholarship slots from the 355,151 million KRW education research group budget divided by average annual stipend costs, and 577 postdoc positions by assuming one postdoc per education research group (577 groups nationally). No disagreements emerged, as all participants applied the same resource logic and eligibility criteria from the policy context.",
      "summary_ko": "신진연구인력 정원 · 대학원생 연구장학금 정원 · 총 배정 예산은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 신진연구인력 정원(forward 577명 ↔ backward 3,200명, 합의도 18%), 대학원생 연구장학금 정원(forward 19,000명 ↔ backward 12,600명, 합의도 66%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all three input variables, anchoring estimates on the Ministry of Education's stated 2022 BK21 budget of 408,080 million KRW.",
      "variables": [
       {
        "key": "postdoc_positions",
@@ -9100,6 +9173,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group reached full consensus on all four activity-level variables, with every participant predicting the same values: total funds disbursed at 408,080,000,000 KRW, evaluation panels convened at 3, consulting sessions held at 280, and compliance checks executed at 205. Their reasoning was uniformly grounded in explicit policy documents, citing the 70%/30% installment schedule, three distinct panel types (annual, mid-term, compliance), the 280 consulting sessions offered to requesting groups, and the 205 innovative talent training groups targeted for compliance checks. No disagreements or alternative estimates emerged, reflecting a shared, process-driven interpretation of the policy context.",
      "summary_ko": "총 집행 예산 · 평가 패널 구성 · 성과 컨설팅 실시 · 이행점검 실시은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus on all four activity-level variables, with every participant predicting the same values: total funds disbursed at 408,080,000,000 KRW, evaluation panels convened at 3, consulting sessions held at 280, and compliance checks executed at 205.",
      "variables": [
       {
        "key": "total_funds_disbursed",
@@ -9402,6 +9476,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached strong consensus that the Outputs phase directly follows from the Inputs and Activities phases, with all participants estimating 19,000 graduate students supported, 577 postdocs, 57,000 publications, and 9,500 international conference presentations. They consistently reasoned that typical graduate student productivity is 2-3 publications per year and postdoc productivity 3-4, yielding an average of 3 publications per participant, while international conference presentations were estimated at 0.5 per participant due to travel constraints. High reporting compliance (575 of 578 groups) was cited as ensuring reliable data capture. No disagreements emerged; all numeric predictions were identical across participants.",
      "summary_ko": "논문 산출 · 지원 신진연구인력 · 국제학회 발표 · 지원 대학원생은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 논문 산출(forward 57,000편 ↔ backward 7,560편, 합의도 13%), 지원 신진연구인력(forward 577명 ↔ backward 3,200명, 합의도 18%), 국제학회 발표(forward 9,500건 ↔ backward 3,780건, 합의도 40%), 지원 대학원생(forward 19,000명 ↔ backward 12,600명, 합의도 66%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus that the Outputs phase directly follows from the Inputs and Activities phases, with all participants estimating 19,000 graduate students supported, 577 postdocs, 57,000 publications, and 9,500 international conference presentations.",
      "variables": [
       {
        "key": "publications_produced",
@@ -9704,6 +9779,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached strong consensus on all outcome estimates, with every participant predicting a graduate employment rate of 78.9% (below the 86.7% target due to post-pandemic job market recovery) and an international collaboration rate of 50.0% (boosted by conference support but limited by domestic focus and barriers). The full-time faculty lecture ratio was uniformly estimated at 85.0%, reflecting policy emphasis on quality mentoring despite reliance on part-time experts for niche courses. Key causal mechanisms included network effects from research groups, training quality, and BK21 reputation for employment, while international collaboration was driven by co-authorship incentives and conference presentations (9,500) but constrained by language and visa issues. No disagreements emerged; all participants independently reasoned from the same prior-phase data (19,000 graduate slots, 577 postdoc positions, 408,080 million KRW funding, 575 of 578 groups compliant) and acknowledged that evaluation feedback loops (3 panels, 280 sessions) had moderate impact due to time lags.",
      "summary_ko": "국제공동연구 건수(2022) · BK21 참여 취업자 수(2022) · 국제협력 비율 · 전임교수 강의비율 · 취업률은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 국제공동연구 건수(2022)(forward 9,500건 ↔ backward 3,500건, 합의도 37%), BK21 참여 취업자 수(2022)(forward 15,000명 ↔ backward 9,000명, 합의도 60%), 국제협력 비율(forward 50% ↔ backward 30%, 합의도 60%), 전임교수 강의비율(forward 85% ↔ backward 75%, 합의도 88%), 취업률(forward 78.9% ↔ backward 86%, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus on all outcome estimates, with every participant predicting a graduate employment rate of 78.9% (below the 86.7% target due to post-pandemic job market recovery) and an international collaboration rate of 50.0% (boosted by conference support but limited by domestic focus and barriers).",
      "variables": [
       {
        "key": "international_research_collaboration_rate_of_bk21_participants_in_2022",
@@ -10057,6 +10133,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group consistently reasoned that sustained BK21 investment over a decade—funding 19,000 graduate slots and 577 postdoc positions, with high compliance and outputs of 57,000 publications and 9,500 international conference presentations—builds a critical mass of skilled researchers who enhance national innovation capacity. They agreed that dissemination of best practices via webzine and forums improves research culture, but that global competition limits South Korea's S&T talent competitiveness rank to a modest 12th, and the 2021-2022 time window restricts full realization of long-term effects on high-impact publications. All participants converged on identical numeric predictions: national S&T talent competitiveness rank of 12 and high-impact publications per 1000 researchers of 8.5, with no disagreement in estimates or reasoning.",
      "summary_ko": "국가 과학기술인재 경쟁력 순위 · 연구자 1천명당 고피인용 논문은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group consistently reasoned that sustained BK21 investment over a decade—funding 19,000 graduate slots and 577 postdoc positions, with high compliance and outputs of 57,000 publications and 9,500 international conference presentations—builds a critical mass of skilled researchers who enhance national innovation capacity.",
      "variables": [
       {
        "key": "national_st_talent_competitiveness_rank",
@@ -10314,6 +10391,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group reached strong consensus on all three input variables, treating the total budget of 410,597 million KRW as ground truth from the policy document. They consistently estimated 19,000 graduate scholarship slots nationally by assuming roughly 70% of the education research group budget (355,151 million KRW) goes to stipends, dividing by an average annual stipend of 12 million KRW, and adjusting downward from a raw calculation of ~20,700 slots. For postdoc positions, they uniformly estimated 1,000 nationally by allocating about 10% of the project budget to postdoc salaries at 36 million KRW per year, yielding ~986 and rounding up. No disagreements emerged; all participants anchored their reasoning on the same policy figures and allocation assumptions.",
      "summary_ko": "신진연구인력 정원 · 총 배정 예산 · 대학원생 연구장학금 정원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 신진연구인력 정원(forward 1,000명 ↔ backward 3,000명, 합의도 33%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus on all three input variables, treating the total budget of 410,597 million KRW as ground truth from the policy document.",
      "variables": [
       {
        "key": "postdoc_positions",
@@ -10565,6 +10643,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group reached full consensus that the total funds disbursed equal the allocated budget of 410,597 million KRW, disbursed via a two-installment schedule (70% in March, 30% in September) to provide early liquidity for stipends and operations while allowing mid-year adjustments. All participants agreed on three evaluation panels convened (annual, mid-term, compliance), 280 consulting sessions held (as explicitly stated for groups that requested them), and 205 compliance checks executed (targeting innovative talent training groups). No disagreements emerged, as all estimates were directly derived from the policy document. The central tendency for all four variables is identical across participants: total_funds_disbursed = 410,597,000,000 KRW, evaluation_panels_convened = 3, consulting_sessions_held = 280, compliance_checks_executed = 205.",
      "summary_ko": "총 집행 예산 · 평가 패널 구성 · 성과 컨설팅 실시 · 이행점검 실시은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus that the total funds disbursed equal the allocated budget of 410,597 million KRW, disbursed via a two-installment schedule (70% in March, 30% in September) to provide early liquidity for stipends and operations while allowing mid-year adjustments.",
      "variables": [
       {
        "key": "total_funds_disbursed",
@@ -10867,6 +10946,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached full consensus on all output estimates, with every participant predicting 19,000 graduate students supported, 1,000 postdoc researchers supported, 57,000 publications, and 7,600 international conference presentations. The causal reasoning was uniform: they derived the supported counts from the policy's stated 19,000 graduate slots and 1,000 postdoc positions, then applied a productivity rate of 3 publications per supported researcher per year (based on a typical 2-4 range in engineering/science) and 0.4 international conference presentations per researcher per year (reflecting a focus on domestic conferences and journal submissions). The high compliance rate of 575 out of 578 groups submitting reports was cited as ensuring reliable reporting. No disagreements or alternative estimates were presented.",
      "summary_ko": "지원 신진연구인력 · 논문 산출 · 지원 대학원생 · 국제학회 발표은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 지원 신진연구인력(forward 1,000명 ↔ backward 3,000명, 합의도 33%), 논문 산출(forward 57,000편 ↔ backward 38,000편, 합의도 67%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all output estimates, with every participant predicting 19,000 graduate students supported, 1,000 postdoc researchers supported, 57,000 publications, and 7,600 international conference presentations.",
      "variables": [
       {
        "key": "postdoc_researchers_supported",
@@ -11169,6 +11249,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached full consensus on all outcome estimates, predicting a 90% graduate employment rate, a 20% international collaboration rate, and an 85% full-time faculty lecture ratio, yielding 17,100 employed graduates and 3,800 internationally collaborating participants. Key causal mechanisms cited included the program's strong reputation, network effects, training quality, conference support, and incentives for collaboration, tempered by a tendency for domestic focus and the continued presence of part-time lecturers. The high compliance rate (575 of 578 groups) was seen as ensuring reliable reporting. No disagreements emerged, with all six participants providing identical numeric predictions.",
      "summary_ko": "BK21 참여 취업자 수(2022) · 국제공동연구 건수(2022) · 국제협력 비율 · 전임교수 강의비율 · 취업률은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 BK21 참여 취업자 수(2022)(forward 17,100명 ↔ backward 85명, 합의도 0%), 국제공동연구 건수(2022)(forward 3,800건 ↔ backward 35건, 합의도 1%), 국제협력 비율(forward 20% ↔ backward 35%, 합의도 57%), 전임교수 강의비율(forward 85% ↔ backward 75%, 합의도 88%), 취업률(forward 90% ↔ backward 85%, 합의도 94%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all outcome estimates, predicting a 90% graduate employment rate, a 20% international collaboration rate, and an 85% full-time faculty lecture ratio, yielding 17,100 employed graduates and 3,800 internationally collaborating participants.",
      "variables": [
       {
        "key": "graduate_employment_rate_of_bk21_participants_in_2022",
@@ -11522,6 +11603,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group unanimously agreed that sustained BK21 investment over a decade will enhance national innovation capacity by creating a critical mass of highly skilled researchers, with dissemination of achievements and systemic cultural changes (e.g., mandatory ethics education, collaboration incentives) raising the overall S&T ecosystem's performance. All participants estimated South Korea's global S&T talent competitiveness rank at 8th (improving from ~10th) and high-impact publications per 1000 researchers at 12.5, based on 57,000 publications, ~0.5% top-cited rate, and 20,000 researchers, adjusted downward from 14.25 due to inactive researchers and engineering field norms. No disagreements emerged; all five participants provided identical numeric predictions and aligned reasoning.",
      "summary_ko": "국가 과학기술인재 경쟁력 순위 · 연구자 1천명당 고피인용 논문은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group unanimously agreed that sustained BK21 investment over a decade will enhance national innovation capacity by creating a critical mass of highly skilled researchers, with dissemination of achievements and systemic cultural changes (e.g., mandatory ethics education, collaboration incentives) raising the overall S&T ecosystem's performance.",
      "variables": [
       {
        "key": "national_st_talent_competitiveness_rank",
@@ -11779,6 +11861,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group focused on translating national BK21 budget figures to Hanyang University-specific inputs, using proportional allocation based on the number of education research groups. There was strong consensus on Hanyang's total funding (20 billion KRW), graduate scholarship slots (658), and postdoc positions (20), derived from the national total of 408,080 million KRW for 577 groups and policy constraints on stipend levels and operating costs. One participant initially provided national-level estimates, but the group converged on Hanyang-specific numbers. The central tendency for all three variables was consistent across participants, with no significant disagreement on the final estimates.",
      "summary_ko": "‘총 배정 예산’은(는) 전민성이 200억원로 가장 낮게, 김찬영이 4080.8억원로 가장 높게 보아 갈렸지만, 토의 끝에 200억원로 수렴했습니다. 이 과정에서 김찬영의 이견(이상치)이 흡수되었습니다. ‘신진연구인력 정원’은(는) 전민성이 20명로 가장 낮게, 김찬영이 577명로 가장 높게 보아 갈렸지만, 토의 끝에 20명로 수렴했습니다. 이 과정에서 김찬영의 이견(이상치)이 흡수되었습니다. ‘대학원생 연구장학금 정원’은(는) 전민성이 658명로 가장 낮게, 김찬영이 19,000명로 가장 높게 보아 갈렸지만, 토의 끝에 658명로 수렴했습니다. 이 과정에서 김찬영의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 총 배정 예산(forward 200억원 ↔ backward 4080.8억원, 합의도 5%), 신진연구인력 정원(forward 20명 ↔ backward 75명, 합의도 27%), 대학원생 연구장학금 정원(forward 658명 ↔ backward 300명, 합의도 46%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on translating national BK21 budget figures to Hanyang University-specific inputs, using proportional allocation based on the number of education research groups.",
      "variables": [
       {
        "key": "total_funding_allocated",
@@ -11825,7 +11908,8 @@
          "type_ko": "교육연구단",
          "value": "4080.8억원",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "For the simulation, I'll set total_funding_allocated to 408,080,000,000 KRW as the national total, but the field asks for Hanyang's allocation."
         }
        ]
       },
@@ -11874,7 +11958,8 @@
          "type_ko": "교육연구단",
          "value": "577명",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "The total funding allocated to Hanyang's BK21 program is part of the national budget of 408,080 million KRW for 2022, which covers 577 education research groups across 68 universities."
         }
        ]
       },
@@ -11923,7 +12008,8 @@
          "type_ko": "교육연구단",
          "value": "19,000명",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "I'll estimate 19,000 slots nationally, and for Hanyang, proportionally about 19,000 * (20/577) ≈ 658 slots."
         }
        ]
       }
@@ -12054,6 +12140,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group focused on the practical execution of funding and oversight mechanisms, with a consensus that the full 20 billion KRW would be disbursed via the 70% March/30% September schedule and that 3 formal evaluation panel meetings would occur. A key disagreement emerged over the scale of consulting sessions and compliance checks: one participant used national totals (280 consulting sessions, 205 compliance checks) while the majority scaled these down proportionally to Hanyang's ~20-30 groups, estimating 10 consulting sessions and 5 compliance checks. The central tendency for consulting sessions was 10 (range 10-280) and for compliance checks was 5 (range 5-205), reflecting the majority view that national figures were not Hanyang-specific.",
      "summary_ko": "총 집행 예산 · 평가 패널 구성은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘이행점검 실시’은(는) 김찬영이 5건로 가장 낮게, 전민성이 205건로 가장 높게 보아 갈렸지만, 토의 끝에 5건로 수렴했습니다. 이 과정에서 전민성의 이견(이상치)이 흡수되었습니다. ‘성과 컨설팅 실시’은(는) 김찬영이 10건로 가장 낮게, 전민성이 280건로 가장 높게 보아 갈렸지만, 토의 끝에 10건로 수렴했습니다. 이 과정에서 전민성의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 이행점검 실시(forward 5건 ↔ backward 205건, 합의도 2%), 성과 컨설팅 실시(forward 10건 ↔ backward 280건, 합의도 4%), 총 집행 예산(forward 200억원 ↔ backward 4080.8억원, 합의도 5%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group focused on the practical execution of funding and oversight mechanisms, with a consensus that the full 20 billion KRW would be disbursed via the 70% March/30% September schedule and that 3 formal evaluation panel meetings would occur.",
      "variables": [
       {
        "key": "compliance_checks_executed",
@@ -12100,7 +12187,8 @@
          "type_ko": "정책담당자",
          "value": "205건",
          "direction": "다수보다 높게",
-         "persona": "전민성 씨는 대구광역시 교육청 산하 기관에서 스마트 교실 구축과 학교 내 네트워크 최적화를 담당하며, 현장 교사들이 겪는 기술적 불편함을 간결한 행정 처리로 해결해 줄 때 깊은 만족감을 느낍니다."
+         "persona": "전민성 씨는 대구광역시 교육청 산하 기관에서 스마트 교실 구축과 학교 내 네트워크 최적화를 담당하며, 현장 교사들이 겪는 기술적 불편함을 간결한 행정 처리로 해결해 줄 때 깊은 만족감을 느낍니다.",
+         "reason": "Compliance checks are conducted on innovative talent training groups, which number 205 nationally; for Hanyang, with about 20-30 groups, I estimate 205 checks as a proportional figure based on the national count."
         }
        ]
       },
@@ -12149,7 +12237,8 @@
          "type_ko": "정책담당자",
          "value": "280건",
          "direction": "다수보다 높게",
-         "persona": "전민성 씨는 대구광역시 교육청 산하 기관에서 스마트 교실 구축과 학교 내 네트워크 최적화를 담당하며, 현장 교사들이 겪는 기술적 불편함을 간결한 행정 처리로 해결해 줄 때 깊은 만족감을 느낍니다."
+         "persona": "전민성 씨는 대구광역시 교육청 산하 기관에서 스마트 교실 구축과 학교 내 네트워크 최적화를 담당하며, 현장 교사들이 겪는 기술적 불편함을 간결한 행정 처리로 해결해 줄 때 깊은 만족감을 느낍니다.",
+         "reason": "Consulting sessions are offered to groups that request them; the policy context indicates 280 out of 578 groups received consulting nationally, so for Hanyang's 20-30 groups, I estimate a proportional 280 sessions (assuming a similar ratio of groups requesting consulting)."
         }
        ]
       },
@@ -12372,6 +12461,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group discussed outputs as direct results of prior inputs and activities, focusing on graduate student and postdoc productivity. There was consensus on the number of graduate students supported (658) and postdoc researchers supported (20). Disagreement centered on per-capita publication and presentation rates: some assumed higher productivity (3 publications per graduate student, 1 presentation each) leading to 1974 publications and 658 presentations, while others used lower averages (2 publications per graduate student, half presenting) yielding 1316 publications and 329 presentations. The central tendency for publications was around 1316-1974, and for presentations 329-658, reflecting differing views on student output and resource constraints.",
      "summary_ko": "지원 대학원생 · 지원 신진연구인력은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘국제학회 발표’은(는) 전민성이 329건로 가장 낮게, 김찬영이 658건로 가장 높게 보아 갈렸지만, 토의 끝에 329건로 수렴했습니다. 이 과정에서 김찬영, 양세정의 이견(이상치)이 흡수되었습니다. ‘논문 산출’은(는) 전민성이 1,316편로 가장 낮게, 김찬영이 1,974편로 가장 높게 보아 갈렸지만, 토의 끝에 1,316편로 수렴했습니다. 이 과정에서 김찬영, 양세정의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원 대학원생(forward 658명 ↔ backward 200명, 합의도 30%), 국제학회 발표(forward 329건 ↔ backward 120건, 합의도 36%), 지원 신진연구인력(forward 20명 ↔ backward 50명, 합의도 40%), 논문 산출(forward 1,316편 ↔ backward 600편, 합의도 46%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group discussed outputs as direct results of prior inputs and activities, focusing on graduate student and postdoc productivity. There was consensus on the number of graduate students supported (658) and postdoc researchers supported (20).",
      "variables": [
       {
        "key": "graduate_students_supported",
@@ -12459,14 +12549,16 @@
          "type_ko": "교육연구단",
          "value": "658건",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "With 658 graduate scholarship slots and 20 postdoc positions funded by the 20 billion KRW budget, I estimate that each graduate student produces about 3 publications per year (based on my experience in engineering fields where students typically publish 2-4 papers annually) and each postdoc produces about 5 publications."
         },
         {
          "agent": "양세정",
          "type_ko": "신진연구인력",
          "value": "658건",
          "direction": "다수보다 높게",
-         "persona": "양세정 씨는 파이썬과 태블로를 능숙하게 다루어 건축 기술 지표의 복잡한 패턴을 한눈에 들어오는 시각화 보고서로 만들어내는 데이터 분석가입니다."
+         "persona": "양세정 씨는 파이썬과 태블로를 능숙하게 다루어 건축 기술 지표의 복잡한 패턴을 한눈에 들어오는 시각화 보고서로 만들어내는 데이터 분석가입니다.",
+         "reason": "With 658 graduate scholarship slots and 20 postdoc positions funded by the 20 billion KRW budget, I estimate that each graduate student produces about 3 publications per year based on my experience in engineering fields where students typically publish 2-4 papers annually."
         }
        ]
       },
@@ -12556,14 +12648,16 @@
          "type_ko": "교육연구단",
          "value": "1,974편",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "I estimate 658 graduate students * 3 publications = 1974 publications, plus a small contribution from postdocs (20 * 5 = 100), but I round to 1974 as a conservative total."
         },
         {
          "agent": "양세정",
          "type_ko": "신진연구인력",
          "value": "1,974편",
          "direction": "다수보다 높게",
-         "persona": "양세정 씨는 파이썬과 태블로를 능숙하게 다루어 건축 기술 지표의 복잡한 패턴을 한눈에 들어오는 시각화 보고서로 만들어내는 데이터 분석가입니다."
+         "persona": "양세정 씨는 파이썬과 태블로를 능숙하게 다루어 건축 기술 지표의 복잡한 패턴을 한눈에 들어오는 시각화 보고서로 만들어내는 데이터 분석가입니다.",
+         "reason": "Postdocs produce about 5 publications each, but since they are fewer, the total publications are driven by graduate students: 658 * 3 = 1974 publications, plus a small contribution from postdocs (20 * 5 = 100), but I round to 1974 as a conservative total."
         }
        ]
       }
@@ -12704,6 +12798,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached strong consensus that the graduate employment rate would be 90% (592 out of 658 students) and the international collaboration rate would be 50% (329 students), with a full-time faculty lecture ratio of 85%. These estimates were consistently derived from prior phases showing 658 graduate slots and 329 international conference presentations, and were justified by the program's reputation, network effects, practical training, and incentives for full-time faculty hiring. No disagreements emerged, as all participants independently converged on identical numeric predictions. The central tendency across all estimates was uniform, with no variation in predicted values.",
      "summary_ko": "BK21 참여 취업자 수(2022) · 국제공동연구 건수(2022) · 국제협력 비율 · 전임교수 강의비율 · 취업률은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 BK21 참여 취업자 수(2022)(forward 592명 ↔ backward 180명, 합의도 30%), 국제공동연구 건수(2022)(forward 329건 ↔ backward 120건, 합의도 36%), 국제협력 비율(forward 50% ↔ backward 35%, 합의도 70%), 전임교수 강의비율(forward 85% ↔ backward 75%, 합의도 88%), 취업률(forward 90% ↔ backward 82.5%, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached strong consensus that the graduate employment rate would be 90% (592 out of 658 students) and the international collaboration rate would be 50% (329 students), with a full-time faculty lecture ratio of 85%.",
      "variables": [
       {
        "key": "graduate_employment_rate_of_bk21_participants_in_2022",
@@ -13057,6 +13152,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group discussed that sustained BK21 investment over a decade builds a strong research culture and talent pipeline, but its national impact is gradual due to limited program scale and time needed for systemic change. There was consensus that Korea's S&T talent competitiveness rank would improve modestly, with most estimating rank 15, and high-impact publications per 1000 researchers at 35. One participant estimated a more optimistic rank of 12 and 45 publications, citing strong group-level outputs and dissemination effects, but others argued this overestimates near-term national impact given that many graduates are early-career. The numeric range for rank was 12-15, and for publications 35-45, with a central tendency around rank 15 and 35 publications.",
      "summary_ko": "‘국가 과학기술인재 경쟁력 순위’은(는) 김찬영이 12위로 가장 낮게, 김현지이 15위로 가장 높게 보아 갈렸지만, 토의 끝에 14위로 수렴했습니다. 이 과정에서 김찬영의 이견(이상치)이 흡수되었습니다. ‘연구자 1천명당 고피인용 논문’은(는) 김현지이 35편로 가장 낮게, 김찬영이 45편로 가장 높게 보아 갈렸지만, 토의 끝에 37편로 수렴했습니다. 이 과정에서 김찬영의 이견(이상치)이 흡수되었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group discussed that sustained BK21 investment over a decade builds a strong research culture and talent pipeline, but its national impact is gradual due to limited program scale and time needed for systemic change.",
      "variables": [
       {
        "key": "national_st_talent_competitiveness_rank",
@@ -13103,7 +13199,8 @@
          "type_ko": "교육연구단",
          "value": "12위",
          "direction": "다수보다 낮게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "I estimate Korea's rank in S&T talent competitiveness will improve to around 12th globally, given the program's scale and the systemic changes in research culture—integrity, collaboration, and interdisciplinarity—that alumni propagate as they progress in their careers."
         }
        ]
       },
@@ -13152,7 +13249,8 @@
          "type_ko": "교육연구단",
          "value": "45편",
          "direction": "다수보다 높게",
-         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다."
+         "persona": "김찬영 씨는 딱딱한 공학 설계 도면과 제조 공정을 학생들의 눈높이에 맞춰 쉽고 재미있게 풀어내며, 강의실의 냉랭한 분위기를 가벼운 농담으로 순식간에 녹여내는 능숙한 교육자입니다.",
+         "reason": "For high-impact publications, I estimate 45 per 1000 researchers, based on our group's output of about 3 publications per graduate student per year, with a fraction (top 1%) being high-impact."
         }
        ]
       }
@@ -13330,6 +13428,7 @@
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group reached full consensus on all three input variables, estimating total funding allocated at 408,080,000,000 KRW, graduate scholarship slots at 19,000, and postdoc positions at 577. All participants anchored their estimates on the fixed Ministry of Education budget and policy documents, with reasoning converging on the stated total of 12,600 future talent and 6,400 innovation talent students summing to 19,000 slots, and 577 education research groups each supporting one postdoc. No disagreements emerged; the central tendency matched the unanimous predictions.",
      "summary_ko": "신진연구인력 정원 · 총 배정 예산 · 대학원생 연구장학금 정원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 신진연구인력 정원(forward 577명 ↔ backward 3,000명, 합의도 19%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all three input variables, estimating total funding allocated at 408,080,000,000 KRW, graduate scholarship slots at 19,000, and postdoc positions at 577.",
      "variables": [
       {
        "key": "postdoc_positions",
@@ -13581,6 +13680,7 @@
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "All participants agreed on the activities phase estimates, citing the fixed 2022 budget of 408,080,000,000 KRW disbursed in two installments (70% in March, 30% in September), three formal evaluation panels (annual, mid-term preparation, compliance checks), 280 consulting sessions (voluntary participation from 578 groups), and 205 compliance checks targeting innovative talent training groups. No disagreements emerged, as the policy context and operational data were clear and consistent across all stakeholder perspectives.",
      "summary_ko": "총 집행 예산 · 평가 패널 구성 · 성과 컨설팅 실시 · 이행점검 실시은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "All participants agreed on the activities phase estimates, citing the fixed 2022 budget of 408,080,000,000 KRW disbursed in two installments (70% in March, 30% in September), three formal evaluation panels (annual, mid-term preparation, compliance checks), 280 consulting sessions (voluntary participation from 578 groups), and 205 compliance checks targeting innovative talent training groups.",
      "variables": [
       {
        "key": "total_funds_disbursed",
@@ -13883,6 +13983,7 @@
      "desc": "활동의 직접적 산출물",
      "summary": "The group agreed that the number of graduate students supported (19,000) and postdocs supported (577) are fixed by policy. For publications, there was a split: one participant estimated 38,000 (2 per participant), while the majority estimated 28,500 (1.5 per participant), citing that many students are early-stage and not all research leads to immediate publication. For international conference presentations, estimates were 7,600 (20% of 38,000) versus 5,700 (20% of 28,500), with the majority citing budget and travel constraints. The central tendency for publications was 28,500 and for presentations 5,700.",
      "summary_ko": "지원 신진연구인력 · 지원 대학원생은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘논문 산출’은(는) 박세린이 28,500편로 가장 낮게, 남성재이 38,000편로 가장 높게 보아 갈렸지만, 토의 끝에 28,500편로 수렴했습니다. 이 과정에서 남성재의 이견(이상치)이 흡수되었습니다. ‘국제학회 발표’은(는) 박세린이 5,700건로 가장 낮게, 남성재이 7,600건로 가장 높게 보아 갈렸지만, 토의 끝에 5,700건로 수렴했습니다. 이 과정에서 남성재의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원 신진연구인력(forward 577명 ↔ backward 3,000명, 합의도 19%), 논문 산출(forward 28,500편 ↔ backward 38,000편, 합의도 75%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group agreed that the number of graduate students supported (19,000) and postdocs supported (577) are fixed by policy.",
      "variables": [
       {
        "key": "postdoc_researchers_supported",
@@ -13970,7 +14071,8 @@
          "type_ko": "신진연구인력",
          "value": "38,000편",
          "direction": "다수보다 높게",
-         "persona": "남성재 씨는 대학원에서 전공한 정보통신기술 지식을 활용해 도매 시장의 복잡한 유통 데이터를 태블로와 엑셀로 시각화하며 하루를 보냅니다."
+         "persona": "남성재 씨는 대학원에서 전공한 정보통신기술 지식을 활용해 도매 시장의 복잡한 유통 데이터를 태블로와 엑셀로 시각화하며 하루를 보냅니다.",
+         "reason": "Given that many students are in early stages, I conservatively assume an average of 2 publications per supported participant (including both students and postdocs), yielding 38,000 publications."
         }
        ]
       },
@@ -14060,7 +14162,8 @@
          "type_ko": "신진연구인력",
          "value": "7,600건",
          "direction": "다수보다 높게",
-         "persona": "남성재 씨는 대학원에서 전공한 정보통신기술 지식을 활용해 도매 시장의 복잡한 유통 데이터를 태블로와 엑셀로 시각화하며 하루를 보냅니다."
+         "persona": "남성재 씨는 대학원에서 전공한 정보통신기술 지식을 활용해 도매 시장의 복잡한 유통 데이터를 태블로와 엑셀로 시각화하며 하루를 보냅니다.",
+         "reason": "For international conference presentations, I estimate that about 20% of publications are presented at international conferences, leading to 7,600 presentations."
         }
        ]
       }
@@ -14201,6 +14304,7 @@
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached full consensus on all outcome estimates, predicting a graduate employment rate of 87.0% (16,530 out of 19,000 graduates) and an international research collaboration rate of 16% (3,040 out of 19,000 participants), with a full-time faculty lecture ratio of 75%. Key causal mechanisms discussed included the policy's target of a 0.3%p annual employment rate increase from an 86.7% baseline, and the conversion of 5,700 international conference presentations into sustained collaborations at roughly 16%. Participants agreed that evaluation and consulting feedback loops had limited impact in the first year, leading to conservative estimates. No disagreements emerged, with all estimates and reasoning closely aligned.",
      "summary_ko": "국제공동연구 건수(2022) · 국제협력 비율 · 전임교수 강의비율 · BK21 참여 취업자 수(2022) · 취업률은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward(상향식) 추정을 대조하면 국제공동연구 건수(2022)(forward 3,040건 ↔ backward 200건, 합의도 7%), 국제협력 비율(forward 16% ↔ backward 35%, 합의도 46%), 전임교수 강의비율(forward 75% ↔ backward 85%, 합의도 88%), BK21 참여 취업자 수(2022)(forward 16,530명 ↔ backward 15,000명, 합의도 91%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "basis": "The group reached full consensus on all outcome estimates, predicting a graduate employment rate of 87.0% (16,530 out of 19,000 graduates) and an international research collaboration rate of 16% (3,040 out of 19,000 participants), with a full-time faculty lecture ratio of 75%.",
      "variables": [
       {
        "key": "international_research_collaboration_rate_of_bk21_participants_in_2022",
@@ -14554,6 +14658,7 @@
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus that sustained BK21 investment (408 billion KRW, 19,000 graduate slots, 577 postdocs) will gradually improve South Korea's S&T talent competitiveness rank from about 10th to 8th, and increase high-impact publications to 12.5 per 1000 researchers. Key causal mechanisms included the program's emphasis on research integrity, collaboration, and dissemination of best practices through forums and publications, which foster a healthier research culture and raise ecosystem performance over a decade. All five participants estimated identical values (rank 8, publications 12.5), reflecting strong alignment on conservative projections given the time lag for full effects. No disagreements were expressed; the reasoning consistently cited the program's scale, focus on quality, and gradual influence on national innovation capacity.",
      "summary_ko": "국가 과학기술인재 경쟁력 순위 · 연구자 1천명당 고피인용 논문은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "basis": "The group reached full consensus that sustained BK21 investment (408 billion KRW, 19,000 graduate slots, 577 postdocs) will gradually improve South Korea's S&T talent competitiveness rank from about 10th to 8th, and increase high-impact publications to 12.5 per 1000 researchers.",
      "variables": [
       {
        "key": "national_st_talent_competitiveness_rank",
