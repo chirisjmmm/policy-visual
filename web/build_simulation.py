@@ -16,6 +16,7 @@ import json, os, re, statistics
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+RAW = os.path.join(ROOT, "raw_data")
 
 # Human-readable labels / units for every prediction variable seen in the logs.
 VAR_META = {
@@ -228,7 +229,7 @@ def build_scenario(d):
 def main():
     scenarios = []
     for i in range(1, 6):
-        path = os.path.join(ROOT, f"scenario_{i}.json")
+        path = os.path.join(RAW, f"scenario_{i}.json")
         if not os.path.exists(path):
             continue
         d = json.load(open(path, encoding="utf-8"))
