@@ -74,34 +74,80 @@ def fmt_ko(v, fmt, unit):
     return f"{int(round(v)):,}{unit}"
 
 
-def phase_summary_ko(variables):
-    """Build a factual Korean summary of the phase from the structured data."""
+def persona_short(text, max_len=95):
+    """First sentence of the (Korean) professional persona, trimmed."""
+    if not text:
+        return ""
+    text = text.strip().replace("\n", " ")
+    # cut at first Korean sentence end
+    for end in ("다. ", "요. ", "함. "):
+        idx = text.find(end)
+        if 0 < idx < max_len + 30:
+            return text[: idx + 2].strip()
+    if len(text) <= max_len:
+        return text
+    return text[:max_len].rstrip() + "…"
+
+
+def variable_dissent(var, agents_meta):
+    """Outlier agents on this variable, with direction and persona, for the
+    clickable 'why did they differ' detail."""
+    cons = var.get("consensus")
+    out = []
+    for o in var["initial"]:
+        if not o["outlier"]:
+            continue
+        a = agents_meta.get(o["agent"], {})
+        if cons is not None and o["value"] is not None:
+            direction = "다수보다 높게" if o["value"] > cons else "다수보다 낮게"
+        else:
+            direction = "다른 값으로"
+        out.append({
+            "agent": o["agent"],
+            "type_ko": a.get("type_ko", ""),
+            "value": fmt_ko(o["value"], var["fmt"], var["unit"]),
+            "direction": direction,
+            "persona": a.get("persona", ""),
+        })
+    return out
+
+
+def phase_summary_ko(variables, agents_meta):
+    """A detailed, factual Korean summary of the phase discussion + reconciliation."""
     if not variables:
         return ""
-    v0 = variables[0]
-    label = v0["label"]
-    vals = [o["value"] for o in v0["initial"] if o["value"] is not None]
-    if not vals:
-        return ""
-    mn, mx = min(vals), max(vals)
-    cons = v0["consensus"]
-    outliers = [o["agent"] for o in v0["initial"] if o["outlier"]]
-    fm = lambda x: fmt_ko(x, v0["fmt"], v0["unit"])
+    fmv = lambda v, m: fmt_ko(v, m["fmt"], m["unit"])
     parts = []
-    if mn == mx:
-        parts.append(f"다섯 참여자는 ‘{label}’을(를) 처음부터 {fm(cons)}로 의견이 일치했습니다.")
-    else:
-        s = f"‘{label}’은(는) 초기 추정이 {fm(mn)}~{fm(mx)}로 갈렸지만, 근거를 교환하며 {fm(cons)}로 수렴했습니다."
-        if outliers:
-            s += f" 특히 {', '.join(outliers)}의 이견(이상치)이 토의 과정에서 흡수되었습니다."
+    agreed, spread = [], []
+    for v in variables:
+        vals = [x["value"] for x in v["initial"] if x["value"] is not None]
+        (agreed if vals and min(vals) == max(vals) else spread).append(v)
+    if agreed:
+        names = " · ".join(dict.fromkeys(v["label"] for v in agreed))
+        parts.append(f"{names}은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다.")
+    seen_label = set()
+    for v in spread:
+        if v["label"] in seen_label:
+            continue
+        seen_label.add(v["label"])
+        pairs = [(x["agent"], x["value"]) for x in v["initial"] if x["value"] is not None]
+        hi = max(pairs, key=lambda t: t[1]); lo = min(pairs, key=lambda t: t[1])
+        outs = [x["agent"] for x in v["initial"] if x["outlier"]]
+        s = (f"‘{v['label']}’은(는) {lo[0]}이 {fmv(lo[1], v)}로 가장 낮게, "
+             f"{hi[0]}이 {fmv(hi[1], v)}로 가장 높게 보아 갈렸지만, "
+             f"토의 끝에 {fmv(v['consensus'], v)}로 수렴했습니다.")
+        if outs:
+            s += f" 이 과정에서 {', '.join(outs)}의 이견(이상치)이 흡수되었습니다."
         parts.append(s)
-    contested = [v["label"] for v in variables
+    contested = [v for v in variables
                  if v["consistency"] is not None and v["consistency"] < 0.95]
     if contested:
-        parts.append(f"다만 forward·backward 교차검증에서 {', '.join(contested)}의 추정이 어긋나 "
-                     f"합의도가 낮았습니다(부분 합의·미합의 지점).")
+        cs = [f"{v['label']}(forward {fmv(v['forward_agg'], v)} ↔ backward {fmv(v['backward_agg'], v)}, "
+              f"합의도 {round(v['consistency'] * 100)}%)" for v in contested]
+        parts.append("forward와 backward(상향식) 추정을 대조하면 " + ", ".join(cs)
+                     + "에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.")
     else:
-        parts.append("forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.")
+        parts.append("forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.")
     return " ".join(parts)
 
 
@@ -182,16 +228,16 @@ def build_scenario(d):
     agents = []
     for i, p in enumerate(d["participants"]):
         st = p["stakeholder_type"]
-        tagline = first_sentences(p.get("professional_persona", ""), 70)
         agents.append({
             "name": p["name"],
             "type": st,
             "type_ko": STAKEHOLDER_KO.get(st, st),
             "color": STAKEHOLDER_COLOR.get(st, "#64748b"),
-            "tagline": tagline,
+            "persona": persona_short(p.get("professional_persona", "")),
             "seat": i,
         })
     name_to_agent = {a["name"]: a for a in agents}
+    agents_meta = {a["name"]: a for a in agents}
 
     # cross-check lookup: (phase, variable) -> record
     cc = {}
@@ -228,6 +274,8 @@ def build_scenario(d):
             })
         # sort: most-contested variable first (largest backward/forward disagreement)
         variables.sort(key=lambda v: (v["consistency"] if v["consistency"] is not None else 1))
+        for v in variables:
+            v["dissent"] = variable_dissent(v, agents_meta)
 
         # per-agent posts (initial forward) for speech bubbles
         agent_posts = []
@@ -271,7 +319,7 @@ def build_scenario(d):
             "label_en": pmeta[1],
             "desc": pmeta[2],
             "summary": fp.get("phase_summary", ""),
-            "summary_ko": phase_summary_ko(variables),
+            "summary_ko": phase_summary_ko(variables, agents_meta),
             "variables": variables,
             "agent_posts": agent_posts,
             "backward_posts": backward_posts,
