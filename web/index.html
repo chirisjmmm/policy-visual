@@ -40,13 +40,14 @@
     <div class="graph-meta">
       <h2 id="graphTitle"></h2>
       <p id="graphSubtitle" class="muted"></p>
-      <p id="graphNote" class="note-box"></p>
     </div>
     <div class="graph-wrap">
       <svg id="graphSvg"></svg>
       <div class="legend" id="graphLegend"></div>
-      <div class="node-tip" id="nodeTip"></div>
+      <div class="hint-chip">노드를 <b>클릭</b>하면 행위자 설명·수행 항목이 열리고, <b>마우스를 올리면</b> 연결된 행위자만 강조됩니다.</div>
+      <aside class="node-panel" id="nodePanel"></aside>
     </div>
+    <div class="graph-overview" id="graphOverview"></div>
   </section>
 
   <!-- ============ TAB 2: SIMULATION ============ -->
@@ -59,10 +60,12 @@
       </div>
     </div>
 
+    <!-- forward -> backward U-turn flow map -->
+    <div class="flow-map" id="flowMap"></div>
+
     <div class="sim-layout">
       <!-- left: round table -->
       <div class="table-col">
-        <div class="phase-track" id="phaseTrack"></div>
         <div class="roundtable-wrap">
           <svg id="tableSvg" viewBox="0 0 600 600"></svg>
           <div class="table-center" id="tableCenter">
@@ -79,11 +82,11 @@
         <div class="step-caption" id="stepCaption"></div>
       </div>
 
-      <!-- right: reconciliation panel -->
+      <!-- right: compact results + detail -->
       <div class="recon-col">
-        <h3>이 단계의 결론 <span class="muted-sm">(forward · backward 교차검증)</span></h3>
+        <h3 id="reconTitle">이 단계의 결론</h3>
         <div id="reconPanel" class="recon-panel"></div>
-        <div class="consensus-note" id="consensusNote"></div>
+        <div class="detail-box" id="detailBox"></div>
       </div>
     </div>
   </section>
@@ -92,10 +95,13 @@
   <section id="tab-feedback" class="tab-panel">
     <div class="panel-head fb-head">
       <p id="fbIntro" class="fb-intro"></p>
-      <div class="fb-filters" id="fbFilters">
-        <button class="fbf active" data-filter="all">전체</button>
-        <button class="fbf" data-filter="kg">정책 구조에 대한 피드백</button>
-        <button class="fbf" data-filter="sim">시뮬레이션에 대한 피드백</button>
+      <div class="fb-bar">
+        <div class="fb-filters" id="fbFilters">
+          <button class="fbf active" data-filter="all">전체</button>
+          <button class="fbf" data-filter="kg">정책 구조</button>
+          <button class="fbf" data-filter="sim">시뮬레이션</button>
+        </div>
+        <span class="fb-count" id="fbCount"></span>
       </div>
     </div>
     <div id="feedbackBody" class="feedback-body"></div>

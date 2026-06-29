@@ -93,7 +93,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "류수빈 씨는 인문학 전공자라는 배경을 무기로 딱딱한 정보 통신기술을 말랑말랑하게 풀어내어 학생들의 만족도가 높은 교수이며, 학…",
+     "persona": "류수빈 씨는 인문학 전공자라는 배경을 무기로 딱딱한 정보 통신기술을 말랑말랑하게 풀어내어 학생들의 만족도가 높은 교수이며, 학계의 명예나 성과 경쟁보다는 정년 보장과 개인…",
      "seat": 0
     },
     {
@@ -101,7 +101,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "박은지 씨는 교육청의 딱딱한 지침을 학교 현장의 분위기에 맞춰 부드럽게 다듬어 전달하는 능력이 탁월한 장학관입니다.",
+     "persona": "박은지 씨는 교육청의 딱딱한 지침을 학교 현장의 분위기에 맞춰 부드럽게 다듬어 전달하는 능력이 탁월한 장학관입니다.",
      "seat": 1
     },
     {
@@ -109,7 +109,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "김보람 씨는 안산 공단의 투박한 연구소에서 전자제품 설계 도면을 그리며, 인문학적 통찰을 더해 사용자가 읽기 쉬운 기술 문서를…",
+     "persona": "김보람 씨는 안산 공단의 투박한 연구소에서 전자제품 설계 도면을 그리며, 인문학적 통찰을 더해 사용자가 읽기 쉬운 기술 문서를 만드는 데 집착합니다.",
      "seat": 2
     },
     {
@@ -117,7 +117,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문…",
+     "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다.",
      "seat": 3
     },
     {
@@ -125,7 +125,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수…",
+     "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…",
      "seat": 4
     }
    ],
@@ -146,7 +146,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, with all participants calculating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW each), 200 fellowship slots, and a 30% regional quota (60 slots for regional institutions). Key themes included the policy's explicit stipulations and the goal of balanced national research capacity through regional allocation. No disagreements emerged, as all estimates and reasoning aligned with the stated policy context. The central tendency and range were identical across all predictions: total_annual_budget_krw = 26,000,000,000, fellowship_slots = 200, regional_quota_pct = 30.0.",
-     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -186,7 +186,8 @@
        "forward_agg": 26000000000.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 26000000000.0
+       "reconciled": 26000000000.0,
+       "dissent": []
       },
       {
        "key": "fellowship_slots",
@@ -226,7 +227,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "regional_quota_pct",
@@ -266,7 +268,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -394,7 +397,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's fixed annual selection of 200 fellows, with applications estimated between 900 and 1200, reflecting a competitive acceptance rate of 16.7% to 22.2%. Consensus emerged that the 30% regional quota and eligibility restrictions narrow the applicant pool, while midterm evaluations emphasize process-oriented performance, leading to pass rates of 80% to 90% (160-180 fellows). Disagreement centered on application volume, with lower estimates citing burdensome requirements and regional quota discouraging Seoul-based applicants, and on midterm pass rates, with lower estimates highlighting risks from lab changes and weaker regional research environments. Central tendencies were approximately 1100 applications and 175 fellows passing midterm.",
-     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 900건~1,200건로 갈렸지만, 근거를 교환하며 900건로 수렴했습니다. 특히 류수빈, 구민혁의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 구민혁이 900건로 가장 낮게, 김보람이 1,200건로 가장 높게 보아 갈렸지만, 토의 끝에 900건로 수렴했습니다. 이 과정에서 류수빈, 구민혁의 이견(이상치)이 흡수되었습니다. ‘단계평가 통과’은(는) 구민혁이 160명로 가장 낮게, 김보람이 180명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. 이 과정에서 구민혁의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 900건 ↔ backward 600건, 합의도 67%), 단계평가 통과(forward 160명 ↔ backward 140명, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "applications_received",
@@ -434,7 +437,23 @@
        "forward_agg": 900.0,
        "consistency": 0.6666666666666667,
        "gap": -300.0,
-       "reconciled": 900.0
+       "reconciled": 900.0,
+       "dissent": [
+        {
+         "agent": "류수빈",
+         "type_ko": "평가위원",
+         "value": "1,000건",
+         "direction": "다수보다 높게",
+         "persona": "류수빈 씨는 인문학 전공자라는 배경을 무기로 딱딱한 정보 통신기술을 말랑말랑하게 풀어내어 학생들의 만족도가 높은 교수이며, 학계의 명예나 성과 경쟁보다는 정년 보장과 개인…"
+        },
+        {
+         "agent": "구민혁",
+         "type_ko": "박사후연구원",
+         "value": "900건",
+         "direction": "다수보다 낮게",
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+        }
+       ]
       },
       {
        "key": "midterm_evaluations_passed",
@@ -474,7 +493,16 @@
        "forward_agg": 160.0,
        "consistency": 0.875,
        "gap": -20.0,
-       "reconciled": 160.0
+       "reconciled": 160.0,
+       "dissent": [
+        {
+         "agent": "구민혁",
+         "type_ko": "박사후연구원",
+         "value": "160명",
+         "direction": "다수보다 낮게",
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+        }
+       ]
       },
       {
        "key": "fellows_selected",
@@ -514,7 +542,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -642,7 +671,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group agreed that 200 fellows are active in the 2021-2022 window, based on the policy of annual selection. For stage_two_fellows, estimates ranged from 160 to 174, with the majority (three participants) converging on 174, reflecting an 87% pass rate from the Activities phase, while two participants proposed lower rates (85% and 80%) due to risks from lab changes and weaker regional research environments. For annual_reports_submitted, there was consensus on 400 reports, as only the first cohort of 200 fellows submits one report per year in the two-year window, with one outlier estimating 600 by incorrectly including the full cohort lifetime. Key causal mechanisms discussed included midterm evaluation pass rates, lab change disruptions, and regional infrastructure challenges affecting attrition.",
-     "summary_ko": "‘2단계 진입 펠로우’은(는) 초기 추정이 160명~174명로 갈렸지만, 근거를 교환하며 160명로 수렴했습니다. 특히 구민혁의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘2단계 진입 펠로우’은(는) 구민혁이 160명로 가장 낮게, 김보람이 174명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. 이 과정에서 구민혁의 이견(이상치)이 흡수되었습니다. ‘연차보고서 제출’은(는) 박은지이 400건로 가장 낮게, 김보람이 600건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 김보람의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 2단계 진입 펠로우(forward 160명 ↔ backward 140명, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "stage_two_fellows",
@@ -682,7 +711,16 @@
        "forward_agg": 160.0,
        "consistency": 0.875,
        "gap": -20.0,
-       "reconciled": 160.0
+       "reconciled": 160.0,
+       "dissent": [
+        {
+         "agent": "구민혁",
+         "type_ko": "박사후연구원",
+         "value": "160명",
+         "direction": "다수보다 낮게",
+         "persona": "구민혁 씨는 내열 플라스틱의 배합비를 최적화하는 정밀한 분석력을 갖춘 연구원이며, 전공을 살려 기술 성과를 특허법에 맞게 명문화하는 작업에 능숙합니다."
+        }
+       ]
       },
       {
        "key": "fellows_active",
@@ -722,7 +760,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "annual_reports_submitted",
@@ -762,7 +801,16 @@
        "forward_agg": 400.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 400.0
+       "reconciled": 400.0,
+       "dissent": [
+        {
+         "agent": "김보람",
+         "type_ko": "박사후연구원",
+         "value": "600건",
+         "direction": "다수보다 높게",
+         "persona": "김보람 씨는 안산 공단의 투박한 연구소에서 전자제품 설계 도면을 그리며, 인문학적 통찰을 더해 사용자가 읽기 쉬운 기술 문서를 만드는 데 집착합니다."
+        }
+       ]
       }
      ],
      "agent_posts": [
@@ -890,7 +938,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the early-stage challenges of the first cohort of 200 fellows, emphasizing that ramp-up time, lab changes (10-15% within 3 years), and weaker infrastructure at regional institutions (30% quota) would limit initial SCI(E) publication output. There was strong consensus on the regional participation rate (30%) and on a lower publication estimate of 340 (0.85 per fellow per year) and a 25% tenure-track transition rate, driven by competitive job markets and regional barriers. One dissenting voice estimated higher productivity (400 publications, 1 per fellow per year) and a 35% transition rate, assuming smoother early progress and policy prestige. Numeric predictions ranged from 340 to 400 for publications and 25% to 35% for tenure-track transition, with the majority converging on the lower end.",
-     "summary_ko": "‘정년트랙 전환율’은(는) 초기 추정이 25%~35%로 갈렸지만, 근거를 교환하며 20%로 수렴했습니다. 특히 이상근의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 정년트랙 전환율, SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘정년트랙 전환율’은(는) 류수빈이 25%로 가장 낮게, 이상근이 35%로 가장 높게 보아 갈렸지만, 토의 끝에 20%로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. ‘SCI(E) 논문 수’은(는) 류수빈이 340편로 가장 낮게, 이상근이 400편로 가장 높게 보아 갈렸지만, 토의 끝에 370편로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 류수빈이 340편로 가장 낮게, 이상근이 400편로 가장 높게 보아 갈렸지만, 토의 끝에 370편로 수렴했습니다. 이 과정에서 이상근의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 정년트랙 전환율(forward 20% ↔ backward 12.5%, 합의도 62%), SCI(E) 논문 수(forward 370편 ↔ backward 400편, 합의도 92%), SCI 논문 수(forward 370편 ↔ backward 400편, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -930,7 +978,16 @@
        "forward_agg": 20.0,
        "consistency": 0.625,
        "gap": -7.5,
-       "reconciled": 20.0
+       "reconciled": 20.0,
+       "dissent": [
+        {
+         "agent": "이상근",
+         "type_ko": "정책담당자",
+         "value": "35%",
+         "direction": "다수보다 높게",
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+        }
+       ]
       },
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -970,7 +1027,16 @@
        "forward_agg": 370.0,
        "consistency": 0.925,
        "gap": 30.0,
-       "reconciled": 370.0
+       "reconciled": 370.0,
+       "dissent": [
+        {
+         "agent": "이상근",
+         "type_ko": "정책담당자",
+         "value": "400편",
+         "direction": "다수보다 높게",
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+        }
+       ]
       },
       {
        "key": "sci_publications_count",
@@ -1010,7 +1076,16 @@
        "forward_agg": 370.0,
        "consistency": 0.925,
        "gap": 30.0,
-       "reconciled": 370.0
+       "reconciled": 370.0,
+       "dissent": [
+        {
+         "agent": "이상근",
+         "type_ko": "정책담당자",
+         "value": "400편",
+         "direction": "다수보다 높게",
+         "persona": "이상근 씨는 대학 강의실과 공학 연구실을 오가며 빌딩 정보 모델링 기술로 시공 오차를 잡아내고, 중소기업 현장에서 바로 쓸 수 있는 실무 공정 매뉴얼을 집필하는 데 매진합…"
+        }
+       ]
       },
       {
        "key": "regional_institution_participation_pct",
@@ -1050,7 +1125,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -1188,7 +1264,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three long-term impact variables, estimating that approximately 20 former fellows (10% of the original 200) will hold tenure-track positions after 5–10 years, regional publication share will grow by 2.5 percentage points over a decade, and 30 former fellows will become independent PIs. Causal mechanisms centered on the 30% regional quota directing 60 fellows to regional institutions, where lower publication productivity (0.7 vs. 1.0 per year) and weaker infrastructure limit capacity growth, while the program's support for research independence enables non-tenure-track PI roles. All participants agreed that systemic barriers in the academic job market and regional research environments constrain the fellowship's long-term impact, with no disagreements in estimates or reasoning.",
-     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 20명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -1228,7 +1304,8 @@
        "forward_agg": 20.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 20.0
+       "reconciled": 20.0,
+       "dissent": []
       },
       {
        "key": "regional_publication_share_growth",
@@ -1268,7 +1345,8 @@
        "forward_agg": 2.5,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 2.5
+       "reconciled": 2.5,
+       "dissent": []
       },
       {
        "key": "independent_pi_count",
@@ -1308,7 +1386,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -1441,7 +1520,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "박채연 씨는 보건복지 전공의 지식을 자동차 전자제어 설계에 녹여내어, 운전자의 생체 신호에 반응하는 콕핏 시스템을 개발하는 화…",
+     "persona": "박채연 씨는 보건복지 전공의 지식을 자동차 전자제어 설계에 녹여내어, 운전자의 생체 신호에 반응하는 콕핏 시스템을 개발하는 화성시의 연구원입니다.",
      "seat": 0
     },
     {
@@ -1449,7 +1528,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다. 인문학 전공자 출신답…",
+     "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다.",
      "seat": 1
     },
     {
@@ -1457,7 +1536,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "윤지영 씨는 수천 장의 생활기록부를 훑으며 행간에 숨은 학생의 거짓말과 진심을 가려내는 일에 능숙하지만, 입시철이 되면 쏟아지…",
+     "persona": "윤지영 씨는 수천 장의 생활기록부를 훑으며 행간에 숨은 학생의 거짓말과 진심을 가려내는 일에 능숙하지만, 입시철이 되면 쏟아지는 서류 뭉치에 압도되어 책상 위에 포스트잇을 무질서하게 붙여두는 습관이 있습니다.",
      "seat": 2
     },
     {
@@ -1465,7 +1544,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "이은정 씨는 강의실에서는 제조 공정의 병목 구간을 정확히 짚어내는 냉철한 공학 교수지만, 연구실 책상 위에는 읽다 만 전공 서…",
+     "persona": "이은정 씨는 강의실에서는 제조 공정의 병목 구간을 정확히 짚어내는 냉철한 공학 교수지만, 연구실 책상 위에는 읽다 만 전공 서적과 커피 컵이 층층이 쌓여 있는 덜렁이 면모를 가지고 있습니다.",
      "seat": 3
     },
     {
@@ -1473,7 +1552,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
+     "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다.",
      "seat": 4
     }
    ],
@@ -1494,7 +1573,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots reserved). They consistently cited the policy's explicit figures for per-fellow funding (100 million KRW direct costs + 30 million KRW indirect costs) and slot allocation, leading to full consensus on all numeric predictions. No disagreements emerged, as participants treated these values as fixed policy parameters rather than estimates. The central tendency is identical across all predictions, with no range in values.",
-     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -1534,7 +1613,8 @@
        "forward_agg": 26000000000.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 26000000000.0
+       "reconciled": 26000000000.0,
+       "dissent": []
       },
       {
        "key": "fellowship_slots",
@@ -1574,7 +1654,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "regional_quota_pct",
@@ -1614,7 +1695,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -1742,7 +1824,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group focused on the fellowship's fixed capacity of 200 selected fellows per year and the process-oriented midterm evaluation, which they expected to yield a 90% pass rate (180 out of 200). They estimated applications between 1,200 and 1,500, with a central tendency around 1,300–1,400, reflecting differing views on the eligible pool's size, including PhD candidates and regional applicants. All agreed on a 10% lab change rate during the first three years, citing policy allowances and typical mobility patterns. The main divergence was in application volume, driven by assumptions about competition and eligibility breadth.",
-     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 1,200건~1,500건로 갈렸지만, 근거를 교환하며 1,300건로 수렴했습니다. 특히 문민철의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "단계평가 통과 · 최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 이은정이 1,200건로 가장 낮게, 문민철이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 문민철의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 1,300건 ↔ backward 4,000건, 합의도 32%), 단계평가 통과(forward 180명 ↔ backward 140명, 합의도 78%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "applications_received",
@@ -1782,7 +1864,16 @@
        "forward_agg": 1300.0,
        "consistency": 0.32499999999999996,
        "gap": 2700.0,
-       "reconciled": 1300.0
+       "reconciled": 1300.0,
+       "dissent": [
+        {
+         "agent": "문민철",
+         "type_ko": "정책담당자",
+         "value": "1,500건",
+         "direction": "다수보다 높게",
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+        }
+       ]
       },
       {
        "key": "midterm_evaluations_passed",
@@ -1822,7 +1913,8 @@
        "forward_agg": 180.0,
        "consistency": 0.7777777777777778,
        "gap": -40.0,
-       "reconciled": 180.0
+       "reconciled": 180.0,
+       "dissent": []
       },
       {
        "key": "fellows_selected",
@@ -1862,7 +1954,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -1990,7 +2083,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached strong consensus that 200 fellows are active in the 2021-2022 window, with 180 continuing to stage two based on a 90% midterm evaluation pass rate. Most participants estimated 400 annual reports submitted, aligning with the two-year simulation target (200 fellows × 2 years). One participant initially estimated 600 reports, likely covering a three-year period, but this was not adopted by others. The central tendency for all three variables is 200, 180, and 400, with no variation in numeric predictions across the group.",
-     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "활동 중 펠로우 · 2단계 진입 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 박채연이 400건로 가장 낮게, 윤지영이 600건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 윤지영의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 400명, 합의도 50%), 연차보고서 제출(forward 400건 ↔ backward 800건, 합의도 50%), 2단계 진입 펠로우(forward 180명 ↔ backward 280명, 합의도 64%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "fellows_active",
@@ -2030,7 +2123,8 @@
        "forward_agg": 200.0,
        "consistency": 0.5,
        "gap": 200.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "annual_reports_submitted",
@@ -2070,7 +2164,16 @@
        "forward_agg": 400.0,
        "consistency": 0.5,
        "gap": 400.0,
-       "reconciled": 400.0
+       "reconciled": 400.0,
+       "dissent": [
+        {
+         "agent": "윤지영",
+         "type_ko": "평가위원",
+         "value": "600건",
+         "direction": "다수보다 높게",
+         "persona": "윤지영 씨는 수천 장의 생활기록부를 훑으며 행간에 숨은 학생의 거짓말과 진심을 가려내는 일에 능숙하지만, 입시철이 되면 쏟아지는 서류 뭉치에 압도되어 책상 위에 포스트잇을 무질서하게 붙여두는 습관이 있습니다."
+        }
+       ]
       },
       {
        "key": "stage_two_fellows",
@@ -2110,7 +2213,8 @@
        "forward_agg": 180.0,
        "consistency": 0.6428571428571428,
        "gap": 100.0,
-       "reconciled": 180.0
+       "reconciled": 180.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -2238,7 +2342,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group discussed the early-stage productivity of 200 fellows in their first two years, focusing on publication output, tenure-track transition, and regional participation. There was consensus that the 30% regional quota is a binding policy mandate, and that the tenure-track transition rate is low (10-15%) due to the program's early stage. Disagreement centered on publication productivity: some estimated 1.2 papers per fellow per year (480 total) based on chemistry/pharma experience, while others argued for 1.0 (400 total) due to a setup phase in engineering and diverse fields. The range for publications was 400-480, with a central tendency around 400, and tenure-track rates ranged from 10-15%.",
-     "summary_ko": "‘SCI(E) 논문 수’은(는) 초기 추정이 400편~480편로 갈렸지만, 근거를 교환하며 500편로 수렴했습니다. 특히 이시연, 문민철의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘SCI(E) 논문 수’은(는) 이은정이 400편로 가장 낮게, 이시연이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 500편로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 이은정이 400편로 가장 낮게, 이시연이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 500편로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. ‘정년트랙 전환율’은(는) 이은정이 10%로 가장 낮게, 이시연이 15%로 가장 높게 보아 갈렸지만, 토의 끝에 10%로 수렴했습니다. 이 과정에서 이시연, 문민철의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 SCI(E) 논문 수(forward 500편 ↔ backward 600편, 합의도 83%), SCI 논문 수(forward 500편 ↔ backward 600편, 합의도 83%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -2278,7 +2382,23 @@
        "forward_agg": 500.0,
        "consistency": 0.8333333333333334,
        "gap": 100.0,
-       "reconciled": 500.0
+       "reconciled": 500.0,
+       "dissent": [
+        {
+         "agent": "이시연",
+         "type_ko": "박사후연구원",
+         "value": "480편",
+         "direction": "다수보다 낮게",
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+        },
+        {
+         "agent": "문민철",
+         "type_ko": "정책담당자",
+         "value": "480편",
+         "direction": "다수보다 낮게",
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+        }
+       ]
       },
       {
        "key": "sci_publications_count",
@@ -2318,7 +2438,23 @@
        "forward_agg": 500.0,
        "consistency": 0.8333333333333334,
        "gap": 100.0,
-       "reconciled": 500.0
+       "reconciled": 500.0,
+       "dissent": [
+        {
+         "agent": "이시연",
+         "type_ko": "박사후연구원",
+         "value": "480편",
+         "direction": "다수보다 낮게",
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+        },
+        {
+         "agent": "문민철",
+         "type_ko": "정책담당자",
+         "value": "480편",
+         "direction": "다수보다 낮게",
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+        }
+       ]
       },
       {
        "key": "tenure_track_transition_rate",
@@ -2358,7 +2494,23 @@
        "forward_agg": 10.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 10.0
+       "reconciled": 10.0,
+       "dissent": [
+        {
+         "agent": "이시연",
+         "type_ko": "박사후연구원",
+         "value": "15%",
+         "direction": "다수보다 높게",
+         "persona": "이시연 씨는 고분자 화합물의 배합비를 정교하게 맞추며 친환경 소재 프로젝트에 매달리는 화학 연구원입니다."
+        },
+        {
+         "agent": "문민철",
+         "type_ko": "정책담당자",
+         "value": "15%",
+         "direction": "다수보다 높게",
+         "persona": "문민철 씨는 아산의 의약품 제조 현장에서 쏟아지는 방대한 수치들을 분석해 불량률을 낮추는 공정 최적화 작업을 수행합니다."
+        }
+       ]
       },
       {
        "key": "regional_institution_participation_pct",
@@ -2398,7 +2550,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -2536,7 +2689,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, projecting that 10% of the 200 fellows (20) will secure tenure-track positions, regional publication share will increase by 2.5 percentage points over a decade, and 15% of fellows (30) will become independent principal investigators. Key causal mechanisms included the competitive Korean academic job market, structural barriers limiting tenure-track positions, and the time needed for regional research capacity to grow despite a 30% regional quota. All participants reasoned that the fellowship's early stage (2021-2022) and modest cohort size constrained long-term impact, with no disagreement on numeric values or underlying logic.",
-     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 20명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -2576,7 +2729,8 @@
        "forward_agg": 20.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 20.0
+       "reconciled": 20.0,
+       "dissent": []
       },
       {
        "key": "regional_publication_share_growth",
@@ -2616,7 +2770,8 @@
        "forward_agg": 2.5,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 2.5
+       "reconciled": 2.5,
+       "dissent": []
       },
       {
        "key": "independent_pi_count",
@@ -2656,7 +2811,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -2789,7 +2945,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제…",
+     "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다.",
      "seat": 0
     },
     {
@@ -2797,7 +2953,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이…",
+     "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다.",
      "seat": 1
     },
     {
@@ -2805,7 +2961,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "김상훈 씨는 저탄소 콘크리트 배합 특허를 내기 위해 연구실 책상 위에 각종 시멘트 샘플을 쌓아두고 분석하며, 최신 BIM 소프…",
+     "persona": "김상훈 씨는 저탄소 콘크리트 배합 특허를 내기 위해 연구실 책상 위에 각종 시멘트 샘플을 쌓아두고 분석하며, 최신 BIM 소프트웨어로 구조 최적화 시뮬레이션을 돌리는 일에 몰두합니다.",
      "seat": 2
     },
     {
@@ -2813,7 +2969,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무…",
+     "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다.",
      "seat": 3
     },
     {
@@ -2821,7 +2977,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
+     "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다.",
      "seat": 4
     }
    ],
@@ -2842,7 +2998,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, treating the policy's explicit numbers as ground truth: 200 fellowship slots, a 30% regional quota, and a total annual budget of 26 billion KRW (derived from 200 slots × 130 million KRW each, with a direct/indirect split of 100M + 30M per fellow). All participants converged on these values, citing the policy document directly. No disagreements emerged, as the estimates were considered fixed parameters rather than variables to be estimated. The central tendency and range were identical across all posts, with no variation in numeric predictions.",
-     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -2882,7 +3038,8 @@
        "forward_agg": 26000000000.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 26000000000.0
+       "reconciled": 26000000000.0,
+       "dissent": []
       },
       {
        "key": "fellowship_slots",
@@ -2922,7 +3079,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "regional_quota_pct",
@@ -2962,7 +3120,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -3090,7 +3249,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's competitive selection process, with a fixed annual target of 200 fellows, and focused on how eligibility restrictions (domestic only, non-tenure-track, PhD within 7 years or under 39) and application barriers (host institution consultation) shape the applicant pool. There was consensus that the midterm evaluation is process-oriented and supportive, leading to high pass rates, and that lab changes are allowed and moderately common. Disagreement centered on the total number of applications, ranging from 800 to 1,200, with a central tendency around 1,050, and on the midterm pass rate, ranging from 80% to 90% (160-180 fellows). Lab change estimates varied from 10% to 20% of fellows.",
-     "summary_ko": "‘단계평가 통과’은(는) 초기 추정이 160명~180명로 갈렸지만, 근거를 교환하며 170명로 수렴했습니다. 다만 forward·backward 교차검증에서 단계평가 통과, 지원서 접수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘단계평가 통과’은(는) 조덕균이 160명로 가장 낮게, 김상훈이 180명로 가장 높게 보아 갈렸지만, 토의 끝에 170명로 수렴했습니다. ‘지원서 접수’은(는) 조덕균이 800건로 가장 낮게, 김상훈이 1,200건로 가장 높게 보아 갈렸지만, 토의 끝에 1,050건로 수렴했습니다. 이 과정에서 김상훈, 조덕균의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 단계평가 통과(forward 173명 ↔ backward 256명, 합의도 68%), 지원서 접수(forward 1,060건 ↔ backward 1,200건, 합의도 88%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -3130,7 +3289,8 @@
        "forward_agg": 173.0,
        "consistency": 0.67578125,
        "gap": 83.0,
-       "reconciled": 173.0
+       "reconciled": 173.0,
+       "dissent": []
       },
       {
        "key": "applications_received",
@@ -3170,7 +3330,23 @@
        "forward_agg": 1060.0,
        "consistency": 0.8833333333333333,
        "gap": 140.0,
-       "reconciled": 1060.0
+       "reconciled": 1060.0,
+       "dissent": [
+        {
+         "agent": "김상훈",
+         "type_ko": "정책담당자",
+         "value": "1,200건",
+         "direction": "다수보다 높게",
+         "persona": "김상훈 씨는 저탄소 콘크리트 배합 특허를 내기 위해 연구실 책상 위에 각종 시멘트 샘플을 쌓아두고 분석하며, 최신 BIM 소프트웨어로 구조 최적화 시뮬레이션을 돌리는 일에 몰두합니다."
+        },
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "800건",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        }
+       ]
       },
       {
        "key": "fellows_selected",
@@ -3210,7 +3386,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -3338,7 +3515,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the 2021-2022 window, agreeing that 200 fellows are active as the first cohort starts in March 2021. They reached consensus on 170 fellows continuing to stage two (85% pass rate) and 400 annual reports (200 fellows × 2 years). One participant dissented, estimating 160 stage-two fellows and 1000 reports, the latter due to including multiple cohorts or a 5-year total, which others rejected as inconsistent with the simulation target. Predictions for fellows_active were unanimous at 200; stage_two_fellows ranged from 160 to 170 (median 170); annual_reports_submitted ranged from 400 to 1000 (median 400).",
-     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 김상훈이 400건로 가장 낮게, 조덕균이 1,000건로 가장 높게 보아 갈렸지만, 토의 끝에 400건로 수렴했습니다. 이 과정에서 조덕균의 이견(이상치)이 흡수되었습니다. ‘2단계 진입 펠로우’은(는) 조덕균이 160명로 가장 낮게, 김상훈이 170명로 가장 높게 보아 갈렸지만, 토의 끝에 170명로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 320명, 합의도 62%), 연차보고서 제출(forward 400건 ↔ backward 640건, 합의도 62%), 2단계 진입 펠로우(forward 170명 ↔ backward 256명, 합의도 66%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "fellows_active",
@@ -3378,7 +3555,8 @@
        "forward_agg": 200.0,
        "consistency": 0.625,
        "gap": 120.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "annual_reports_submitted",
@@ -3418,7 +3596,16 @@
        "forward_agg": 400.0,
        "consistency": 0.625,
        "gap": 240.0,
-       "reconciled": 400.0
+       "reconciled": 400.0,
+       "dissent": [
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "1,000건",
+         "direction": "다수보다 높게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        }
+       ]
       },
       {
        "key": "stage_two_fellows",
@@ -3458,7 +3645,8 @@
        "forward_agg": 170.0,
        "consistency": 0.6640625,
        "gap": 86.0,
-       "reconciled": 170.0
+       "reconciled": 170.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -3586,7 +3774,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on how the first cohort of 200 fellows (starting March 2021) drives outcomes in the 2021-2022 window, with the second cohort contributing only partially. There was consensus that midterm attrition reduces active fellows to about 170 and that the 30% regional quota is strictly enforced, though one participant estimated 28% due to applicant shortages. Disagreements centered on publication productivity per fellow-year (ranging from 0.6 to 1.5) and tenure-track transition rates (15% to 25%), with lower estimates reflecting regional constraints and longer engineering publication cycles, while higher estimates assumed policy support boosts output. Numeric predictions for total SCI(E) publications ranged from 320 to 480, with a central tendency around 360-400, and transition rates clustered near 20%.",
-     "summary_ko": "‘정년트랙 전환율’은(는) 초기 추정이 15%~25%로 갈렸지만, 근거를 교환하며 18%로 수렴했습니다. 특히 조덕균, 김종한의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 정년트랙 전환율, SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "‘정년트랙 전환율’은(는) 조덕균이 15%로 가장 낮게, 김종한이 25%로 가장 높게 보아 갈렸지만, 토의 끝에 18%로 수렴했습니다. 이 과정에서 조덕균, 김종한의 이견(이상치)이 흡수되었습니다. ‘SCI(E) 논문 수’은(는) 조덕균이 320편로 가장 낮게, 김종한이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 390편로 수렴했습니다. 이 과정에서 조덕균, 김종한, 정에스더의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 조덕균이 320편로 가장 낮게, 김종한이 480편로 가장 높게 보아 갈렸지만, 토의 끝에 390편로 수렴했습니다. 이 과정에서 조덕균, 김종한, 정에스더의 이견(이상치)이 흡수되었습니다. ‘지역기관 참여 비율’은(는) 조덕균이 28%로 가장 낮게, 김종한이 30%로 가장 높게 보아 갈렸지만, 토의 끝에 30%로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 정년트랙 전환율(forward 16.8% ↔ backward 9.6%, 합의도 57%), SCI(E) 논문 수(forward 390편 ↔ backward 500편, 합의도 78%), SCI 논문 수(forward 390편 ↔ backward 500편, 합의도 78%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -3626,7 +3814,23 @@
        "forward_agg": 16.8,
        "consistency": 0.5714285714285714,
        "gap": -7.200000000000001,
-       "reconciled": 16.8
+       "reconciled": 16.8,
+       "dissent": [
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "15%",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        },
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "25%",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        }
+       ]
       },
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -3666,7 +3870,30 @@
        "forward_agg": 390.0,
        "consistency": 0.78,
        "gap": 110.0,
-       "reconciled": 390.0
+       "reconciled": 390.0,
+       "dissent": [
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "320편",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        },
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "480편",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        },
+        {
+         "agent": "정에스더",
+         "type_ko": "평가위원",
+         "value": "400편",
+         "direction": "다수보다 높게",
+         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다."
+        }
+       ]
       },
       {
        "key": "sci_publications_count",
@@ -3706,7 +3933,30 @@
        "forward_agg": 390.0,
        "consistency": 0.78,
        "gap": 110.0,
-       "reconciled": 390.0
+       "reconciled": 390.0,
+       "dissent": [
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "320편",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        },
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "480편",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        },
+        {
+         "agent": "정에스더",
+         "type_ko": "평가위원",
+         "value": "400편",
+         "direction": "다수보다 높게",
+         "persona": "정에스더 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치며, 딱딱한 이론을 교육학적 관점에서 부드럽게 풀어내 학생들의 이해를 돕는 교수입니다."
+        }
+       ]
       },
       {
        "key": "regional_institution_participation_pct",
@@ -3746,7 +3996,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -3884,7 +4135,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group discussed the long-term impact of the Sejong Science Fellowship on tenure-track transitions, regional publication share, and independent PI counts, focusing on causal mechanisms like the 30% regional quota, stable funding, and lab mobility. Consensus emerged that the independent PI count would exceed the tenure-track count due to non-tenure-track leadership roles, and that regional publication share growth would be modest. Disagreement centered on the magnitude of impact: some participants estimated higher outcomes (40 tenure-track, 2.5% regional growth, 50 PIs) based on policy support, while others predicted lower figures (20-30 tenure-track, 1.0-1.5% growth, 30-40 PIs) citing structural barriers for regional researchers and a competitive job market. Prediction ranges were: former_fellows_in_tenure_track 20-40 (central tendency ~30), regional_publication_share_growth 1.0-2.5% (~1.5%), independent_pi_count 30-50 (~40).",
-     "summary_ko": "‘지역 논문 점유율 증가’은(는) 초기 추정이 1%p~2.5%p로 갈렸지만, 근거를 교환하며 1.5%p로 수렴했습니다. 특히 김종한, 송성진, 조덕균의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지역 논문 점유율 증가의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "‘지역 논문 점유율 증가’은(는) 조덕균이 1%p로 가장 낮게, 김종한이 2.5%p로 가장 높게 보아 갈렸지만, 토의 끝에 1.5%p로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. ‘정년트랙 진입 펠로우’은(는) 조덕균이 20명로 가장 낮게, 김종한이 40명로 가장 높게 보아 갈렸지만, 토의 끝에 30명로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. ‘독립 연구책임자(PI) 수’은(는) 조덕균이 30명로 가장 낮게, 김종한이 50명로 가장 높게 보아 갈렸지만, 토의 끝에 40명로 수렴했습니다. 이 과정에서 김종한, 송성진, 조덕균의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지역 논문 점유율 증가(forward 1.56%p ↔ backward 1.8%p, 합의도 87%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "regional_publication_share_growth",
@@ -3924,7 +4175,30 @@
        "forward_agg": 1.56,
        "consistency": 0.8666666666666667,
        "gap": 0.24,
-       "reconciled": 1.56
+       "reconciled": 1.56,
+       "dissent": [
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "2.5%p",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        },
+        {
+         "agent": "송성진",
+         "type_ko": "평가위원",
+         "value": "2.5%p",
+         "direction": "다수보다 높게",
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+        },
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "1%p",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        }
+       ]
       },
       {
        "key": "former_fellows_in_tenure_track",
@@ -3964,7 +4238,30 @@
        "forward_agg": 30.4,
        "consistency": 0.95,
        "gap": 1.6000000000000014,
-       "reconciled": 30.4
+       "reconciled": 30.4,
+       "dissent": [
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "40명",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        },
+        {
+         "agent": "송성진",
+         "type_ko": "평가위원",
+         "value": "40명",
+         "direction": "다수보다 높게",
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+        },
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "20명",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        }
+       ]
       },
       {
        "key": "independent_pi_count",
@@ -4004,7 +4301,30 @@
        "forward_agg": 40.4,
        "consistency": 0.9619047619047618,
        "gap": 1.6000000000000014,
-       "reconciled": 40.4
+       "reconciled": 40.4,
+       "dissent": [
+        {
+         "agent": "김종한",
+         "type_ko": "평가위원",
+         "value": "50명",
+         "direction": "다수보다 높게",
+         "persona": "김종한 씨는 대학 강단에서 정보 통신기술을 가르치며 행정적 비효율을 디지털로 걷어내는 시스템 설계에 집착합니다."
+        },
+        {
+         "agent": "송성진",
+         "type_ko": "평가위원",
+         "value": "50명",
+         "direction": "다수보다 높게",
+         "persona": "송성진 씨는 스마트 팩토리의 센서 네트워크 최적화 전문가로, 복잡한 설계 도면을 현장 엔지니어들이 한눈에 알아볼 수 있는 실무 매뉴얼로 바꾸는 작업에 집착합니다."
+        },
+        {
+         "agent": "조덕균",
+         "type_ko": "박사후연구원",
+         "value": "30명",
+         "direction": "다수보다 낮게",
+         "persona": "조덕균 씨는 원주의 화학 연구소에서 친환경 촉매제 배합비를 맞추기 위해 실험실과 현장을 바쁘게 오가며, 이론적인 수치보다 실제 제품의 반응 속도를 빠르게 캐치해 오차를 줄이는 실무형 해결사로 통합니다."
+        }
+       ]
       }
      ],
      "agent_posts": [
@@ -4137,7 +4457,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡…",
+     "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다.",
      "seat": 0
     },
     {
@@ -4145,7 +4465,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "김성미 씨는 자동차 전장 제어 회로의 미세한 전압 오차 하나까지 잡아내기 위해 수천 장의 데이터 시트를 훑는 집요한 연구원입니…",
+     "persona": "김성미 씨는 자동차 전장 제어 회로의 미세한 전압 오차 하나까지 잡아내기 위해 수천 장의 데이터 시트를 훑는 집요한 연구원입니다.",
      "seat": 1
     },
     {
@@ -4153,7 +4473,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "김태희 씨는 자동차 전자제품 개발 현장에서 법적 규제와 기술적 요구사항을 촘촘하게 엮어 설계 문서로 만들어내는 능력이 탁월하며…",
+     "persona": "김태희 씨는 자동차 전자제품 개발 현장에서 법적 규제와 기술적 요구사항을 촘촘하게 엮어 설계 문서로 만들어내는 능력이 탁월하며, 오타 하나에도 예민하게 반응하는 완벽주의적…",
      "seat": 2
     },
     {
@@ -4161,7 +4481,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "김기남 씨는 고분자 소재의 결합 구조를 분석하고 시약을 정밀하게 배합하여 최적의 물성을 찾아내는 화학 연구원으로, 보건학적 지…",
+     "persona": "김기남 씨는 고분자 소재의 결합 구조를 분석하고 시약을 정밀하게 배합하여 최적의 물성을 찾아내는 화학 연구원으로, 보건학적 지식을 활용해 연구실 내 유해 물질 노출 경로를 차단하는 안전 가이드라인을 직접 수립합니다.",
      "seat": 3
     },
     {
@@ -4169,7 +4489,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "이영희 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치는 교수로, 딱딱한 설계도면 속에서 비효율적인 동선을 귀신같이 찾아…",
+     "persona": "이영희 씨는 전주 지역 대학에서 공학 및 건설 분야를 가르치는 교수로, 딱딱한 설계도면 속에서 비효율적인 동선을 귀신같이 찾아내어 학생들에게 실무적인 대안을 제시합니다.",
      "seat": 4
     }
    ],
@@ -4190,7 +4510,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, all deriving directly from explicit policy statements: a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). There was no disagreement, as every participant cited the same policy numbers and calculations. The central causal mechanism discussed was that these inputs—budget, slots, and regional quota—directly determine the program's capacity to support young scientists and strengthen regional research. All numeric predictions were identical, reflecting complete consensus on the policy's stated resource logic.",
-     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -4230,7 +4550,8 @@
        "forward_agg": 26000000000.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 26000000000.0
+       "reconciled": 26000000000.0,
+       "dissent": []
       },
       {
        "key": "fellowship_slots",
@@ -4270,7 +4591,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "regional_quota_pct",
@@ -4310,7 +4632,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -4438,7 +4761,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the Sejong Science Fellowship's competitive application process, with estimates for applications_received ranging from 1,200 to 1,500, centering around 1,300-1,400, driven by the program's generous funding (130M KRW/year), 30% regional quota, and broad eligibility. There was strong consensus that fellows_selected is fixed at 200 and that midterm_evaluations_passed would be 180 (90% pass rate), due to the process-oriented stage evaluation focusing on faithful performance. Disagreement centered on application volume: some expected higher numbers due to the program's attractiveness, while others cited the rigorous selection process as a deterrent. All agreed that lab changes are permitted but rare (about 10%), with minimal impact on midterm outcomes.",
-     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 1,200건~1,500건로 갈렸지만, 근거를 교환하며 1,300건로 수렴했습니다. 특히 조혜진의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "단계평가 통과 · 최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원서 접수’은(는) 김태희이 1,200건로 가장 낮게, 조혜진이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 조혜진의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원서 접수(forward 1,300건 ↔ backward 600건, 합의도 46%), 단계평가 통과(forward 180명 ↔ backward 160명, 합의도 89%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "applications_received",
@@ -4478,7 +4801,16 @@
        "forward_agg": 1300.0,
        "consistency": 0.46153846153846156,
        "gap": -700.0,
-       "reconciled": 1300.0
+       "reconciled": 1300.0,
+       "dissent": [
+        {
+         "agent": "조혜진",
+         "type_ko": "평가위원",
+         "value": "1,500건",
+         "direction": "다수보다 높게",
+         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다."
+        }
+       ]
       },
       {
        "key": "midterm_evaluations_passed",
@@ -4518,7 +4850,8 @@
        "forward_agg": 180.0,
        "consistency": 0.8888888888888888,
        "gap": -20.0,
-       "reconciled": 180.0
+       "reconciled": 180.0,
+       "dissent": []
       },
       {
        "key": "fellows_selected",
@@ -4558,7 +4891,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -4686,7 +5020,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the active cohort math within the 2021-2022 window, with a clear consensus that only the first cohort of 200 fellows is fully active, as the second cohort starts in March 2022 with minimal activity. All participants agreed on fellows_active=200 and stage_two_fellows=180 (the expected 90% pass rate from the prior phase, though the midterm evaluation occurs after 2022). For annual_reports_submitted, the group converged on 600, calculated as 400 reports from the first cohort (200 fellows × 2 years) plus 200 reports from the second cohort (200 fellows × 1 year in 2022). One initial estimate of 960 was rejected as inconsistent with the window. The central tendency across all predictions is 200 for fellows_active, 180 for stage_two_fellows, and 600 for annual_reports_submitted.",
-     "summary_ko": "‘연차보고서 제출’은(는) 초기 추정이 600건~960건로 갈렸지만, 근거를 교환하며 600건로 수렴했습니다. 특히 조혜진의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "2단계 진입 펠로우 · 활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘연차보고서 제출’은(는) 김태희이 600건로 가장 낮게, 조혜진이 960건로 가장 높게 보아 갈렸지만, 토의 끝에 600건로 수렴했습니다. 이 과정에서 조혜진의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 연차보고서 제출(forward 600건 ↔ backward 520건, 합의도 87%), 2단계 진입 펠로우(forward 180명 ↔ backward 160명, 합의도 89%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "annual_reports_submitted",
@@ -4726,7 +5060,16 @@
        "forward_agg": 600.0,
        "consistency": 0.8666666666666667,
        "gap": -80.0,
-       "reconciled": 600.0
+       "reconciled": 600.0,
+       "dissent": [
+        {
+         "agent": "조혜진",
+         "type_ko": "평가위원",
+         "value": "960건",
+         "direction": "다수보다 높게",
+         "persona": "조혜진 씨는 수천 장의 생활기록부 속에서 학생의 숨은 개성을 포착하는 정밀한 분석력을 갖췄지만, 서류의 아주 작은 모순까지 잡아내려다 초기 검토 시간이 지나치게 길어져 동료들의 눈치를 보곤 합니다."
+        }
+       ]
       },
       {
        "key": "stage_two_fellows",
@@ -4766,7 +5109,8 @@
        "forward_agg": 180.0,
        "consistency": 0.8888888888888888,
        "gap": -20.0,
-       "reconciled": 180.0
+       "reconciled": 180.0,
+       "dissent": []
       },
       {
        "key": "fellows_active",
@@ -4806,7 +5150,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -4934,7 +5279,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached full consensus that only the first cohort of 200 fellows was fully active in the 2021-2022 window, leading to an estimated 600 SCI(E) publications based on an average productivity of 1.5 papers per fellow per year. All participants agreed on a 25% tenure-track transition rate, reasoning that most fellows were still early in the program, and a 30% regional institution participation rate, reflecting the binding policy quota. No disagreements emerged; all numeric predictions were identical across stakeholders.",
-     "summary_ko": "다섯 참여자는 ‘SCI(E) 논문 수’을(를) 처음부터 600편로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "SCI(E) 논문 수 · SCI 논문 수 · 정년트랙 전환율 · 지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -4974,7 +5319,8 @@
        "forward_agg": 600.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 600.0
+       "reconciled": 600.0,
+       "dissent": []
       },
       {
        "key": "sci_publications_count",
@@ -5014,7 +5360,8 @@
        "forward_agg": 600.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 600.0
+       "reconciled": 600.0,
+       "dissent": []
       },
       {
        "key": "tenure_track_transition_rate",
@@ -5054,7 +5401,8 @@
        "forward_agg": 25.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 25.0
+       "reconciled": 25.0,
+       "dissent": []
       },
       {
        "key": "regional_institution_participation_pct",
@@ -5094,7 +5442,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -5232,7 +5581,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, predicting that 50 former fellows (25% of the 200 active cohort) will secure tenure-track positions, regional publication share will grow by 5 percentage points due to the 30% quota, and 120 former fellows (60%) will become independent PIs. Key causal mechanisms included the cohort size (200 fellows in the first cohort), the 25% tenure-track transition rate from the Outcomes phase, and the binding regional quota. No disagreements emerged, as all participants independently arrived at identical numeric predictions based on the same cohort math and policy parameters. The central tendency and range were identical: former_fellows_in_tenure_track = 50, regional_publication_share_growth = 5.0, independent_pi_count = 120.",
-     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 50명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -5272,7 +5621,8 @@
        "forward_agg": 50.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 50.0
+       "reconciled": 50.0,
+       "dissent": []
       },
       {
        "key": "regional_publication_share_growth",
@@ -5312,7 +5662,8 @@
        "forward_agg": 5.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 5.0
+       "reconciled": 5.0,
+       "dissent": []
       },
       {
        "key": "independent_pi_count",
@@ -5352,7 +5703,8 @@
        "forward_agg": 120.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 120.0
+       "reconciled": 120.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -5485,7 +5837,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "이성분 씨는 건설 현장의 거친 도면과 공정을 학생들의 눈높이에 맞춰 친절하게 풀어내는 공학 교수이며, 퇴임을 앞두고 그동안 쌓…",
+     "persona": "이성분 씨는 건설 현장의 거친 도면과 공정을 학생들의 눈높이에 맞춰 친절하게 풀어내는 공학 교수이며, 퇴임을 앞두고 그동안 쌓아온 현장 노하우를 집대성한 실무 지침서를 집…",
      "seat": 0
     },
     {
@@ -5493,7 +5845,7 @@
      "type": "PostdoctoralResearcher",
      "type_ko": "박사후연구원",
      "color": "#f59e0b",
-     "tagline": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니…",
+     "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다.",
      "seat": 1
     },
     {
@@ -5501,7 +5853,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "김창희 씨는 대학 강단에서 건설 현장의 법적 리스크와 공학적 설계를 가르치며, 정년 퇴임 후에는 작은 가구 공방을 열어 손끝으…",
+     "persona": "김창희 씨는 대학 강단에서 건설 현장의 법적 리스크와 공학적 설계를 가르치며, 정년 퇴임 후에는 작은 가구 공방을 열어 손끝으로 직접 무언가를 만드는 삶을 준비합니다.",
      "seat": 2
     },
     {
@@ -5509,7 +5861,7 @@
      "type": "PolicyRole",
      "type_ko": "정책담당자",
      "color": "#0ea5e9",
-     "tagline": "한아진 씨는 전주 교육지원청에서 학교 현장의 갈등을 조율해 명확한 지침서로 만들어내는 데 탁월한 능력을 발휘하며, 후배 장학사…",
+     "persona": "한아진 씨는 전주 교육지원청에서 학교 현장의 갈등을 조율해 명확한 지침서로 만들어내는 데 탁월한 능력을 발휘하며, 후배 장학사들이 실무적으로 가장 먼저 찾는 해결사로 통합니다.",
      "seat": 3
     },
     {
@@ -5517,7 +5869,7 @@
      "type": "EvaluationPanel",
      "type_ko": "평가위원",
      "color": "#6366f1",
-     "tagline": "이은미 씨는 경북 예천의 대학에서 친환경 건축 자재의 내구성을 가르치는 교수이며, 도면의 1밀리미터 오차도 용납하지 않는 결벽…",
+     "persona": "이은미 씨는 경북 예천의 대학에서 친환경 건축 자재의 내구성을 가르치는 교수이며, 도면의 1밀리미터 오차도 용납하지 않는 결벽에 가까운 치밀함으로 학생들 사이에서 호랑이 선생님이라 불립니다.",
      "seat": 4
     }
    ],
@@ -5538,7 +5890,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input values, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). Consensus was grounded in the policy's explicit resource logic, which specified the per-fellow funding split (100 million KRW direct costs, 30 million KRW indirect costs) and the regional allocation. No disagreements emerged, as participants consistently cited the same policy evidence and arithmetic. The central tendency and range were identical across all estimates, reflecting complete alignment on these inputs.",
-     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "연간 총 예산 · 펠로우십 선정 인원 · 지역 할당 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -5578,7 +5930,8 @@
        "forward_agg": 26000000000.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 26000000000.0
+       "reconciled": 26000000000.0,
+       "dissent": []
       },
       {
        "key": "fellowship_slots",
@@ -5618,7 +5971,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "regional_quota_pct",
@@ -5658,7 +6012,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -5786,7 +6141,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's selection and midterm evaluation processes, focusing on application volume, selection competitiveness, and attrition due to lab changes and strict evaluation criteria. There was consensus that 200 fellows would be selected annually, as per policy, and that applications would range from 1,200 to 1,500, with a central tendency around 1,300-1,400. Midterm evaluation pass rates varied from 155 to 170, with a central estimate near 160-165, reflecting differing views on attrition from lab changes and process-oriented compliance. Key causal mechanisms included the 30% regional quota boosting applications, strict eligibility capping the pool, and lab changes potentially disrupting progress and lowering pass rates.",
-     "summary_ko": "‘단계평가 통과’은(는) 초기 추정이 155명~170명로 갈렸지만, 근거를 교환하며 160명로 수렴했습니다. 다만 forward·backward 교차검증에서 단계평가 통과, 지원서 접수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "최종 선정 인원은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘단계평가 통과’은(는) 이은미이 155명로 가장 낮게, 한아진이 170명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. ‘지원서 접수’은(는) 한아진이 1,200건로 가장 낮게, 김창희이 1,500건로 가장 높게 보아 갈렸지만, 토의 끝에 1,300건로 수렴했습니다. 이 과정에서 김창희의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 단계평가 통과(forward 161명 ↔ backward 320명, 합의도 50%), 지원서 접수(forward 1,300건 ↔ backward 1,200건, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -5826,7 +6181,8 @@
        "forward_agg": 161.0,
        "consistency": 0.503125,
        "gap": 159.0,
-       "reconciled": 161.0
+       "reconciled": 161.0,
+       "dissent": []
       },
       {
        "key": "applications_received",
@@ -5866,7 +6222,16 @@
        "forward_agg": 1300.0,
        "consistency": 0.9230769230769231,
        "gap": -100.0,
-       "reconciled": 1300.0
+       "reconciled": 1300.0,
+       "dissent": [
+        {
+         "agent": "김창희",
+         "type_ko": "평가위원",
+         "value": "1,500건",
+         "direction": "다수보다 높게",
+         "persona": "김창희 씨는 대학 강단에서 건설 현장의 법적 리스크와 공학적 설계를 가르치며, 정년 퇴임 후에는 작은 가구 공방을 열어 손끝으로 직접 무언가를 만드는 삶을 준비합니다."
+        }
+       ]
       },
       {
        "key": "fellows_selected",
@@ -5906,7 +6271,8 @@
        "forward_agg": 200.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -6034,7 +6400,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the first cohort of 200 fellows starting in March 2021, with all active through 2021-2022. There was consensus on fellows_active (200) and stage_two_fellows (155-160, with most agreeing on 160 based on 20% attrition from lab changes and strict evaluation). For annual_reports_submitted, most agreed on 800 (2 reports per fellow per year: annual plus mid-year), but one participant estimated 920, citing potential extra reports from lab changes. The central tendency for stage_two_fellows is 160, and for reports is 800, with the disagreement reflecting differing assumptions about reporting frequency.",
-     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 2단계 진입 펠로우, 연차보고서 제출의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "활동 중 펠로우은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘2단계 진입 펠로우’은(는) 이은미이 155명로 가장 낮게, 최규민이 160명로 가장 높게 보아 갈렸지만, 토의 끝에 160명로 수렴했습니다. ‘연차보고서 제출’은(는) 김창희이 800건로 가장 낮게, 최규민이 920건로 가장 높게 보아 갈렸지만, 토의 끝에 800건로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 활동 중 펠로우(forward 200명 ↔ backward 400명, 합의도 50%), 2단계 진입 펠로우(forward 160명 ↔ backward 320명, 합의도 50%), 연차보고서 제출(forward 800건 ↔ backward 1,200건, 합의도 67%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "fellows_active",
@@ -6074,7 +6440,8 @@
        "forward_agg": 200.0,
        "consistency": 0.5,
        "gap": 200.0,
-       "reconciled": 200.0
+       "reconciled": 200.0,
+       "dissent": []
       },
       {
        "key": "stage_two_fellows",
@@ -6114,7 +6481,8 @@
        "forward_agg": 160.0,
        "consistency": 0.5,
        "gap": 160.0,
-       "reconciled": 160.0
+       "reconciled": 160.0,
+       "dissent": []
       },
       {
        "key": "annual_reports_submitted",
@@ -6154,7 +6522,16 @@
        "forward_agg": 800.0,
        "consistency": 0.6666666666666667,
        "gap": 400.0,
-       "reconciled": 800.0
+       "reconciled": 800.0,
+       "dissent": [
+        {
+         "agent": "최규민",
+         "type_ko": "박사후연구원",
+         "value": "920건",
+         "direction": "다수보다 높게",
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+        }
+       ]
       }
      ],
      "agent_posts": [
@@ -6282,7 +6659,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the first cohort of 200 fellows active for about 1.8 years in 2021-2022, estimating an average of 1.5 SCI(E) publications per fellow per year. There was strong consensus on a tenure-track transition rate of 12.5% and full achievement of the 30% regional quota. Most participants adjusted the publication count downward from 540 to 480 due to lab changes and strict midterm evaluations, but one participant maintained the higher estimate of 540, arguing that stable funding and mentoring would sustain productivity. The range for SCI(E) publications was 480 to 540, with a central tendency around 480.",
-     "summary_ko": "‘SCI(E) 논문 수’은(는) 초기 추정이 480편~540편로 갈렸지만, 근거를 교환하며 480편로 수렴했습니다. 특히 최규민의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 SCI(E) 논문 수, SCI 논문 수, 정년트랙 전환율의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
+     "summary_ko": "정년트랙 전환율 · 지역기관 참여 비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘SCI(E) 논문 수’은(는) 이은미이 480편로 가장 낮게, 최규민이 540편로 가장 높게 보아 갈렸지만, 토의 끝에 480편로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. ‘SCI 논문 수’은(는) 이은미이 480편로 가장 낮게, 최규민이 540편로 가장 높게 보아 갈렸지만, 토의 끝에 480편로 수렴했습니다. 이 과정에서 최규민의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 SCI(E) 논문 수(forward 480편 ↔ backward 600편, 합의도 80%), SCI 논문 수(forward 480편 ↔ backward 600편, 합의도 80%), 정년트랙 전환율(forward 12.5% ↔ backward 10%, 합의도 80%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -6322,7 +6699,16 @@
        "forward_agg": 480.0,
        "consistency": 0.8,
        "gap": 120.0,
-       "reconciled": 480.0
+       "reconciled": 480.0,
+       "dissent": [
+        {
+         "agent": "최규민",
+         "type_ko": "박사후연구원",
+         "value": "540편",
+         "direction": "다수보다 높게",
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+        }
+       ]
       },
       {
        "key": "sci_publications_count",
@@ -6362,7 +6748,16 @@
        "forward_agg": 480.0,
        "consistency": 0.8,
        "gap": 120.0,
-       "reconciled": 480.0
+       "reconciled": 480.0,
+       "dissent": [
+        {
+         "agent": "최규민",
+         "type_ko": "박사후연구원",
+         "value": "540편",
+         "direction": "다수보다 높게",
+         "persona": "최규민 씨는 수천 장의 도면 속에서 1밀리미터의 오차도 허용하지 않는 꼼꼼함으로 대형 플랜트 공정의 효율을 설계하는 기술자입니다."
+        }
+       ]
       },
       {
        "key": "tenure_track_transition_rate",
@@ -6402,7 +6797,8 @@
        "forward_agg": 12.5,
        "consistency": 0.8,
        "gap": -2.5,
-       "reconciled": 12.5
+       "reconciled": 12.5,
+       "dissent": []
       },
       {
        "key": "regional_institution_participation_pct",
@@ -6442,7 +6838,8 @@
        "forward_agg": 30.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 30.0
+       "reconciled": 30.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
@@ -6580,7 +6977,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group consistently estimated that 5-10 years post-fellowship, 25 former fellows would secure tenure-track positions (12.5% transition rate from 200 annual fellows), regional publication share would grow by 2.5 percentage points due to the 30% regional quota, and 40 former fellows would become independent PIs. All participants agreed these long-term outcomes would not be realized within the 2021-2022 window, as only the first cohort was active. No disagreements emerged; estimates were uniformly conservative, grounded in policy structure and typical career progression. The central tendency and range for all three variables were identical across participants: 25, 2.5%, and 40.",
-     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 25명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
+     "summary_ko": "정년트랙 진입 펠로우 · 지역 논문 점유율 증가 · 독립 연구책임자(PI) 수은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -6620,7 +7017,8 @@
        "forward_agg": 25.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 25.0
+       "reconciled": 25.0,
+       "dissent": []
       },
       {
        "key": "regional_publication_share_growth",
@@ -6660,7 +7058,8 @@
        "forward_agg": 2.5,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 2.5
+       "reconciled": 2.5,
+       "dissent": []
       },
       {
        "key": "independent_pi_count",
@@ -6700,7 +7099,8 @@
        "forward_agg": 40.0,
        "consistency": 1.0,
        "gap": 0.0,
-       "reconciled": 40.0
+       "reconciled": 40.0,
+       "dissent": []
       }
      ],
      "agent_posts": [
