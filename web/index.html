@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>정책 시뮬레이션 · 이해관계 시각화</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">◑</span>
+    <div>
+      <h1>정책 효과 예측 · 멀티에이전트 시뮬레이션</h1>
+      <p class="sub">BK21 &amp; 세종과학펠로우십 — 이해관계 구조 · Forward→Backward 토의 · 전문가 피드백</p>
+    </div>
+  </div>
+  <nav class="tabs">
+    <button class="tab active" data-tab="graph">① 이해관계 구조</button>
+    <button class="tab" data-tab="sim">② 시뮬레이션 (원탁 토의)</button>
+    <button class="tab" data-tab="feedback">③ 전문가 피드백</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ TAB 1: KNOWLEDGE GRAPH ============ -->
+  <section id="tab-graph" class="tab-panel active">
+    <div class="panel-head">
+      <div class="graph-switch">
+        <button class="gbtn active" data-graph="bk21">BK21 (두뇌한국21)</button>
+        <button class="gbtn" data-graph="ssf">세종과학펠로우십</button>
+      </div>
+      <div class="graph-controls">
+        <label class="chk"><input type="checkbox" id="toggleLabels" checked> 관계 설명</label>
+        <button id="replayGraph" class="ghost-btn">↻ 재배치</button>
+      </div>
+    </div>
+    <div class="graph-meta">
+      <h2 id="graphTitle"></h2>
+      <p id="graphSubtitle" class="muted"></p>
+      <p id="graphNote" class="note-box"></p>
+    </div>
+    <div class="graph-wrap">
+      <svg id="graphSvg"></svg>
+      <div class="legend" id="graphLegend"></div>
+      <div class="node-tip" id="nodeTip"></div>
+    </div>
+  </section>
+
+  <!-- ============ TAB 2: SIMULATION ============ -->
+  <section id="tab-sim" class="tab-panel">
+    <div class="panel-head">
+      <div class="sim-scenario">
+        <label>시나리오</label>
+        <select id="scenarioSel"></select>
+        <span class="pass-badge">진행 방식: <b>Forward → Backward</b> <i>(macro-avg 최상)</i></span>
+      </div>
+    </div>
+
+    <div class="sim-layout">
+      <!-- left: round table -->
+      <div class="table-col">
+        <div class="phase-track" id="phaseTrack"></div>
+        <div class="roundtable-wrap">
+          <svg id="tableSvg" viewBox="0 0 600 600"></svg>
+          <div class="table-center" id="tableCenter">
+            <div class="tc-phase" id="tcPhase">투입 · Inputs</div>
+            <div class="tc-dir" id="tcDir">FORWARD ▸ 하향식 추정</div>
+            <div class="tc-consensus" id="tcConsensus"></div>
+          </div>
+        </div>
+        <div class="sim-controls">
+          <button id="prevStep" class="ctrl">◂ 이전</button>
+          <button id="playPause" class="ctrl primary">▶ 자동재생</button>
+          <button id="nextStep" class="ctrl">다음 ▸</button>
+        </div>
+        <div class="step-caption" id="stepCaption"></div>
+      </div>
+
+      <!-- right: reconciliation panel -->
+      <div class="recon-col">
+        <h3>이 단계의 결론 <span class="muted-sm">(forward · backward 교차검증)</span></h3>
+        <div id="reconPanel" class="recon-panel"></div>
+        <div class="consensus-note" id="consensusNote"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAB 3: FEEDBACK ============ -->
+  <section id="tab-feedback" class="tab-panel">
+    <div class="panel-head fb-head">
+      <p id="fbIntro" class="fb-intro"></p>
+      <div class="fb-filters" id="fbFilters">
+        <button class="fbf active" data-filter="all">전체</button>
+        <button class="fbf" data-filter="kg">정책 구조에 대한 피드백</button>
+        <button class="fbf" data-filter="sim">시뮬레이션에 대한 피드백</button>
+      </div>
+    </div>
+    <div id="feedbackBody" class="feedback-body"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>데이터 출처: 교육부 「2022 4단계 BK21 운영·관리 기본계획」, 과기정통부 「세종과학펠로우십 추진계획」, 정책 KG(IAD/IG) · 멀티에이전트 시뮬레이션 로그</span>
+</footer>
+
+<script src="js/graph.js"></script>
+<script src="js/simulation.js"></script>
+<script src="js/feedback.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
