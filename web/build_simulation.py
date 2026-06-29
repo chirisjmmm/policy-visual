@@ -37,20 +37,24 @@ VAR_META = {
     "regional_publication_share_growth": ("지역 논문 점유율 증가", "%p", "pct"),
     "independent_pi_count":         ("독립 연구책임자(PI) 수", "명", "count"),
     # --- BK21 ---
-    "number_of_research_groups":    ("교육연구단 수", "개", "count"),
-    "graduate_innovation_universities": ("대학원혁신지원대학", "개", "count"),
-    "self_evaluation_reports":      ("자체평가 제출", "개", "count"),
-    "consulting_groups":            ("성과 컨설팅 단", "개", "count"),
-    "commendation_recipients":      ("우수 참여인력 표창", "명", "count"),
-    "supported_grad_students":      ("지원 대학원생", "명", "count"),
-    "new_researchers_supported":    ("신진연구인력 지원", "명", "count"),
-    "contract_terminations":        ("협약해지 교육연구단", "개", "count"),
-    "employment_rate_pct":          ("대학원생 취업률", "%", "pct"),
-    "major_match_rate_pct":         ("취업 전공일치율", "%", "pct"),
-    "faculty_lecture_ratio_pct":    ("전임교수 강의비율", "%", "pct"),
-    "faculty_appointments":         ("전임교원 임용", "명", "count"),
-    "annual_sci_e_publications":    ("연간 SCI(E) 논문", "편", "count"),
-    "doctoral_graduates":           ("박사 배출", "명", "count"),
+    "graduate_scholarship_slots":   ("대학원생 연구장학금 정원", "명", "count"),
+    "postdoc_positions":            ("신진연구인력 정원", "명", "count"),
+    "total_funding_allocated":      ("총 배정 예산", "원", "budget"),
+    "compliance_checks_executed":   ("이행점검 실시", "건", "count"),
+    "consulting_sessions_held":     ("성과 컨설팅 실시", "건", "count"),
+    "evaluation_panels_convened":   ("평가 패널 구성", "개", "count"),
+    "total_funds_disbursed":        ("총 집행 예산", "원", "budget"),
+    "graduate_students_supported":  ("지원 대학원생", "명", "count"),
+    "international_conference_presentations": ("국제학회 발표", "건", "count"),
+    "postdoc_researchers_supported": ("지원 신진연구인력", "명", "count"),
+    "publications_produced":        ("논문 산출", "편", "count"),
+    "employment_rate":              ("취업률", "%", "pct"),
+    "full_time_faculty_lecture_ratio": ("전임교수 강의비율", "%", "pct"),
+    "graduate_employment_rate_of_bk21_participants_in_2022": ("BK21 참여 취업자 수(2022)", "명", "count"),
+    "international_collaboration_rate": ("국제협력 비율", "%", "pct"),
+    "international_research_collaboration_rate_of_bk21_participants_in_2022": ("국제공동연구 건수(2022)", "건", "count"),
+    "high_impact_publications_per_1000_researchers": ("연구자 1천명당 고피인용 논문", "편", "count"),
+    "national_st_talent_competitiveness_rank": ("국가 과학기술인재 경쟁력 순위", "위", "count"),
 }
 
 PHASE_META = {
@@ -211,18 +215,34 @@ def first_sentences(text, max_len=180):
     return cut.rstrip() + "…"
 
 
+BUDGET_KEYS = {k for k, m in VAR_META.items() if m[2] == "budget"}
+
+
+def norm_val(k, v):
+    """Normalise budget values to KRW. Some logs express budget in 백만원
+    (e.g. 408,080) and others in 원 (e.g. 410,597,000,000); a national-program
+    budget below 1억 is a unit artifact, so scale 백만원 → 원."""
+    if k in BUDGET_KEYS and v is not None and 0 < abs(v) < 1e8:
+        return v * 1e6
+    return v
+
+
+def norm_pv(pv):
+    return {k: norm_val(k, v) for k, v in (pv or {}).items()}
+
+
 def collect_phase(fp_phase):
     """Return dict of variable -> list of (agent, value) from initial_posts,
     plus refined consensus per variable, plus posting order."""
     initial = {}
     for p in fp_phase.get("initial_posts") or []:
-        pv = p.get("prediction_values") or {}
+        pv = norm_pv(p.get("prediction_values"))
         for k, v in pv.items():
             initial.setdefault(k, []).append((p["persona_name"], v))
     refined = {}
     rposts = fp_phase.get("refined_posts") or fp_phase.get("revised_posts") or []
     for p in rposts:
-        pv = p.get("prediction_values") or {}
+        pv = norm_pv(p.get("prediction_values"))
         for k, v in pv.items():
             refined.setdefault(k, []).append(v)
     consensus = {}
@@ -290,6 +310,16 @@ def build_scenario(d, policy="ssf"):
             ccrec = cc.get((phase, var))
             vals = [v for _, v in pairs]
             spread = (max(vals) - min(vals)) if vals else 0
+            # normalise budget units, then recompute consistency = min/max so a
+            # forward(원)/backward(백만원) unit mismatch is not read as 0% agreement
+            fa = norm_val(var, ccrec["forward_agg"]) if ccrec else consensus.get(var)
+            ba = norm_val(var, ccrec["backward_agg"]) if ccrec else None
+            if fa is not None and ba is not None and max(abs(fa), abs(ba)) > 0:
+                consistency = min(abs(fa), abs(ba)) / max(abs(fa), abs(ba))
+                gap = ba - fa
+            else:
+                consistency = ccrec["consistency"] if ccrec else None
+                gap = ccrec["gap"] if ccrec else None
             variables.append({
                 "key": var,
                 "label": meta[0],
@@ -298,11 +328,11 @@ def build_scenario(d, policy="ssf"):
                 "initial": [{"agent": a, "value": v, "outlier": a in outliers} for a, v in pairs],
                 "spread": spread,
                 "consensus": consensus.get(var),
-                "backward_agg": ccrec["backward_agg"] if ccrec else None,
-                "forward_agg": ccrec["forward_agg"] if ccrec else None,
-                "consistency": ccrec["consistency"] if ccrec else None,
-                "gap": ccrec["gap"] if ccrec else None,
-                "reconciled": ccrec.get("aggregated_value") if ccrec else None,
+                "backward_agg": ba,
+                "forward_agg": fa,
+                "consistency": consistency,
+                "gap": gap,
+                "reconciled": norm_val(var, ccrec.get("aggregated_value")) if ccrec else consensus.get(var),
             })
         # sort: most-contested variable first (largest backward/forward disagreement)
         variables.sort(key=lambda v: (v["consistency"] if v["consistency"] is not None else 1))
@@ -315,7 +345,7 @@ def build_scenario(d, policy="ssf"):
             a = name_to_agent.get(p["persona_name"])
             if not a:
                 continue
-            pv = p.get("prediction_values") or {}
+            pv = norm_pv(p.get("prediction_values"))
             # is this agent an outlier on any variable?
             is_out = any(p["persona_name"] in detect_outliers(initial.get(k, [])) for k in pv)
             agent_posts.append({
@@ -336,7 +366,7 @@ def build_scenario(d, policy="ssf"):
             for p in bw.get("initial_posts") or []:
                 backward_posts.append({
                     "agent": p["persona_name"],
-                    "values": p.get("prediction_values") or {},
+                    "values": norm_pv(p.get("prediction_values")),
                     "rationale": first_sentences(p.get("narrative", ""), 180),
                 })
 
@@ -383,7 +413,7 @@ def load_glob(pattern, policy):
 def main():
     scenarios = []
     scenarios += load_glob("scenario_*.json", "ssf")
-    scenarios += load_glob("bk21_scenario_*.json", "bk21")
+    scenarios += load_glob("bkscenario_*.json", "bk21")
     out = {
         "policies": {
             "ssf": "세종과학펠로우십 (SSF)",

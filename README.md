@@ -52,11 +52,10 @@ python3 -m http.server 8000
    마친 뒤 backward 전 과정을 진행하는 흐름을 U자(⤾) 흐름도로 표시. 이상치 흡수·합의
    도달을 보여주고, ‘이견’ 표시된 결과 박스를 누르면 다른 값을 낸 참여자의 배경·근거가
    나타납니다.
-   - SSF 시뮬레이션은 실제 멀티에이전트 로그(`scenario_*.json`)에서 추출합니다.
-   - 저장소에 BK21 시뮬레이션 로그가 없어, BK21은 정책계획서의 실제 수치(예산 4,080억,
-     교육연구단 577개, 취업률·전공일치율·전임교수 강의비율 등)에 근거한 **대표 시나리오**를
-     동일 형식으로 생성해 넣었습니다(`make_bk21_scenarios.py`). 실제 BK21 로그를 같은
-     형식으로 넣으면 그대로 대체됩니다.
+   - SSF 시뮬레이션은 `scenario_*.json`, BK21 시뮬레이션은 `bkscenario_*.json`
+     멀티에이전트 로그에서 추출합니다(각 5개).
+   - 예산 변수는 일부 로그가 원/백만원 단위를 혼용해, 빌드 단계에서 원(KRW)으로
+     정규화하고 합의도를 다시 계산합니다.
 3. **전문가 피드백** — 국가연구개발 성과평가 체계·정책 고유 성과지표의 세부 지표
    아래에 점검 항목(체크리스트)을 배치. 각 항목은 측면(지표 정확성·실행 병목·결과
    분배·한계·측정 가능성)과 대상(구조/시뮬레이션)으로 구조화.
@@ -65,6 +64,5 @@ python3 -m http.server 8000
 
 시뮬레이션 가공 데이터를 다시 만들려면:
 ```bash
-python3 web/make_bk21_scenarios.py   # (선택) BK21 대표 시나리오 생성 → raw_data/bk21_scenario_*.json
-python3 web/build_simulation.py      # raw_data/(bk21_)scenario_*.json → web/data/simulation.json
+python3 web/build_simulation.py   # raw_data/scenario_*.json(SSF)·bkscenario_*.json(BK21) → web/data/simulation.json
 ```
