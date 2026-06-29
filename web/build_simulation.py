@@ -18,6 +18,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 RAW = os.path.join(ROOT, "raw_data")
 
+# Korean translations of the English scenario excerpts (dissent reasons + phase
+# consensus basis). Built once by hand; lookup falls back to the original text.
+TRANS = {}
+_tp = os.path.join(HERE, "data", "translations_ko.json")
+if os.path.exists(_tp):
+    TRANS = json.load(open(_tp, encoding="utf-8"))
+
 # Human-readable labels / units for every prediction variable seen in the logs.
 VAR_META = {
     "total_annual_budget_krw":      ("연간 총 예산", "원", "budget"),
@@ -182,13 +189,15 @@ def variable_dissent(var, agents_meta, narr_map):
             direction = "다수보다 높게" if o["value"] > cons else "다수보다 낮게"
         else:
             direction = "다른 값으로"
+        reason = relevant_excerpt(narr_map.get(o["agent"], ""), o["value"], var["label"])
         out.append({
             "agent": o["agent"],
             "type_ko": a.get("type_ko", ""),
             "value": fmt_ko(o["value"], var["fmt"], var["unit"]),
             "direction": direction,
             "persona": a.get("persona", ""),
-            "reason": relevant_excerpt(narr_map.get(o["agent"], ""), o["value"], var["label"]),
+            "reason": reason,
+            "reason_ko": TRANS.get(reason, ""),
         })
     return out
 
@@ -430,6 +439,7 @@ def build_scenario(d, policy="ssf"):
             "summary": fp.get("phase_summary", ""),
             "summary_ko": phase_summary_ko(variables, agents_meta),
             "basis": excerpt(fp.get("phase_summary", ""), 360),
+            "basis_ko": TRANS.get(excerpt(fp.get("phase_summary", ""), 360), ""),
             "variables": variables,
             "agent_posts": agent_posts,
             "backward_posts": backward_posts,

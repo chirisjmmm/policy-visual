@@ -326,7 +326,7 @@ const SimView = (() => {
         <div class="dis-head"><b>${d.agent}</b> <span class="dis-type">${d.type_ko}</span>
           <span class="dis-dir">${v.label} ${d.value} · ${d.direction}</span></div>
         <div class="dis-persona">${d.persona}</div>
-        ${d.reason ? `<div class="dis-reason"><span class="dis-reason-tag">이견 근거 · 시나리오 발췌</span>“${d.reason}”</div>` : ''}
+        ${(d.reason_ko || d.reason) ? `<div class="dis-reason"><span class="dis-reason-tag">이견 근거 · 시나리오 발췌</span>“${d.reason_ko || d.reason}”${d.reason_ko && d.reason ? `<span class="src-orig">원문: ${d.reason}</span>` : ''}</div>` : ''}
       </div>`).join('');
     box.innerHTML = `<div class="db-head">‘${v.label}’에 이견을 낸 참여자 <button class="db-back" id="dbBack">← 토의 요약</button></div>
       <div class="dis-list">${items}</div>`;
@@ -338,10 +338,11 @@ const SimView = (() => {
     curPh = ph; curStep = step;
     document.querySelectorAll('.vrow').forEach(r => r.classList.remove('open'));
     const box = document.getElementById('detailBox');
+    const basisKo = ph.basis_ko || ph.basis;
     box.innerHTML = `<div class="db-head">토의 · 합의 요약</div>
       <p class="db-text">${ph.summary_ko || ''}</p>
-      ${ph.basis ? `<div class="db-sub">합의에 이른 근거 <span class="muted-sm">· 시나리오 발췌</span></div>
-        <blockquote class="db-quote">“${ph.basis}”</blockquote>` : ''}`;
+      ${basisKo ? `<div class="db-sub">합의에 이른 근거 <span class="muted-sm">· 시나리오 발췌</span></div>
+        <blockquote class="db-quote">“${basisKo}”${ph.basis_ko && ph.basis ? `<span class="src-orig">원문: ${ph.basis}</span>` : ''}</blockquote>` : ''}`;
   }
 
   /* ---------- playback ---------- */
