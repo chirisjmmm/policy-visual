@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.root": "/",
+  "liveServer.settings.entryFile": "index.html",
+  "liveServer.settings.NoBrowser": false,
+  "liveServer.settings.ignoreFiles": [
+    ".vscode/**",
+    "**/*.py",
+    "raw_data/**"
+  ]
+}
