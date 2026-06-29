@@ -80,10 +80,10 @@ const SimView = (() => {
     tbl.setAttribute('cx', 300); tbl.setAttribute('cy', 300);
     tbl.setAttribute('rx', 150); tbl.setAttribute('ry', 138);
     tbl.setAttribute('fill', 'url(#tableGrad)');
-    tbl.setAttribute('stroke', '#33415e'); tbl.setAttribute('stroke-width', 2);
+    tbl.setAttribute('stroke', '#c6cfdd'); tbl.setAttribute('stroke-width', 2);
     const defs = document.createElementNS(SVGNS, 'defs');
     defs.innerHTML = `<radialGradient id="tableGrad" cx="50%" cy="42%" r="65%">
-      <stop offset="0%" stop-color="#243352"/><stop offset="100%" stop-color="#161f33"/></radialGradient>`;
+      <stop offset="0%" stop-color="#f7f9fc"/><stop offset="100%" stop-color="#dde5f1"/></radialGradient>`;
     svg.appendChild(defs); svg.appendChild(tbl);
 
     const n = sc.agents.length;
@@ -97,12 +97,12 @@ const SimView = (() => {
       const ix = (300 - p.x) * 0.32, iy = (300 - p.y) * 0.32;
       cl.setAttribute('x1', 0); cl.setAttribute('y1', 0);
       cl.setAttribute('x2', ix); cl.setAttribute('y2', iy);
-      cl.setAttribute('stroke', '#2c3650'); cl.setAttribute('stroke-width', 1.5);
+      cl.setAttribute('stroke', '#ccd4e1'); cl.setAttribute('stroke-width', 1.5);
       g.appendChild(cl);
       // avatar
       const av = document.createElementNS(SVGNS, 'circle');
       av.setAttribute('r', 30); av.setAttribute('fill', a.color);
-      av.setAttribute('stroke', '#0b101b'); av.setAttribute('stroke-width', 3);
+      av.setAttribute('stroke', '#ffffff'); av.setAttribute('stroke-width', 3);
       g.appendChild(av);
       // person glyph
       const ic = document.createElementNS(SVGNS, 'text');
@@ -124,10 +124,10 @@ const SimView = (() => {
       const chipR = document.createElementNS(SVGNS, 'rect');
       chipR.setAttribute('x', -34); chipR.setAttribute('y', -13); chipR.setAttribute('rx', 9);
       chipR.setAttribute('width', 68); chipR.setAttribute('height', 26);
-      chipR.setAttribute('fill', '#0d131f'); chipR.setAttribute('stroke', a.color); chipR.setAttribute('stroke-width', 1.5);
+      chipR.setAttribute('fill', '#ffffff'); chipR.setAttribute('stroke', a.color); chipR.setAttribute('stroke-width', 1.5);
       const chipT = document.createElementNS(SVGNS, 'text');
       chipT.setAttribute('text-anchor', 'middle'); chipT.setAttribute('y', 5);
-      chipT.setAttribute('font-size', 12); chipT.setAttribute('font-weight', 700); chipT.setAttribute('fill', '#fff');
+      chipT.setAttribute('font-size', 12); chipT.setAttribute('font-weight', 700); chipT.setAttribute('fill', '#1c2435');
       chipG.appendChild(chipR); chipG.appendChild(chipT);
       chipG.style.opacity = 0; chipG.style.transition = 'opacity .35s';
       g.appendChild(chipG);
@@ -189,7 +189,7 @@ const SimView = (() => {
     renderRecon(ph, stage);
     document.getElementById('consensusNote').innerHTML =
       `<b>${STAGE_LABEL[stage].dir}</b> — ${STAGE_LABEL[stage].note}` +
-      (stage === 'reconcile' ? `<br><br><b>이 단계 요약.</b> ${ph.summary || ''}` : '');
+      (stage === 'reconcile' ? `<br><br><b>이 단계 요약.</b> ${ph.summary_ko || ph.summary || ''}` : '');
 
     // chip + bubble behaviour by stage
     seats.forEach(s => { s.chipG.style.opacity = 0; });
@@ -206,11 +206,11 @@ const SimView = (() => {
         const v = o ? o.value : null, out = o && o.outlier;
         setTimeout(() => {
           s.chipT.textContent = fmtVal(v, hv.fmt, hv.unit);
-          s.chipR.setAttribute('stroke', out ? '#f59e0b' : s.a.color);
-          s.chipR.setAttribute('fill', out ? '#3a2a08' : '#0d131f');
+          s.chipR.setAttribute('stroke', out ? '#d97706' : s.a.color);
+          s.chipR.setAttribute('fill', out ? '#fff7e6' : '#ffffff');
           s.chipG.style.opacity = 1;
           const post = ph.agent_posts.find(p => p.agent === name);
-          const rat = post ? post.rationale : '';
+          const rat = post ? (post.rationale_ko || post.rationale) : '';
           clearBubbles();
           showBubble(s, `${out ? '<span class="b-flag">이상치</span>' : ''}` +
             `<span class="b-val">${hv.label}: ${fmtVal(v, hv.fmt, hv.unit)}</span>` +
@@ -221,10 +221,10 @@ const SimView = (() => {
     }
     else if (stage === 'fwd_consensus') {
       const cv = hv.consensus;
-      tcc.innerHTML = `<span style="color:#5ee08a">합의 ${hv.label}<br><b style="font-size:15px;color:#fff">${fmtVal(cv, hv.fmt, hv.unit)}</b></span>`;
+      tcc.innerHTML = `<span style="color:#15803d">합의 ${hv.label}<br><b style="font-size:15px;color:#16203a">${fmtVal(cv, hv.fmt, hv.unit)}</b></span>`;
       seats.forEach(s => {
         s.chipT.textContent = fmtVal(cv, hv.fmt, hv.unit);
-        s.chipR.setAttribute('stroke', '#22c55e'); s.chipR.setAttribute('fill', '#0e2417');
+        s.chipR.setAttribute('stroke', '#16a34a'); s.chipR.setAttribute('fill', '#e7f7ee');
         s.chipG.style.opacity = 1;
       });
       const outs = hv.initial.filter(o => o.outlier).map(o => o.agent);
@@ -233,12 +233,12 @@ const SimView = (() => {
         : `다섯 명 모두 <b>${fmtVal(cv, hv.fmt, hv.unit)}</b> 에 합의 (이견 없음)`);
     }
     else if (stage === 'backward') {
-      tcc.innerHTML = `<span style="color:#c4b5fd">역방향 재추정<br><span class="muted-sm">상향식으로 다시</span></span>`;
+      tcc.innerHTML = `<span style="color:#7c3aed">역방향 재추정<br><span class="muted-sm">상향식으로 다시</span></span>`;
       seats.forEach(s => {
         const bp = bwdPost[s.a.name];
         const bv = bp && bp.values ? bp.values[hv.key] : null;
         s.chipT.textContent = bv != null ? fmtVal(bv, hv.fmt, hv.unit) : '—';
-        s.chipR.setAttribute('stroke', '#a855f7'); s.chipR.setAttribute('fill', '#1e1233');
+        s.chipR.setAttribute('stroke', '#9333ea'); s.chipR.setAttribute('fill', '#f3e9fe');
         s.chipG.style.opacity = bv != null ? 1 : 0.35;
       });
       const anyB = (ph.backward_posts || [])[0];
@@ -247,7 +247,7 @@ const SimView = (() => {
     else { // reconcile
       const fa = hv.forward_agg, ba = hv.backward_agg, cons = hv.consistency;
       tcc.innerHTML = `<span class="muted-sm">forward ${fmtVal(fa, hv.fmt, hv.unit)} · backward ${fmtVal(ba, hv.fmt, hv.unit)}</span>` +
-        `<br><b style="font-size:15px;color:#fff">합의도 ${(cons != null ? Math.round(cons * 100) : 100)}%</b>`;
+        `<br><b style="font-size:15px;color:#16203a">합의도 ${(cons != null ? Math.round(cons * 100) : 100)}%</b>`;
       seats.forEach(s => { s.chipG.style.opacity = 0; });
     }
 
