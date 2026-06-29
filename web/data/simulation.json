@@ -146,6 +146,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, with all participants calculating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW each), 200 fellowship slots, and a 30% regional quota (60 slots for regional institutions). Key themes included the policy's explicit stipulations and the goal of balanced national research capacity through regional allocation. No disagreements emerged, as all estimates and reasoning aligned with the stated policy context. The central tendency and range were identical across all predictions: total_annual_budget_krw = 26,000,000,000, fellowship_slots = 200, regional_quota_pct = 30.0.",
+     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -278,6 +279,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I see the budget as straightforward: 200 fellows × 130 million KRW each = 26 billion KRW annually.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -289,6 +291,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in a regional institution (안산), I see the budget as 200 fellows × 130M KRW = 26B KRW annually.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -300,6 +303,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in a regional institution, I see the budget as 200 fellows × 130M KRW = 26B KRW annually.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -311,6 +315,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I confirm the budget calculation: 200 fellows × 130 million KRW each = 26 billion KRW annually.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -322,6 +327,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I confirm the budget calculation: 200 fellows × 130 million KRW each = 26 billion KRW annually.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       }
      ],
@@ -388,6 +394,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's fixed annual selection of 200 fellows, with applications estimated between 900 and 1200, reflecting a competitive acceptance rate of 16.7% to 22.2%. Consensus emerged that the 30% regional quota and eligibility restrictions narrow the applicant pool, while midterm evaluations emphasize process-oriented performance, leading to pass rates of 80% to 90% (160-180 fellows). Disagreement centered on application volume, with lower estimates citing burdensome requirements and regional quota discouraging Seoul-based applicants, and on midterm pass rates, with lower estimates highlighting risks from lab changes and weaker regional research environments. Central tendencies were approximately 1100 applications and 175 fellows passing midterm.",
+     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 900건~1,200건로 갈렸지만, 근거를 교환하며 900건로 수렴했습니다. 특히 류수빈, 구민혁의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "applications_received",
@@ -520,6 +527,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a graduation expectancy applicant at a regional institution in Ansan, I see the fellowship as a rare opportunity for researchers like me who lack the prestige of Seoul-based labs.",
+       "rationale_ko": "박사후연구원의 예측: 지원서 접수 1,200건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -531,6 +539,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit stipulations and the committee's role in overseeing the selection process.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,200건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -542,6 +551,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit stipulations and the committee's role in overseeing the selection process.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,200건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -553,6 +563,7 @@
         "midterm_evaluations_passed": 170
        },
        "rationale": "As an evaluation panel member with a humanities background, I view the fellowship's selection process as highly competitive but grounded in clear policy stipulations.",
+       "rationale_ko": "평가위원의 예측: 지원서 접수 1,000건 · 단계평가 통과 170명 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -564,6 +575,7 @@
         "midterm_evaluations_passed": 160
        },
        "rationale": "As a graduation expectancy applicant with a background in optimizing polymer formulations, I view the fellowship's selection process through a lens of precision and realism.",
+       "rationale_ko": "박사후연구원의 예측: 지원서 접수 900건 · 단계평가 통과 160명 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       }
      ],
@@ -630,6 +642,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group agreed that 200 fellows are active in the 2021-2022 window, based on the policy of annual selection. For stage_two_fellows, estimates ranged from 160 to 174, with the majority (three participants) converging on 174, reflecting an 87% pass rate from the Activities phase, while two participants proposed lower rates (85% and 80%) due to risks from lab changes and weaker regional research environments. For annual_reports_submitted, there was consensus on 400 reports, as only the first cohort of 200 fellows submits one report per year in the two-year window, with one outlier estimating 600 by incorrectly including the full cohort lifetime. Key causal mechanisms discussed included midterm evaluation pass rates, lab change disruptions, and regional infrastructure challenges affecting attrition.",
+     "summary_ko": "‘2단계 진입 펠로우’은(는) 초기 추정이 160명~174명로 갈렸지만, 근거를 교환하며 160명로 수렴했습니다. 특히 구민혁의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "stage_two_fellows",
@@ -762,6 +775,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As a graduation expectancy applicant from a regional institution in Ansan, I see the fellowship starting with 200 fellows each year.",
+       "rationale_ko": "박사후연구원의 예측: 2단계 진입 펠로우 174명 · 활동 중 펠로우 200명 · 연차보고서 제출 600건 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -773,6 +787,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I oversee the selection and evaluation process.",
+       "rationale_ko": "정책담당자의 예측: 2단계 진입 펠로우 174명 · 활동 중 펠로우 200명 · 연차보고서 제출 400건",
        "outlier": false
       },
       {
@@ -784,6 +799,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As an evaluation panel member with a humanities background, I see the fellowship starting with 200 active fellows in the 2021-2022 window, as the policy explicitly states 200 fellows selected annually.",
+       "rationale_ko": "평가위원의 예측: 2단계 진입 펠로우 170명 · 활동 중 펠로우 200명 · 연차보고서 제출 400건",
        "outlier": false
       },
       {
@@ -795,6 +811,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a graduation expectancy applicant with a background in optimizing polymer formulations, I view the fellowship's outputs through a lens of precision and realism.",
+       "rationale_ko": "박사후연구원의 예측: 2단계 진입 펠로우 160명 · 활동 중 펠로우 200명 · 연차보고서 제출 400건 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -806,6 +823,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit stipulations and the committee's role in overseeing the selection and evaluation process.",
+       "rationale_ko": "정책담당자의 예측: 2단계 진입 펠로우 174명 · 활동 중 펠로우 200명 · 연차보고서 제출 400건",
        "outlier": false
       }
      ],
@@ -872,6 +890,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the early-stage challenges of the first cohort of 200 fellows, emphasizing that ramp-up time, lab changes (10-15% within 3 years), and weaker infrastructure at regional institutions (30% quota) would limit initial SCI(E) publication output. There was strong consensus on the regional participation rate (30%) and on a lower publication estimate of 340 (0.85 per fellow per year) and a 25% tenure-track transition rate, driven by competitive job markets and regional barriers. One dissenting voice estimated higher productivity (400 publications, 1 per fellow per year) and a 35% transition rate, assuming smoother early progress and policy prestige. Numeric predictions ranged from 340 to 400 for publications and 25% to 35% for tenure-track transition, with the majority converging on the lower end.",
+     "summary_ko": "‘정년트랙 전환율’은(는) 초기 추정이 25%~35%로 갈렸지만, 근거를 교환하며 20%로 수렴했습니다. 특히 이상근의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 정년트랙 전환율, SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -1045,6 +1064,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I estimate that in the 2021-2022 window, the active cohort consists of the first cohort of 200 fellows (selected in early 2021, active from March 2021).",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 전환율 35% · SCI(E) 논문 수 400편 · SCI 논문 수 400편 · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -1057,6 +1077,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member with a humanities background, I estimate that in the 2021-2022 window, the active cohort consists of the first cohort of 200 fellows (selected in early 2021, active from March 2021).",
+       "rationale_ko": "평가위원의 예측: 정년트랙 전환율 25% · SCI(E) 논문 수 340편 · SCI 논문 수 340편 · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -1069,6 +1090,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in a regional institution, I see the 2021-2022 window as the early phase for the first cohort of 200 fellows.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 전환율 25% · SCI(E) 논문 수 340편 · SCI 논문 수 340편 · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -1081,6 +1103,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a graduation expectancy applicant from a regional institution in Ansan, I see the 2021-2022 window as the early phase for the first cohort of 200 fellows.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 전환율 25% · SCI(E) 논문 수 340편 · SCI 논문 수 340편 · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -1093,6 +1116,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I oversee the selection and evaluation process. In the 2021-2022 window, only the first cohort of 200 fellows is active, starting from March 2021.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 전환율 25% · SCI(E) 논문 수 340편 · SCI 논문 수 340편 · 지역기관 참여 비율 30%",
        "outlier": false
       }
      ],
@@ -1164,6 +1188,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three long-term impact variables, estimating that approximately 20 former fellows (10% of the original 200) will hold tenure-track positions after 5–10 years, regional publication share will grow by 2.5 percentage points over a decade, and 30 former fellows will become independent PIs. Causal mechanisms centered on the 30% regional quota directing 60 fellows to regional institutions, where lower publication productivity (0.7 vs. 1.0 per year) and weaker infrastructure limit capacity growth, while the program's support for research independence enables non-tenure-track PI roles. All participants agreed that systemic barriers in the academic job market and regional research environments constrain the fellowship's long-term impact, with no disagreements in estimates or reasoning.",
+     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 20명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -1296,6 +1321,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I see the fellowship's long-term impact through a lens of cautious optimism.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -1307,6 +1333,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a graduation expectancy applicant from a regional institution in Ansan, I see the long-term impact of the fellowship through a cautious lens.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -1318,6 +1345,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I see the fellowship's long-term impact through a lens of cautious optimism.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -1329,6 +1357,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As an evaluation panel member with a humanities background, I see the long-term impact of the fellowship as modest but meaningful.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -1340,6 +1369,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a postdoctoral researcher in a regional institution, I see the long-term impact of the fellowship as modest but meaningful.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       }
      ],
@@ -1464,6 +1494,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots reserved). They consistently cited the policy's explicit figures for per-fellow funding (100 million KRW direct costs + 30 million KRW indirect costs) and slot allocation, leading to full consensus on all numeric predictions. No disagreements emerged, as participants treated these values as fixed policy parameters rather than estimates. The central tendency is identical across all predictions, with no range in values.",
+     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -1596,6 +1627,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in chemistry, I see the Sejong Science Fellowship as a crucial opportunity for early-career scientists like myself.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -1607,6 +1639,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a data analyst in pharmaceutical manufacturing, I approach this from a process optimization perspective.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -1618,6 +1651,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a researcher in human-machine interface design, I see the Sejong Science Fellowship as a structured funding mechanism.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -1629,6 +1663,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a manufacturing engineering professor and member of the Basic Research Project Promotion Committee, I view the Sejong Science Fellowship from a resource allocation and operational efficiency perspective.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -1640,6 +1675,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I rely on the policy's explicit numbers: 130 million KRW per fellow and 200 fellows annually, giving a total budget of 26 billion KRW.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       }
      ],
@@ -1706,6 +1742,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group focused on the fellowship's fixed capacity of 200 selected fellows per year and the process-oriented midterm evaluation, which they expected to yield a 90% pass rate (180 out of 200). They estimated applications between 1,200 and 1,500, with a central tendency around 1,300–1,400, reflecting differing views on the eligible pool's size, including PhD candidates and regional applicants. All agreed on a 10% lab change rate during the first three years, citing policy allowances and typical mobility patterns. The main divergence was in application volume, driven by assumptions about competition and eligibility breadth.",
+     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 1,200건~1,500건로 갈렸지만, 근거를 교환하며 1,300건로 수렴했습니다. 특히 문민철의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "applications_received",
@@ -1838,6 +1875,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a manufacturing engineering professor on the Basic Research Project Promotion Committee, I see the fellowship as a targeted investment in early-career talent.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,200건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -1849,6 +1887,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a data analyst in pharmaceutical manufacturing, I approach this with a process optimization mindset. The policy explicitly states 200 fellows selected annually, so that's fixed.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,500건 · 단계평가 통과 180명 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -1860,6 +1899,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a researcher in human-machine interface design, I see the fellowship as a structured program with fixed slots. The policy states 200 fellows selected annually, so that's ground truth.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,300건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -1871,6 +1911,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a chemistry postdoc with a humanities background, I see the fellowship as a structured opportunity. The policy states 200 slots, so that's fixed.",
+       "rationale_ko": "박사후연구원의 예측: 지원서 접수 1,400건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -1882,6 +1923,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As an evaluation panel member, I see the fellowship as a structured program with fixed slots. The policy states 200 fellows selected annually, so that's ground truth.",
+       "rationale_ko": "평가위원의 예측: 지원서 접수 1,300건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       }
      ],
@@ -1948,6 +1990,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group reached strong consensus that 200 fellows are active in the 2021-2022 window, with 180 continuing to stage two based on a 90% midterm evaluation pass rate. Most participants estimated 400 annual reports submitted, aligning with the two-year simulation target (200 fellows × 2 years). One participant initially estimated 600 reports, likely covering a three-year period, but this was not adopted by others. The central tendency for all three variables is 200, 180, and 400, with no variation in numeric predictions across the group.",
+     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "fellows_active",
@@ -2080,6 +2123,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As an evaluation panel member, I reason from the policy's fixed parameters and the midterm evaluation pass rate. The fellowship selects 200 fellows annually, and all 200 are active during the first three years.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 600건 · 2단계 진입 펠로우 180명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -2091,6 +2135,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a researcher in human-machine interface design, I view the fellowship as a structured pipeline. The policy selects 200 fellows annually, and all are active during the first two years (2021-2022).",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 180명",
        "outlier": false
       },
       {
@@ -2102,6 +2147,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a data analyst in pharmaceutical manufacturing, I view the fellowship as a process with clear inputs and throughput.",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 180명",
        "outlier": false
       },
       {
@@ -2113,6 +2159,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a manufacturing engineering professor on the Basic Research Project Promotion Committee, I view the fellowship as a structured pipeline.",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 180명",
        "outlier": false
       },
       {
@@ -2124,6 +2171,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a chemistry postdoc and graduation expectancy applicant, I see the fellowship as a structured pipeline.",
+       "rationale_ko": "박사후연구원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 180명",
        "outlier": false
       }
      ],
@@ -2190,6 +2238,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group discussed the early-stage productivity of 200 fellows in their first two years, focusing on publication output, tenure-track transition, and regional participation. There was consensus that the 30% regional quota is a binding policy mandate, and that the tenure-track transition rate is low (10-15%) due to the program's early stage. Disagreement centered on publication productivity: some estimated 1.2 papers per fellow per year (480 total) based on chemistry/pharma experience, while others argued for 1.0 (400 total) due to a setup phase in engineering and diverse fields. The range for publications was 400-480, with a central tendency around 400, and tenure-track rates ranged from 10-15%.",
+     "summary_ko": "‘SCI(E) 논문 수’은(는) 초기 추정이 400편~480편로 갈렸지만, 근거를 교환하며 500편로 수렴했습니다. 특히 이시연, 문민철의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -2363,6 +2412,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a chemistry postdoc and graduation expectancy applicant, I estimate that during 2021-2022, the 200 active fellows will produce about 480 SCI(E) publications.",
+       "rationale_ko": "박사후연구원의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 15% · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -2375,6 +2425,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a data analyst in pharmaceutical manufacturing, I view the fellowship as a process with measurable outputs. From the prior phases, we have 200 active fellows in 2021-2022, all in their first two years.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 15% · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -2387,6 +2438,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a manufacturing engineering professor on the Basic Research Project Promotion Committee, I view the fellowship's outcomes through a resource allocation and operational efficiency lens.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 400편 · SCI 논문 수 400편 · 정년트랙 전환율 10% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -2399,6 +2451,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a researcher in human-machine interface design, I view the fellowship's outcomes through a lens of early-career productivity.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 400편 · SCI 논문 수 400편 · 정년트랙 전환율 10% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -2411,6 +2464,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I reason from the prior phases: 200 fellows are active in 2021-2022, all in their first two years.",
+       "rationale_ko": "평가위원의 예측: SCI(E) 논문 수 400편 · SCI 논문 수 400편 · 정년트랙 전환율 10% · 지역기관 참여 비율 30%",
        "outlier": false
       }
      ],
@@ -2482,6 +2536,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, projecting that 10% of the 200 fellows (20) will secure tenure-track positions, regional publication share will increase by 2.5 percentage points over a decade, and 15% of fellows (30) will become independent principal investigators. Key causal mechanisms included the competitive Korean academic job market, structural barriers limiting tenure-track positions, and the time needed for regional research capacity to grow despite a 30% regional quota. All participants reasoned that the fellowship's early stage (2021-2022) and modest cohort size constrained long-term impact, with no disagreement on numeric values or underlying logic.",
+     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 20명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -2614,6 +2669,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a manufacturing engineering professor on the Basic Research Project Promotion Committee, I reason from the prior phases that the fellowship's long-term impact on career trajectories and regional capacity is modest in…",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -2625,6 +2681,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As an evaluation panel member, I reason from the prior phases that the fellowship's long-term impact on career trajectories and regional capacity is modest in the 2021-2022 window.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -2636,6 +2693,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a data analyst in pharmaceutical manufacturing, I approach this impact phase with a process optimization mindset.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -2647,6 +2705,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a chemistry postdoc and graduation expectancy applicant, I reason from the prior phases that the fellowship's long-term impact on career trajectories and regional capacity is modest in the 2021-2022 window.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       },
       {
@@ -2658,6 +2717,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a researcher in human-machine interface design, I see the fellowship's long-term impact through a lens of structured career progression.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 20명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 30명",
        "outlier": false
       }
      ],
@@ -2782,6 +2842,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input variables, treating the policy's explicit numbers as ground truth: 200 fellowship slots, a 30% regional quota, and a total annual budget of 26 billion KRW (derived from 200 slots × 130 million KRW each, with a direct/indirect split of 100M + 30M per fellow). All participants converged on these values, citing the policy document directly. No disagreements emerged, as the estimates were considered fixed parameters rather than variables to be estimated. The central tendency and range were identical across all posts, with no variation in numeric predictions.",
+     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -2914,6 +2975,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I estimate the total annual budget for the Sejong Science Fellowship at 26 billion KRW, based on 200 slots at 130 million KRW each (100M direct + 30M indirec…",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -2925,6 +2987,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I base my estimates on the policy's explicit resource logic: 200 fellows per year at 130 million KRW each (100M direct + 30M indirect) yields 26 billion KRW total annual budget.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -2936,6 +2999,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I base my estimates on the policy's explicit resource logic: 200 fellows per year at 130 million KRW each (100M direct + 30M indirect) yields 26 billion KRW total annual budget.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -2947,6 +3011,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in a regional institution (Wonju, Gangwon), I see the policy's explicit numbers as ground truth: 200 slots at 130M KRW each gives 26B KRW total budget.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -2958,6 +3023,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member from Jeonju, I see the policy's explicit numbers as ground truth: 200 slots at 130M KRW each gives 26B KRW total annual budget.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       }
      ],
@@ -3024,6 +3090,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's competitive selection process, with a fixed annual target of 200 fellows, and focused on how eligibility restrictions (domestic only, non-tenure-track, PhD within 7 years or under 39) and application barriers (host institution consultation) shape the applicant pool. There was consensus that the midterm evaluation is process-oriented and supportive, leading to high pass rates, and that lab changes are allowed and moderately common. Disagreement centered on the total number of applications, ranging from 800 to 1,200, with a central tendency around 1,050, and on the midterm pass rate, ranging from 80% to 90% (160-180 fellows). Lab change estimates varied from 10% to 20% of fellows.",
+     "summary_ko": "‘단계평가 통과’은(는) 초기 추정이 160명~180명로 갈렸지만, 근거를 교환하며 170명로 수렴했습니다. 다만 forward·backward 교차검증에서 단계평가 통과, 지원서 접수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -3156,6 +3223,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I estimate that the annual call will attract approximately 1,200 applications, given the program's prestige and the large pool of eligible postdocs in Korea.…",
+       "rationale_ko": "정책담당자의 예측: 단계평가 통과 180명 · 지원서 접수 1,200건 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3167,6 +3235,7 @@
         "midterm_evaluations_passed": 170
        },
        "rationale": "As an evaluation panel member from a regional university in Jeonju, I see the selection process as highly competitive.",
+       "rationale_ko": "평가위원의 예측: 단계평가 통과 170명 · 지원서 접수 1,000건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -3178,6 +3247,7 @@
         "midterm_evaluations_passed": 175
        },
        "rationale": "As an evaluation panel member with a background in ICT and a focus on administrative efficiency, I view the selection process through a lens of system design and resource optimization.",
+       "rationale_ko": "평가위원의 예측: 단계평가 통과 175명 · 지원서 접수 1,100건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -3189,6 +3259,7 @@
         "midterm_evaluations_passed": 170
        },
        "rationale": "As an evaluation panel member with a background in smart factory sensor network optimization, I view the selection process through a lens of system efficiency and practical constraints.",
+       "rationale_ko": "평가위원의 예측: 단계평가 통과 170명 · 지원서 접수 1,050건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -3200,6 +3271,7 @@
         "midterm_evaluations_passed": 160
        },
        "rationale": "As a postdoctoral researcher at a regional chemistry lab in Wonju, I see the application pool as smaller than my colleagues estimate.",
+       "rationale_ko": "박사후연구원의 예측: 단계평가 통과 160명 · 지원서 접수 800건 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       }
      ],
@@ -3266,6 +3338,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the 2021-2022 window, agreeing that 200 fellows are active as the first cohort starts in March 2021. They reached consensus on 170 fellows continuing to stage two (85% pass rate) and 400 annual reports (200 fellows × 2 years). One participant dissented, estimating 160 stage-two fellows and 1000 reports, the latter due to including multiple cohorts or a 5-year total, which others rejected as inconsistent with the simulation target. Predictions for fellows_active were unanimous at 200; stage_two_fellows ranged from 160 to 170 (median 170); annual_reports_submitted ranged from 400 to 1000 (median 400).",
+     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "fellows_active",
@@ -3398,6 +3471,7 @@
         "annual_reports_submitted": 1000
        },
        "rationale": "As a postdoctoral researcher in a regional chemistry lab in Wonju, I see the outputs phase as a direct consequence of the selection and midterm evaluation processes.",
+       "rationale_ko": "박사후연구원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 1,000건 · 2단계 진입 펠로우 160명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3409,6 +3483,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's design and the prior phases. The policy selects 200 fellows annually, and the first cohort starts in March 2021.",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 170명",
        "outlier": false
       },
       {
@@ -3420,6 +3495,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As an evaluation panel member from a regional university in Jeonju, I see the outputs phase as a direct consequence of the selection and midterm evaluation processes.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 170명",
        "outlier": false
       },
       {
@@ -3431,6 +3507,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As an evaluation panel member with a background in smart factory sensor network optimization, I see the outputs phase as a direct consequence of the selection and midterm evaluation processes.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 170명",
        "outlier": false
       },
       {
@@ -3442,6 +3519,7 @@
         "annual_reports_submitted": 400
        },
        "rationale": "As an evaluation panel member with a background in ICT and a focus on administrative efficiency, I see the outputs phase as a direct consequence of the selection and midterm evaluation processes.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 연차보고서 제출 400건 · 2단계 진입 펠로우 170명",
        "outlier": false
       }
      ],
@@ -3508,6 +3586,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on how the first cohort of 200 fellows (starting March 2021) drives outcomes in the 2021-2022 window, with the second cohort contributing only partially. There was consensus that midterm attrition reduces active fellows to about 170 and that the 30% regional quota is strictly enforced, though one participant estimated 28% due to applicant shortages. Disagreements centered on publication productivity per fellow-year (ranging from 0.6 to 1.5) and tenure-track transition rates (15% to 25%), with lower estimates reflecting regional constraints and longer engineering publication cycles, while higher estimates assumed policy support boosts output. Numeric predictions for total SCI(E) publications ranged from 320 to 480, with a central tendency around 360-400, and transition rates clustered near 20%.",
+     "summary_ko": "‘정년트랙 전환율’은(는) 초기 추정이 15%~25%로 갈렸지만, 근거를 교환하며 18%로 수렴했습니다. 특히 조덕균, 김종한의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 정년트랙 전환율, SCI(E) 논문 수, SCI 논문 수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "tenure_track_transition_rate",
@@ -3681,6 +3760,7 @@
         "regional_institution_participation_pct": 28.0
        },
        "rationale": "As a 45-year-old postdoctoral researcher in a regional chemistry lab in Wonju, I see the outcomes phase as a direct consequence of the selection, activities, and outputs phases.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 전환율 15% · SCI(E) 논문 수 320편 · SCI 논문 수 320편 · 지역기관 참여 비율 28% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3693,6 +3773,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member focused on system efficiency, I estimate the outcomes based on the prior phases. The first cohort of 200 fellows starts in March 2021, active for about 1.8 years in the 2021-2022 window.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 전환율 25% · SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3705,6 +3786,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member from a regional university in Jeonju, I see the outcomes phase as a direct consequence of the prior phases.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 전환율 20% · SCI(E) 논문 수 400편 · SCI 논문 수 400편 · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3717,6 +3799,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee with a background in engineering and construction, I view the outcomes through a practical lens.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 전환율 20% · SCI(E) 논문 수 360편 · SCI 논문 수 360편 · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -3729,6 +3812,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member with a background in smart factory sensor network optimization, I see the outcomes phase as a direct consequence of the prior phases.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 전환율 20% · SCI(E) 논문 수 360편 · SCI 논문 수 360편 · 지역기관 참여 비율 30%",
        "outlier": false
       }
      ],
@@ -3800,6 +3884,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group discussed the long-term impact of the Sejong Science Fellowship on tenure-track transitions, regional publication share, and independent PI counts, focusing on causal mechanisms like the 30% regional quota, stable funding, and lab mobility. Consensus emerged that the independent PI count would exceed the tenure-track count due to non-tenure-track leadership roles, and that regional publication share growth would be modest. Disagreement centered on the magnitude of impact: some participants estimated higher outcomes (40 tenure-track, 2.5% regional growth, 50 PIs) based on policy support, while others predicted lower figures (20-30 tenure-track, 1.0-1.5% growth, 30-40 PIs) citing structural barriers for regional researchers and a competitive job market. Prediction ranges were: former_fellows_in_tenure_track 20-40 (central tendency ~30), regional_publication_share_growth 1.0-2.5% (~1.5%), independent_pi_count 30-50 (~40).",
+     "summary_ko": "‘지역 논문 점유율 증가’은(는) 초기 추정이 1%p~2.5%p로 갈렸지만, 근거를 교환하며 1.5%p로 수렴했습니다. 특히 김종한, 송성진, 조덕균의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지역 논문 점유율 증가의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "regional_publication_share_growth",
@@ -3932,6 +4017,7 @@
         "independent_pi_count": 50
        },
        "rationale": "As an evaluation panel member focused on system efficiency, I reason forward from the prior phases. The fellowship selects 200 fellows per year with a 30% regional quota, and the first cohort starts in March 2021.",
+       "rationale_ko": "평가위원의 예측: 지역 논문 점유율 증가 2.5%p · 정년트랙 진입 펠로우 40명 · 독립 연구책임자(PI) 수 50명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3943,6 +4029,7 @@
         "independent_pi_count": 50
        },
        "rationale": "As an evaluation panel member with a background in smart factory sensor network optimization, I reason forward from the prior phases.",
+       "rationale_ko": "평가위원의 예측: 지역 논문 점유율 증가 2.5%p · 정년트랙 진입 펠로우 40명 · 독립 연구책임자(PI) 수 50명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -3954,6 +4041,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As a regional professor in Jeonju, I see the long-term impact of the fellowship through a cautious lens. The prior phases show that 200 fellows start, 170 pass midterm, and the 30% regional quota is enforced.",
+       "rationale_ko": "평가위원의 예측: 지역 논문 점유율 증가 1.5%p · 정년트랙 진입 펠로우 30명 · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -3965,6 +4053,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee with an engineering background, I reason forward from the prior phases.",
+       "rationale_ko": "정책담당자의 예측: 지역 논문 점유율 증가 1.5%p · 정년트랙 진입 펠로우 30명 · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -3976,6 +4065,7 @@
         "independent_pi_count": 30
        },
        "rationale": "As a 45-year-old postdoctoral researcher in a regional chemistry lab in Wonju, I see the long-term impact of the Sejong Science Fellowship through a very cautious lens.",
+       "rationale_ko": "박사후연구원의 예측: 지역 논문 점유율 증가 1%p · 정년트랙 진입 펠로우 20명 · 독립 연구책임자(PI) 수 30명 — 다수와 다른 추정(이상치)",
        "outlier": true
       }
      ],
@@ -4100,6 +4190,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input estimates, all deriving directly from explicit policy statements: a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). There was no disagreement, as every participant cited the same policy numbers and calculations. The central causal mechanism discussed was that these inputs—budget, slots, and regional quota—directly determine the program's capacity to support young scientists and strengthen regional research. All numeric predictions were identical, reflecting complete consensus on the policy's stated resource logic.",
+     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -4232,6 +4323,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in the automotive electronics field, I see the Sejong Science Fellowship as a crucial opportunity for stable research funding.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -4243,6 +4335,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a vital source of stable funding for early-career researchers.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -4254,6 +4347,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I rely on the policy's explicit resource logic: 130 million KRW per fellow, 200 fellows per year, and a 30% regional quota.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -4265,6 +4359,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I base my estimates on the policy's explicit resource logic. The annual budget is straightforward: 200 fellows × 130 million KRW per fellow = 26 billion KRW.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -4276,6 +4371,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a graduation expectancy applicant in chemistry, I am deeply focused on the precise numbers that will determine my eligibility and the program's capacity.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       }
      ],
@@ -4342,6 +4438,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the Sejong Science Fellowship's competitive application process, with estimates for applications_received ranging from 1,200 to 1,500, centering around 1,300-1,400, driven by the program's generous funding (130M KRW/year), 30% regional quota, and broad eligibility. There was strong consensus that fellows_selected is fixed at 200 and that midterm_evaluations_passed would be 180 (90% pass rate), due to the process-oriented stage evaluation focusing on faithful performance. Disagreement centered on application volume: some expected higher numbers due to the program's attractiveness, while others cited the rigorous selection process as a deterrent. All agreed that lab changes are permitted but rare (about 10%), with minimal impact on midterm outcomes.",
+     "summary_ko": "‘지원서 접수’은(는) 초기 추정이 1,200건~1,500건로 갈렸지만, 근거를 교환하며 1,300건로 수렴했습니다. 특히 조혜진의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 지원서 접수, 단계평가 통과의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "applications_received",
@@ -4474,6 +4571,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a highly competitive opportunity.",
+       "rationale_ko": "박사후연구원의 예측: 지원서 접수 1,200건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -4485,6 +4583,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As an evaluation panel member, I estimate applications_received at 1500, higher than 김태희's 1200, because the policy's generous funding and regional quota will attract many applicants from both metropolitan and regional i…",
+       "rationale_ko": "평가위원의 예측: 지원서 접수 1,500건 · 단계평가 통과 180명 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -4496,6 +4595,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a graduation expectancy applicant in chemistry, I see the Sejong Science Fellowship as a highly competitive opportunity.",
+       "rationale_ko": "박사후연구원의 예측: 지원서 접수 1,300건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -4507,6 +4607,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a highly competitive opportunity.",
+       "rationale_ko": "정책담당자의 예측: 지원서 접수 1,400건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -4518,6 +4619,7 @@
         "midterm_evaluations_passed": 180
        },
        "rationale": "As an evaluation panel member with a background in engineering and construction, I see the fellowship as a rigorous but fair process.",
+       "rationale_ko": "평가위원의 예측: 지원서 접수 1,300건 · 단계평가 통과 180명 · 최종 선정 인원 200명",
        "outlier": false
       }
      ],
@@ -4584,6 +4686,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the active cohort math within the 2021-2022 window, with a clear consensus that only the first cohort of 200 fellows is fully active, as the second cohort starts in March 2022 with minimal activity. All participants agreed on fellows_active=200 and stage_two_fellows=180 (the expected 90% pass rate from the prior phase, though the midterm evaluation occurs after 2022). For annual_reports_submitted, the group converged on 600, calculated as 400 reports from the first cohort (200 fellows × 2 years) plus 200 reports from the second cohort (200 fellows × 1 year in 2022). One initial estimate of 960 was rejected as inconsistent with the window. The central tendency across all predictions is 200 for fellows_active, 180 for stage_two_fellows, and 600 for annual_reports_submitted.",
+     "summary_ko": "‘연차보고서 제출’은(는) 초기 추정이 600건~960건로 갈렸지만, 근거를 교환하며 600건로 수렴했습니다. 특히 조혜진의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 연차보고서 제출, 2단계 진입 펠로우의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "annual_reports_submitted",
@@ -4716,6 +4819,7 @@
         "annual_reports_submitted": 960
        },
        "rationale": "As an evaluation panel member, I reason from the prior phases: the program selects 200 fellows per year, and the midterm evaluation passes 180 (90% pass rate).",
+       "rationale_ko": "평가위원의 예측: 연차보고서 제출 960건 · 2단계 진입 펠로우 180명 · 활동 중 펠로우 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -4727,6 +4831,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the fellowship starting in March 2021.",
+       "rationale_ko": "박사후연구원의 예측: 연차보고서 제출 600건 · 2단계 진입 펠로우 180명 · 활동 중 펠로우 200명",
        "outlier": false
       },
       {
@@ -4738,6 +4843,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As an evaluation panel member with a background in engineering and construction, I reason from the prior phases: the program selects 200 fellows per year, and the midterm evaluation passes 180 (90% pass rate).",
+       "rationale_ko": "평가위원의 예측: 연차보고서 제출 600건 · 2단계 진입 펠로우 180명 · 활동 중 펠로우 200명",
        "outlier": false
       },
       {
@@ -4749,6 +4855,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the fellowship starting in March 2021.",
+       "rationale_ko": "정책담당자의 예측: 연차보고서 제출 600건 · 2단계 진입 펠로우 180명 · 활동 중 펠로우 200명",
        "outlier": false
       },
       {
@@ -4760,6 +4867,7 @@
         "annual_reports_submitted": 600
        },
        "rationale": "As a graduation expectancy applicant in chemistry, I focus on the precise cohort math within the 2021-2022 window. The program starts in March 2021 with 200 fellows selected annually.",
+       "rationale_ko": "박사후연구원의 예측: 연차보고서 제출 600건 · 2단계 진입 펠로우 180명 · 활동 중 펠로우 200명",
        "outlier": false
       }
      ],
@@ -4826,6 +4934,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group reached full consensus that only the first cohort of 200 fellows was fully active in the 2021-2022 window, leading to an estimated 600 SCI(E) publications based on an average productivity of 1.5 papers per fellow per year. All participants agreed on a 25% tenure-track transition rate, reasoning that most fellows were still early in the program, and a 30% regional institution participation rate, reflecting the binding policy quota. No disagreements emerged; all numeric predictions were identical across stakeholders.",
+     "summary_ko": "다섯 참여자는 ‘SCI(E) 논문 수’을(를) 처음부터 600편로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -4999,6 +5108,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a stable funding source that enables focused research.",
+       "rationale_ko": "박사후연구원의 예측: SCI(E) 논문 수 600편 · SCI 논문 수 600편 · 정년트랙 전환율 25% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -5011,6 +5121,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I reason from the prior phases: 200 fellows selected annually, with the first cohort starting in March 2021 and the second cohort starting in March 2022.",
+       "rationale_ko": "평가위원의 예측: SCI(E) 논문 수 600편 · SCI 논문 수 600편 · 정년트랙 전환율 25% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -5023,6 +5134,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a graduation expectancy applicant in chemistry, I reason from the prior phases: 200 fellows selected annually, with the first cohort starting in March 2021 and the second cohort starting in March 2022.",
+       "rationale_ko": "박사후연구원의 예측: SCI(E) 논문 수 600편 · SCI 논문 수 600편 · 정년트랙 전환율 25% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -5035,6 +5147,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a stable funding source that enables focused research.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 600편 · SCI 논문 수 600편 · 정년트랙 전환율 25% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -5047,6 +5160,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member with a background in engineering and construction, I reason from the prior phases.",
+       "rationale_ko": "평가위원의 예측: SCI(E) 논문 수 600편 · SCI 논문 수 600편 · 정년트랙 전환율 25% · 지역기관 참여 비율 30%",
        "outlier": false
       }
      ],
@@ -5118,6 +5232,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group reached full consensus on all three impact estimates, predicting that 50 former fellows (25% of the 200 active cohort) will secure tenure-track positions, regional publication share will grow by 5 percentage points due to the 30% quota, and 120 former fellows (60%) will become independent PIs. Key causal mechanisms included the cohort size (200 fellows in the first cohort), the 25% tenure-track transition rate from the Outcomes phase, and the binding regional quota. No disagreements emerged, as all participants independently arrived at identical numeric predictions based on the same cohort math and policy parameters. The central tendency and range were identical: former_fellows_in_tenure_track = 50, regional_publication_share_growth = 5.0, independent_pi_count = 120.",
+     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 50명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -5250,6 +5365,7 @@
         "independent_pi_count": 120
        },
        "rationale": "As an evaluation panel member with a background in engineering and construction, I reason from the prior phases.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 50명 · 지역 논문 점유율 증가 5%p · 독립 연구책임자(PI) 수 120명",
        "outlier": false
       },
       {
@@ -5261,6 +5377,7 @@
         "independent_pi_count": 120
        },
        "rationale": "As a postdoctoral researcher in automotive electronics at a regional institution in Daejeon, I see the Sejong Science Fellowship as a stable funding source that enables focused research.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 50명 · 지역 논문 점유율 증가 5%p · 독립 연구책임자(PI) 수 120명",
        "outlier": false
       },
       {
@@ -5272,6 +5389,7 @@
         "independent_pi_count": 120
        },
        "rationale": "As a postdoctoral researcher in automotive electronics, I see the Sejong Science Fellowship as a stable funding source that enables focused research.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 50명 · 지역 논문 점유율 증가 5%p · 독립 연구책임자(PI) 수 120명",
        "outlier": false
       },
       {
@@ -5283,6 +5401,7 @@
         "independent_pi_count": 120
        },
        "rationale": "As a graduation expectancy applicant in chemistry, I reason from the prior phases. The program selects 200 fellows per year, and in the 2021-2022 window only the first cohort of 200 fellows is active.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 50명 · 지역 논문 점유율 증가 5%p · 독립 연구책임자(PI) 수 120명",
        "outlier": false
       },
       {
@@ -5294,6 +5413,7 @@
         "independent_pi_count": 120
        },
        "rationale": "As an evaluation panel member, I reason from the prior phases. The program selects 200 fellows per year, and in the 2021-2022 window only the first cohort of 200 fellows is active.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 50명 · 지역 논문 점유율 증가 5%p · 독립 연구책임자(PI) 수 120명",
        "outlier": false
       }
      ],
@@ -5418,6 +5538,7 @@
      "label_en": "Inputs",
      "desc": "정책에 투입되는 예산·정원·제도적 조건",
      "summary": "The group unanimously agreed on the input values, with all participants estimating a total annual budget of 26 billion KRW (200 fellows × 130 million KRW per fellow), 200 fellowship slots, and a 30% regional quota (60 slots). Consensus was grounded in the policy's explicit resource logic, which specified the per-fellow funding split (100 million KRW direct costs, 30 million KRW indirect costs) and the regional allocation. No disagreements emerged, as participants consistently cited the same policy evidence and arithmetic. The central tendency and range were identical across all estimates, reflecting complete alignment on these inputs.",
+     "summary_ko": "다섯 참여자는 ‘연간 총 예산’을(를) 처음부터 260억원로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "total_annual_budget_krw",
@@ -5550,6 +5671,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member, I base my estimates on the policy context and my experience reviewing research proposals.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -5561,6 +5683,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit resource logic.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -5572,6 +5695,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit resource logic.",
+       "rationale_ko": "정책담당자의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -5583,6 +5707,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As a postdoctoral researcher and graduation expectancy applicant, I see the policy's stated numbers as ground truth.",
+       "rationale_ko": "박사후연구원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       },
       {
@@ -5594,6 +5719,7 @@
         "regional_quota_pct": 30.0
        },
        "rationale": "As an evaluation panel member with a background in engineering and law, I approach the budget and slot allocation with a focus on legal and operational clarity.",
+       "rationale_ko": "평가위원의 예측: 연간 총 예산 260억원 · 펠로우십 선정 인원 200명 · 지역 할당 비율 30%",
        "outlier": false
       }
      ],
@@ -5660,6 +5786,7 @@
      "label_en": "Activities",
      "desc": "선발·평가 등 정책이 수행하는 활동",
      "summary": "The group discussed the fellowship's selection and midterm evaluation processes, focusing on application volume, selection competitiveness, and attrition due to lab changes and strict evaluation criteria. There was consensus that 200 fellows would be selected annually, as per policy, and that applications would range from 1,200 to 1,500, with a central tendency around 1,300-1,400. Midterm evaluation pass rates varied from 155 to 170, with a central estimate near 160-165, reflecting differing views on attrition from lab changes and process-oriented compliance. Key causal mechanisms included the 30% regional quota boosting applications, strict eligibility capping the pool, and lab changes potentially disrupting progress and lowering pass rates.",
+     "summary_ko": "‘단계평가 통과’은(는) 초기 추정이 155명~170명로 갈렸지만, 근거를 교환하며 160명로 수렴했습니다. 다만 forward·backward 교차검증에서 단계평가 통과, 지원서 접수의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "midterm_evaluations_passed",
@@ -5792,6 +5919,7 @@
         "midterm_evaluations_passed": 170
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit resource logic and my experience with competitive fellowship programs.",
+       "rationale_ko": "정책담당자의 예측: 단계평가 통과 170명 · 지원서 접수 1,200건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -5803,6 +5931,7 @@
         "midterm_evaluations_passed": 160
        },
        "rationale": "As an evaluation panel member with a background in engineering and law, I see the selection process as a rigorous, multi-stage filter.",
+       "rationale_ko": "평가위원의 예측: 단계평가 통과 160명 · 지원서 접수 1,500건 · 최종 선정 인원 200명 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -5814,6 +5943,7 @@
         "midterm_evaluations_passed": 155
        },
        "rationale": "As an evaluation panel member with a background in engineering and a meticulous approach to design and durability, I view the selection process as a rigorous, multi-stage filter.",
+       "rationale_ko": "평가위원의 예측: 단계평가 통과 155명 · 지원서 접수 1,400건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -5825,6 +5955,7 @@
         "midterm_evaluations_passed": 165
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee with a background in engineering education, I view the selection process as a rigorous but fair competition.",
+       "rationale_ko": "정책담당자의 예측: 단계평가 통과 165명 · 지원서 접수 1,300건 · 최종 선정 인원 200명",
        "outlier": false
       },
       {
@@ -5836,6 +5967,7 @@
         "midterm_evaluations_passed": 160
        },
        "rationale": "As a graduation expectancy applicant and postdoctoral researcher, I see the policy's explicit numbers as ground truth: 200 fellows selected annually. The selection process will be highly competitive.",
+       "rationale_ko": "박사후연구원의 예측: 단계평가 통과 160명 · 지원서 접수 1,300건 · 최종 선정 인원 200명",
        "outlier": false
       }
      ],
@@ -5902,6 +6034,7 @@
      "label_en": "Outputs",
      "desc": "활동의 직접적 산출물",
      "summary": "The group focused on the first cohort of 200 fellows starting in March 2021, with all active through 2021-2022. There was consensus on fellows_active (200) and stage_two_fellows (155-160, with most agreeing on 160 based on 20% attrition from lab changes and strict evaluation). For annual_reports_submitted, most agreed on 800 (2 reports per fellow per year: annual plus mid-year), but one participant estimated 920, citing potential extra reports from lab changes. The central tendency for stage_two_fellows is 160, and for reports is 800, with the disagreement reflecting differing assumptions about reporting frequency.",
+     "summary_ko": "다섯 참여자는 ‘활동 중 펠로우’을(를) 처음부터 200명로 의견이 일치했습니다. 다만 forward·backward 교차검증에서 활동 중 펠로우, 2단계 진입 펠로우, 연차보고서 제출의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "fellows_active",
@@ -6034,6 +6167,7 @@
         "annual_reports_submitted": 920
        },
        "rationale": "As a postdoctoral researcher and graduation expectancy applicant, I base my estimates on the policy's explicit numbers and my understanding of typical fellowship dynamics.",
+       "rationale_ko": "박사후연구원의 예측: 활동 중 펠로우 200명 · 2단계 진입 펠로우 160명 · 연차보고서 제출 920건 — 다수와 다른 추정(이상치)",
        "outlier": true
       },
       {
@@ -6045,6 +6179,7 @@
         "annual_reports_submitted": 800
        },
        "rationale": "As an evaluation panel member with engineering and legal expertise, I reason from the policy's explicit numbers and my understanding of typical fellowship dynamics.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 2단계 진입 펠로우 160명 · 연차보고서 제출 800건",
        "outlier": false
       },
       {
@@ -6056,6 +6191,7 @@
         "annual_reports_submitted": 800
        },
        "rationale": "As a member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit numbers and my experience with program monitoring.",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 2단계 진입 펠로우 160명 · 연차보고서 제출 800건",
        "outlier": false
       },
       {
@@ -6067,6 +6203,7 @@
         "annual_reports_submitted": 800
        },
        "rationale": "As a professor of engineering education and a member of the Basic Research Project Promotion Committee, I see the fellowship as a structured program with clear milestones.",
+       "rationale_ko": "정책담당자의 예측: 활동 중 펠로우 200명 · 2단계 진입 펠로우 160명 · 연차보고서 제출 800건",
        "outlier": false
       },
       {
@@ -6078,6 +6215,7 @@
         "annual_reports_submitted": 800
        },
        "rationale": "As an evaluation panel member with a meticulous engineering background, I base my estimates on the policy's explicit numbers and my strict interpretation of the process.",
+       "rationale_ko": "평가위원의 예측: 활동 중 펠로우 200명 · 2단계 진입 펠로우 155명 · 연차보고서 제출 800건",
        "outlier": false
       }
      ],
@@ -6144,6 +6282,7 @@
      "label_en": "Outcomes",
      "desc": "수혜자에게 나타나는 중기 성과",
      "summary": "The group focused on the first cohort of 200 fellows active for about 1.8 years in 2021-2022, estimating an average of 1.5 SCI(E) publications per fellow per year. There was strong consensus on a tenure-track transition rate of 12.5% and full achievement of the 30% regional quota. Most participants adjusted the publication count downward from 540 to 480 due to lab changes and strict midterm evaluations, but one participant maintained the higher estimate of 540, arguing that stable funding and mentoring would sustain productivity. The range for SCI(E) publications was 480 to 540, with a central tendency around 480.",
+     "summary_ko": "‘SCI(E) 논문 수’은(는) 초기 추정이 480편~540편로 갈렸지만, 근거를 교환하며 480편로 수렴했습니다. 특히 최규민의 이견(이상치)이 토의 과정에서 흡수되었습니다. 다만 forward·backward 교차검증에서 SCI(E) 논문 수, SCI 논문 수, 정년트랙 전환율의 추정이 어긋나 합의도가 낮았습니다(부분 합의·미합의 지점).",
      "variables": [
       {
        "key": "number_of_sci_e_publications_in_2021_2022",
@@ -6317,6 +6456,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member with an engineering background and meticulous attention to detail, I estimate the publication output for 2021-2022 based on the active cohort and typical productivity.",
+       "rationale_ko": "평가위원의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 12.5% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -6329,6 +6469,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a professor of engineering education on the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit structure and my understanding of early-career researcher productivity.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 12.5% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -6341,6 +6482,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As an evaluation panel member with engineering and legal expertise, I reason from the policy's explicit numbers and my understanding of typical fellowship dynamics.",
+       "rationale_ko": "평가위원의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 12.5% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -6353,6 +6495,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a meticulous member of the Basic Research Project Promotion Committee, I base my estimates on the policy's explicit structure and my experience with program monitoring.",
+       "rationale_ko": "정책담당자의 예측: SCI(E) 논문 수 480편 · SCI 논문 수 480편 · 정년트랙 전환율 12.5% · 지역기관 참여 비율 30%",
        "outlier": false
       },
       {
@@ -6365,6 +6508,7 @@
         "regional_institution_participation_pct": 30.0
        },
        "rationale": "As a meticulous plant engineering technician and graduation expectancy applicant, I reason from the policy's explicit numbers and my own experience with precise project timelines.",
+       "rationale_ko": "박사후연구원의 예측: SCI(E) 논문 수 540편 · SCI 논문 수 540편 · 정년트랙 전환율 12.5% · 지역기관 참여 비율 30% — 다수와 다른 추정(이상치)",
        "outlier": true
       }
      ],
@@ -6436,6 +6580,7 @@
      "label_en": "Impact",
      "desc": "사회·학계에 미치는 장기 영향",
      "summary": "The group consistently estimated that 5-10 years post-fellowship, 25 former fellows would secure tenure-track positions (12.5% transition rate from 200 annual fellows), regional publication share would grow by 2.5 percentage points due to the 30% regional quota, and 40 former fellows would become independent PIs. All participants agreed these long-term outcomes would not be realized within the 2021-2022 window, as only the first cohort was active. No disagreements emerged; estimates were uniformly conservative, grounded in policy structure and typical career progression. The central tendency and range for all three variables were identical across participants: 25, 2.5%, and 40.",
+     "summary_ko": "다섯 참여자는 ‘정년트랙 진입 펠로우’을(를) 처음부터 25명로 의견이 일치했습니다. forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.",
      "variables": [
       {
        "key": "former_fellows_in_tenure_track",
@@ -6568,6 +6713,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As a meticulous member of the Basic Research Project Promotion Committee, I reason from the prior phases.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 25명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -6579,6 +6725,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As an evaluation panel member with engineering and legal expertise, I reason from the prior phases.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 25명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -6590,6 +6737,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As a meticulous plant engineering technician and graduation expectancy applicant, I reason from the prior phases.",
+       "rationale_ko": "박사후연구원의 예측: 정년트랙 진입 펠로우 25명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -6601,6 +6749,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As an evaluation panel member with a meticulous engineering background and experience in regional development, I reason from the prior phases.",
+       "rationale_ko": "평가위원의 예측: 정년트랙 진입 펠로우 25명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       },
       {
@@ -6612,6 +6761,7 @@
         "independent_pi_count": 40
        },
        "rationale": "As a professor of engineering education on the Basic Research Project Promotion Committee, I reason from the prior phases.",
+       "rationale_ko": "정책담당자의 예측: 정년트랙 진입 펠로우 25명 · 지역 논문 점유율 증가 2.5%p · 독립 연구책임자(PI) 수 40명",
        "outlier": false
       }
      ],

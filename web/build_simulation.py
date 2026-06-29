@@ -58,6 +58,66 @@ STAKEHOLDER_COLOR = {
 }
 
 
+def fmt_ko(v, fmt, unit):
+    """Human-readable Korean number formatting."""
+    if v is None:
+        return "—"
+    if fmt == "budget":
+        x = v / 1e8
+        s = f"{x:.1f}".rstrip("0").rstrip(".")
+        return f"{s}억원"
+    if fmt == "pct":
+        x = round(v, 2)
+        if x == int(x):
+            x = int(x)
+        return f"{x}{unit}"
+    return f"{int(round(v)):,}{unit}"
+
+
+def phase_summary_ko(variables):
+    """Build a factual Korean summary of the phase from the structured data."""
+    if not variables:
+        return ""
+    v0 = variables[0]
+    label = v0["label"]
+    vals = [o["value"] for o in v0["initial"] if o["value"] is not None]
+    if not vals:
+        return ""
+    mn, mx = min(vals), max(vals)
+    cons = v0["consensus"]
+    outliers = [o["agent"] for o in v0["initial"] if o["outlier"]]
+    fm = lambda x: fmt_ko(x, v0["fmt"], v0["unit"])
+    parts = []
+    if mn == mx:
+        parts.append(f"다섯 참여자는 ‘{label}’을(를) 처음부터 {fm(cons)}로 의견이 일치했습니다.")
+    else:
+        s = f"‘{label}’은(는) 초기 추정이 {fm(mn)}~{fm(mx)}로 갈렸지만, 근거를 교환하며 {fm(cons)}로 수렴했습니다."
+        if outliers:
+            s += f" 특히 {', '.join(outliers)}의 이견(이상치)이 토의 과정에서 흡수되었습니다."
+        parts.append(s)
+    contested = [v["label"] for v in variables
+                 if v["consistency"] is not None and v["consistency"] < 0.95]
+    if contested:
+        parts.append(f"다만 forward·backward 교차검증에서 {', '.join(contested)}의 추정이 어긋나 "
+                     f"합의도가 낮았습니다(부분 합의·미합의 지점).")
+    else:
+        parts.append("forward·backward 추정이 거의 일치해 이 단계의 합의도는 높았습니다.")
+    return " ".join(parts)
+
+
+def rationale_ko(type_ko, values, variables, is_outlier):
+    """Concise Korean summary of one agent's stance for the phase, from values."""
+    seen, chunks = set(), []
+    for v in variables:
+        k = v["key"]
+        if k in values and values[k] is not None and v["label"] not in seen:
+            seen.add(v["label"])
+            chunks.append(f"{v['label']} {fmt_ko(values[k], v['fmt'], v['unit'])}")
+    line = " · ".join(chunks) if chunks else "예측값 없음"
+    note = " — 다수와 다른 추정(이상치)" if is_outlier else ""
+    return f"{type_ko}의 예측: {line}{note}"
+
+
 def first_sentences(text, max_len=180):
     if not text:
         return ""
@@ -183,6 +243,9 @@ def build_scenario(d):
                 "type": p["stakeholder_type"],
                 "values": pv,
                 "rationale": first_sentences(p.get("narrative", ""), 220),
+                "rationale_ko": rationale_ko(
+                    STAKEHOLDER_KO.get(p["stakeholder_type"], p["stakeholder_type"]),
+                    pv, variables, is_out),
                 "outlier": is_out,
             })
 
@@ -208,6 +271,7 @@ def build_scenario(d):
             "label_en": pmeta[1],
             "desc": pmeta[2],
             "summary": fp.get("phase_summary", ""),
+            "summary_ko": phase_summary_ko(variables),
             "variables": variables,
             "agent_posts": agent_posts,
             "backward_posts": backward_posts,
