@@ -1,5 +1,8 @@
 {
- "policy": "Sejong Science Fellowship (세종과학펠로우십)",
+ "policies": {
+  "ssf": "세종과학펠로우십 (SSF)",
+  "bk21": "두뇌한국21 (BK21)"
+ },
  "pass_type": "forward → backward",
  "var_meta": {
   "total_annual_budget_krw": {
@@ -81,11 +84,82 @@
    "label": "독립 연구책임자(PI) 수",
    "unit": "명",
    "fmt": "count"
+  },
+  "number_of_research_groups": {
+   "label": "교육연구단 수",
+   "unit": "개",
+   "fmt": "count"
+  },
+  "graduate_innovation_universities": {
+   "label": "대학원혁신지원대학",
+   "unit": "개",
+   "fmt": "count"
+  },
+  "self_evaluation_reports": {
+   "label": "자체평가 제출",
+   "unit": "개",
+   "fmt": "count"
+  },
+  "consulting_groups": {
+   "label": "성과 컨설팅 단",
+   "unit": "개",
+   "fmt": "count"
+  },
+  "commendation_recipients": {
+   "label": "우수 참여인력 표창",
+   "unit": "명",
+   "fmt": "count"
+  },
+  "supported_grad_students": {
+   "label": "지원 대학원생",
+   "unit": "명",
+   "fmt": "count"
+  },
+  "new_researchers_supported": {
+   "label": "신진연구인력 지원",
+   "unit": "명",
+   "fmt": "count"
+  },
+  "contract_terminations": {
+   "label": "협약해지 교육연구단",
+   "unit": "개",
+   "fmt": "count"
+  },
+  "employment_rate_pct": {
+   "label": "대학원생 취업률",
+   "unit": "%",
+   "fmt": "pct"
+  },
+  "major_match_rate_pct": {
+   "label": "취업 전공일치율",
+   "unit": "%",
+   "fmt": "pct"
+  },
+  "faculty_lecture_ratio_pct": {
+   "label": "전임교수 강의비율",
+   "unit": "%",
+   "fmt": "pct"
+  },
+  "faculty_appointments": {
+   "label": "전임교원 임용",
+   "unit": "명",
+   "fmt": "count"
+  },
+  "annual_sci_e_publications": {
+   "label": "연간 SCI(E) 논문",
+   "unit": "편",
+   "fmt": "count"
+  },
+  "doctoral_graduates": {
+   "label": "박사 배출",
+   "unit": "명",
+   "fmt": "count"
   }
  },
  "scenarios": [
   {
    "id": "S1",
+   "policy": "ssf",
    "scenario_id": "S1_류수빈_박은지_김보람_구민혁_이상근",
    "agents": [
     {
@@ -1513,6 +1587,7 @@
   },
   {
    "id": "S2",
+   "policy": "ssf",
    "scenario_id": "S2_박채연_이시연_윤지영_이은정_문민철",
    "agents": [
     {
@@ -2938,6 +3013,7 @@
   },
   {
    "id": "S3",
+   "policy": "ssf",
    "scenario_id": "S3_조덕균_정에스더_김상훈_송성진_김종한",
    "agents": [
     {
@@ -4450,6 +4526,7 @@
   },
   {
    "id": "S4",
+   "policy": "ssf",
    "scenario_id": "S4_조혜진_김성미_김태희_김기남_이영희",
    "agents": [
     {
@@ -5830,6 +5907,7 @@
   },
   {
    "id": "S5",
+   "policy": "ssf",
    "scenario_id": "S5_이성분_최규민_김창희_한아진_이은미",
    "agents": [
     {
@@ -7220,6 +7298,2764 @@
       "최규민",
       "이은미",
       "이성분"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S1",
+   "policy": "bk21",
+   "scenario_id": "BK21_S1_한지윤_오세훈_정민서_배수진_강태웅",
+   "agents": [
+    {
+     "name": "한지윤",
+     "type": "GraduateStudent",
+     "type_ko": "대학원생",
+     "color": "#c2255c",
+     "persona": "한지윤 씨는 지방 국립대 물리학과 박사과정생으로, 실험 장비 부족 속에서도 꾸준히 논문을 쓰며 안정적인 연구장학금 지원에 가장 민감하게 반응합니다.",
+     "seat": 0
+    },
+    {
+     "name": "오세훈",
+     "type": "EducationResearchGroup",
+     "type_ko": "교육연구단",
+     "color": "#1864ab",
+     "persona": "오세훈 씨는 수도권 사립대 공학 교육연구단을 이끄는 단장으로, 사업비 자율 집행과 행정 부담 사이에서 균형을 고민하며 성과 목표를 다소 높게 잡는 편입니다.",
+     "seat": 1
+    },
+    {
+     "name": "정민서",
+     "type": "UniversityAdministration",
+     "type_ko": "대학 본부",
+     "color": "#5c6b8a",
+     "persona": "정민서 씨는 대학 본부 산학협력단의 행정 책임자로, 대학원혁신지원비의 회계 투명성과 연차평가 대응을 총괄하며 수치를 보수적으로 잡습니다.",
+     "seat": 2
+    },
+    {
+     "name": "배수진",
+     "type": "NationalResearchFoundation",
+     "type_ko": "연구재단",
+     "color": "#0c8599",
+     "persona": "배수진 씨는 한국연구재단의 평가 담당으로, 지표의 정의와 데이터 정합성을 깐깐하게 따지며 낙관적 추정을 경계해 값을 낮게 보는 경향이 있습니다.",
+     "seat": 3
+    },
+    {
+     "name": "강태웅",
+     "type": "ProjectOversightCommittee",
+     "type_ko": "사업총괄위원",
+     "color": "#6741d9",
+     "persona": "강태웅 씨는 사업총괄위원회 위원으로 예산과 성과의 균형을 거시적으로 판단하며, 정책 명시값을 기준으로 삼습니다.",
+     "seat": 4
+    }
+   ],
+   "final_impact": {
+    "faculty_appointments": 1200.0,
+    "annual_sci_e_publications": 22000.0,
+    "doctoral_graduates": 4800.0
+   },
+   "final_confidence": {
+    "faculty_appointments": 1.0,
+    "annual_sci_e_publications": 1.0,
+    "doctoral_graduates": 1.0
+   },
+   "phases": [
+    {
+     "phase": "Inputs",
+     "label_ko": "투입",
+     "label_en": "Inputs",
+     "desc": "정책에 투입되는 예산·정원·제도적 조건",
+     "summary": "",
+     "summary_ko": "연간 총 예산 · 교육연구단 수 · 대학원혁신지원대학은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "variables": [
+      {
+       "key": "total_annual_budget_krw",
+       "label": "연간 총 예산",
+       "unit": "원",
+       "fmt": "budget",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 408080000000,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 408080000000,
+       "backward_agg": 408080000000.0,
+       "forward_agg": 408080000000.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 408080000000.0,
+       "dissent": []
+      },
+      {
+       "key": "number_of_research_groups",
+       "label": "교육연구단 수",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 577,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 577,
+       "backward_agg": 577.0,
+       "forward_agg": 577.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 577.0,
+       "dissent": []
+      },
+      {
+       "key": "graduate_innovation_universities",
+       "label": "대학원혁신지원대학",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 20,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 20,
+       "backward_agg": 20.0,
+       "forward_agg": 20.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 20.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "한지윤",
+       "type": "GraduateStudent",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "오세훈",
+       "type": "EducationResearchGroup",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "정민서",
+       "type": "UniversityAdministration",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "배수진",
+       "type": "NationalResearchFoundation",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "연구재단의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "강태웅",
+       "type": "ProjectOversightCommittee",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "사업총괄위원의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "한지윤",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "오세훈",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "정민서",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "배수진",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "강태웅",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 1.0,
+     "contested_count": 0,
+     "posting_order": [
+      "한지윤",
+      "오세훈",
+      "정민서",
+      "배수진",
+      "강태웅"
+     ]
+    },
+    {
+     "phase": "Activities",
+     "label_ko": "활동",
+     "label_en": "Activities",
+     "desc": "선발·평가 등 정책이 수행하는 활동",
+     "summary": "",
+     "summary_ko": "우수 참여인력 표창은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘성과 컨설팅 단’은(는) 배수진이 260개로 가장 낮게, 오세훈이 300개로 가장 높게 보아 갈렸지만, 토의 끝에 280개로 수렴했습니다. ‘자체평가 제출’은(는) 한지윤이 575개로 가장 낮게, 오세훈이 578개로 가장 높게 보아 갈렸지만, 토의 끝에 575개로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 성과 컨설팅 단(forward 280개 ↔ backward 240개, 합의도 86%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "consulting_groups",
+       "label": "성과 컨설팅 단",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 280,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 300,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 280,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 260,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 280,
+         "outlier": false
+        }
+       ],
+       "spread": 40,
+       "consensus": 280,
+       "backward_agg": 240.0,
+       "forward_agg": 280.0,
+       "consistency": 0.8571428571428571,
+       "gap": -40.0,
+       "reconciled": 280.0,
+       "dissent": []
+      },
+      {
+       "key": "self_evaluation_reports",
+       "label": "자체평가 제출",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 578,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 578,
+         "outlier": false
+        }
+       ],
+       "spread": 3,
+       "consensus": 575,
+       "backward_agg": 575.0,
+       "forward_agg": 575.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 575.0,
+       "dissent": []
+      },
+      {
+       "key": "commendation_recipients",
+       "label": "우수 참여인력 표창",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 32,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 32,
+       "backward_agg": 32.0,
+       "forward_agg": 32.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 32.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "한지윤",
+       "type": "GraduateStudent",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "오세훈",
+       "type": "EducationResearchGroup",
+       "values": {
+        "self_evaluation_reports": 578,
+        "consulting_groups": 300,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 성과 컨설팅 단 300개 · 자체평가 제출 578개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "정민서",
+       "type": "UniversityAdministration",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "배수진",
+       "type": "NationalResearchFoundation",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 260,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "연구재단의 예측: 성과 컨설팅 단 260개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "강태웅",
+       "type": "ProjectOversightCommittee",
+       "values": {
+        "self_evaluation_reports": 578,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "사업총괄위원의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 578개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "한지윤",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 240,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "오세훈",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 240,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "정민서",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 240,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "배수진",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 240,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "강태웅",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 240,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.952,
+     "contested_count": 1,
+     "posting_order": [
+      "한지윤",
+      "오세훈",
+      "정민서",
+      "배수진",
+      "강태웅"
+     ]
+    },
+    {
+     "phase": "Outputs",
+     "label_ko": "산출",
+     "label_en": "Outputs",
+     "desc": "활동의 직접적 산출물",
+     "summary": "",
+     "summary_ko": "협약해지 교육연구단은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원 대학원생’은(는) 배수진이 17,500명로 가장 낮게, 오세훈이 20,500명로 가장 높게 보아 갈렸지만, 토의 끝에 19,000명로 수렴했습니다. ‘신진연구인력 지원’은(는) 한지윤이 2,400명로 가장 낮게, 오세훈이 2,700명로 가장 높게 보아 갈렸지만, 토의 끝에 2,400명로 수렴했습니다. 이 과정에서 오세훈의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원 대학원생(forward 19,000명 ↔ backward 17,500명, 합의도 92%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "supported_grad_students",
+       "label": "지원 대학원생",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 19000,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 20500,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 19000,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 17500,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 19000,
+         "outlier": false
+        }
+       ],
+       "spread": 3000,
+       "consensus": 19000,
+       "backward_agg": 17500.0,
+       "forward_agg": 19000.0,
+       "consistency": 0.9210526315789473,
+       "gap": -1500.0,
+       "reconciled": 19000.0,
+       "dissent": []
+      },
+      {
+       "key": "new_researchers_supported",
+       "label": "신진연구인력 지원",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 2400,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 2700,
+         "outlier": true
+        },
+        {
+         "agent": "정민서",
+         "value": 2400,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 2400,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 2400,
+         "outlier": false
+        }
+       ],
+       "spread": 300,
+       "consensus": 2400,
+       "backward_agg": 2400.0,
+       "forward_agg": 2400.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 2400.0,
+       "dissent": [
+        {
+         "agent": "오세훈",
+         "type_ko": "교육연구단",
+         "value": "2,700명",
+         "direction": "다수보다 높게",
+         "persona": "오세훈 씨는 수도권 사립대 공학 교육연구단을 이끄는 단장으로, 사업비 자율 집행과 행정 부담 사이에서 균형을 고민하며 성과 목표를 다소 높게 잡는 편입니다."
+        }
+       ]
+      },
+      {
+       "key": "contract_terminations",
+       "label": "협약해지 교육연구단",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 1,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 1,
+       "backward_agg": 1.0,
+       "forward_agg": 1.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 1.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "한지윤",
+       "type": "GraduateStudent",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      },
+      {
+       "agent": "오세훈",
+       "type": "EducationResearchGroup",
+       "values": {
+        "supported_grad_students": 20500,
+        "new_researchers_supported": 2700,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 지원 대학원생 20,500명 · 신진연구인력 지원 2,700명 · 협약해지 교육연구단 1개 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "정민서",
+       "type": "UniversityAdministration",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      },
+      {
+       "agent": "배수진",
+       "type": "NationalResearchFoundation",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "연구재단의 예측: 지원 대학원생 17,500명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      },
+      {
+       "agent": "강태웅",
+       "type": "ProjectOversightCommittee",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "사업총괄위원의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "한지윤",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "오세훈",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "정민서",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "배수진",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "강태웅",
+       "values": {
+        "supported_grad_students": 17500,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.974,
+     "contested_count": 1,
+     "posting_order": [
+      "한지윤",
+      "오세훈",
+      "정민서",
+      "배수진",
+      "강태웅"
+     ]
+    },
+    {
+     "phase": "Outcomes",
+     "label_ko": "성과",
+     "label_en": "Outcomes",
+     "desc": "수혜자에게 나타나는 중기 성과",
+     "summary": "",
+     "summary_ko": "취업 전공일치율 · 전임교수 강의비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘대학원생 취업률’은(는) 배수진이 66%로 가장 낮게, 오세훈이 82%로 가장 높게 보아 갈렸지만, 토의 끝에 73%로 수렴했습니다. 이 과정에서 오세훈, 배수진의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 대학원생 취업률(forward 73% ↔ backward 68%, 합의도 93%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "employment_rate_pct",
+       "label": "대학원생 취업률",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 73,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 82,
+         "outlier": true
+        },
+        {
+         "agent": "정민서",
+         "value": 73,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 66,
+         "outlier": true
+        },
+        {
+         "agent": "강태웅",
+         "value": 73,
+         "outlier": false
+        }
+       ],
+       "spread": 16,
+       "consensus": 73,
+       "backward_agg": 68.0,
+       "forward_agg": 73.0,
+       "consistency": 0.9315068493150684,
+       "gap": -5.0,
+       "reconciled": 73.0,
+       "dissent": [
+        {
+         "agent": "오세훈",
+         "type_ko": "교육연구단",
+         "value": "82%",
+         "direction": "다수보다 높게",
+         "persona": "오세훈 씨는 수도권 사립대 공학 교육연구단을 이끄는 단장으로, 사업비 자율 집행과 행정 부담 사이에서 균형을 고민하며 성과 목표를 다소 높게 잡는 편입니다."
+        },
+        {
+         "agent": "배수진",
+         "type_ko": "연구재단",
+         "value": "66%",
+         "direction": "다수보다 낮게",
+         "persona": "배수진 씨는 한국연구재단의 평가 담당으로, 지표의 정의와 데이터 정합성을 깐깐하게 따지며 낙관적 추정을 경계해 값을 낮게 보는 경향이 있습니다."
+        }
+       ]
+      },
+      {
+       "key": "major_match_rate_pct",
+       "label": "취업 전공일치율",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 88.3,
+         "outlier": false
+        }
+       ],
+       "spread": 0.0,
+       "consensus": 88.3,
+       "backward_agg": 86.0,
+       "forward_agg": 88.3,
+       "consistency": 0.9739524348810872,
+       "gap": -2.299999999999997,
+       "reconciled": 88.3,
+       "dissent": []
+      },
+      {
+       "key": "faculty_lecture_ratio_pct",
+       "label": "전임교수 강의비율",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 90.4,
+         "outlier": false
+        }
+       ],
+       "spread": 0.0,
+       "consensus": 90.4,
+       "backward_agg": 90.4,
+       "forward_agg": 90.4,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 90.4,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "한지윤",
+       "type": "GraduateStudent",
+       "values": {
+        "employment_rate_pct": 73,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 대학원생 취업률 73% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      },
+      {
+       "agent": "오세훈",
+       "type": "EducationResearchGroup",
+       "values": {
+        "employment_rate_pct": 82,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 대학원생 취업률 82% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4% — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "정민서",
+       "type": "UniversityAdministration",
+       "values": {
+        "employment_rate_pct": 73,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 대학원생 취업률 73% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      },
+      {
+       "agent": "배수진",
+       "type": "NationalResearchFoundation",
+       "values": {
+        "employment_rate_pct": 66,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "연구재단의 예측: 대학원생 취업률 66% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4% — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "강태웅",
+       "type": "ProjectOversightCommittee",
+       "values": {
+        "employment_rate_pct": 73,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "사업총괄위원의 예측: 대학원생 취업률 73% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "한지윤",
+       "values": {
+        "employment_rate_pct": 68,
+        "major_match_rate_pct": 86,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "오세훈",
+       "values": {
+        "employment_rate_pct": 68,
+        "major_match_rate_pct": 86,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "정민서",
+       "values": {
+        "employment_rate_pct": 68,
+        "major_match_rate_pct": 86,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "배수진",
+       "values": {
+        "employment_rate_pct": 68,
+        "major_match_rate_pct": 86,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "강태웅",
+       "values": {
+        "employment_rate_pct": 68,
+        "major_match_rate_pct": 86,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.968,
+     "contested_count": 1,
+     "posting_order": [
+      "한지윤",
+      "오세훈",
+      "정민서",
+      "배수진",
+      "강태웅"
+     ]
+    },
+    {
+     "phase": "Impact",
+     "label_ko": "영향",
+     "label_en": "Impact",
+     "desc": "사회·학계에 미치는 장기 영향",
+     "summary": "",
+     "summary_ko": "박사 배출은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘전임교원 임용’은(는) 배수진이 1,000명로 가장 낮게, 오세훈이 1,550명로 가장 높게 보아 갈렸지만, 토의 끝에 1,200명로 수렴했습니다. 이 과정에서 오세훈, 배수진의 이견(이상치)이 흡수되었습니다. ‘연간 SCI(E) 논문’은(는) 한지윤이 22,000편로 가장 낮게, 오세훈이 25,000편로 가장 높게 보아 갈렸지만, 토의 끝에 22,000편로 수렴했습니다. 이 과정에서 오세훈의 이견(이상치)이 흡수되었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "variables": [
+      {
+       "key": "faculty_appointments",
+       "label": "전임교원 임용",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 1200,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 1550,
+         "outlier": true
+        },
+        {
+         "agent": "정민서",
+         "value": 1200,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 1000,
+         "outlier": true
+        },
+        {
+         "agent": "강태웅",
+         "value": 1200,
+         "outlier": false
+        }
+       ],
+       "spread": 550,
+       "consensus": 1200,
+       "backward_agg": 1200.0,
+       "forward_agg": 1200.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 1200.0,
+       "dissent": [
+        {
+         "agent": "오세훈",
+         "type_ko": "교육연구단",
+         "value": "1,550명",
+         "direction": "다수보다 높게",
+         "persona": "오세훈 씨는 수도권 사립대 공학 교육연구단을 이끄는 단장으로, 사업비 자율 집행과 행정 부담 사이에서 균형을 고민하며 성과 목표를 다소 높게 잡는 편입니다."
+        },
+        {
+         "agent": "배수진",
+         "type_ko": "연구재단",
+         "value": "1,000명",
+         "direction": "다수보다 낮게",
+         "persona": "배수진 씨는 한국연구재단의 평가 담당으로, 지표의 정의와 데이터 정합성을 깐깐하게 따지며 낙관적 추정을 경계해 값을 낮게 보는 경향이 있습니다."
+        }
+       ]
+      },
+      {
+       "key": "annual_sci_e_publications",
+       "label": "연간 SCI(E) 논문",
+       "unit": "편",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 22000,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 25000,
+         "outlier": true
+        },
+        {
+         "agent": "정민서",
+         "value": 22000,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 22000,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 22000,
+         "outlier": false
+        }
+       ],
+       "spread": 3000,
+       "consensus": 22000,
+       "backward_agg": 22000.0,
+       "forward_agg": 22000.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 22000.0,
+       "dissent": [
+        {
+         "agent": "오세훈",
+         "type_ko": "교육연구단",
+         "value": "25,000편",
+         "direction": "다수보다 높게",
+         "persona": "오세훈 씨는 수도권 사립대 공학 교육연구단을 이끄는 단장으로, 사업비 자율 집행과 행정 부담 사이에서 균형을 고민하며 성과 목표를 다소 높게 잡는 편입니다."
+        }
+       ]
+      },
+      {
+       "key": "doctoral_graduates",
+       "label": "박사 배출",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "한지윤",
+         "value": 4800,
+         "outlier": false
+        },
+        {
+         "agent": "오세훈",
+         "value": 4800,
+         "outlier": false
+        },
+        {
+         "agent": "정민서",
+         "value": 4800,
+         "outlier": false
+        },
+        {
+         "agent": "배수진",
+         "value": 4800,
+         "outlier": false
+        },
+        {
+         "agent": "강태웅",
+         "value": 4800,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 4800,
+       "backward_agg": 4800.0,
+       "forward_agg": 4800.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 4800.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "한지윤",
+       "type": "GraduateStudent",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 전임교원 임용 1,200명 · 연간 SCI(E) 논문 22,000편 · 박사 배출 4,800명",
+       "outlier": false
+      },
+      {
+       "agent": "오세훈",
+       "type": "EducationResearchGroup",
+       "values": {
+        "faculty_appointments": 1550,
+        "annual_sci_e_publications": 25000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 전임교원 임용 1,550명 · 연간 SCI(E) 논문 25,000편 · 박사 배출 4,800명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "정민서",
+       "type": "UniversityAdministration",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 전임교원 임용 1,200명 · 연간 SCI(E) 논문 22,000편 · 박사 배출 4,800명",
+       "outlier": false
+      },
+      {
+       "agent": "배수진",
+       "type": "NationalResearchFoundation",
+       "values": {
+        "faculty_appointments": 1000,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": "",
+       "rationale_ko": "연구재단의 예측: 전임교원 임용 1,000명 · 연간 SCI(E) 논문 22,000편 · 박사 배출 4,800명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "강태웅",
+       "type": "ProjectOversightCommittee",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": "",
+       "rationale_ko": "사업총괄위원의 예측: 전임교원 임용 1,200명 · 연간 SCI(E) 논문 22,000편 · 박사 배출 4,800명",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "한지윤",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "오세훈",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "정민서",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "배수진",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "강태웅",
+       "values": {
+        "faculty_appointments": 1200,
+        "annual_sci_e_publications": 22000,
+        "doctoral_graduates": 4800
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 1.0,
+     "contested_count": 0,
+     "posting_order": [
+      "한지윤",
+      "오세훈",
+      "정민서",
+      "배수진",
+      "강태웅"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "policy": "bk21",
+   "scenario_id": "BK21_S2_김도현_나윤서_서지호_임채원_한석규",
+   "agents": [
+    {
+     "name": "김도현",
+     "type": "GraduateStudent",
+     "type_ko": "대학원생",
+     "color": "#c2255c",
+     "persona": "김도현 씨는 수도권 대학 인문사회 분야 석사과정생으로, 연구장학금과 진로 불안 사이에서 현실적인 취업 성과에 관심이 많습니다.",
+     "seat": 0
+    },
+    {
+     "name": "나윤서",
+     "type": "EducationResearchGroup",
+     "type_ko": "교육연구단",
+     "color": "#1864ab",
+     "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다.",
+     "seat": 1
+    },
+    {
+     "name": "서지호",
+     "type": "UniversityAdministration",
+     "type_ko": "대학 본부",
+     "color": "#5c6b8a",
+     "persona": "서지호 씨는 지역 거점 국립대 대학원 혁신 담당 보직교수로, 지역 형평과 안정적 운영을 중시하며 보수적으로 추정합니다.",
+     "seat": 2
+    },
+    {
+     "name": "임채원",
+     "type": "EarlyCareerResearcher",
+     "type_ko": "신진연구인력",
+     "color": "#e8590c",
+     "persona": "임채원 씨는 박사후연구원(신진연구인력)으로, 인건비와 고용 안정성에 민감하며 현장의 어려움을 반영해 다소 낮게 봅니다.",
+     "seat": 3
+    },
+    {
+     "name": "한석규",
+     "type": "MinistryOfEducation",
+     "type_ko": "교육부",
+     "color": "#7048e8",
+     "persona": "한석규 씨는 교육부 사업 담당 사무관으로, 예산과 정책 목표치를 기준으로 균형 잡힌 추정을 제시합니다.",
+     "seat": 4
+    }
+   ],
+   "final_impact": {
+    "faculty_appointments": 1100.0,
+    "annual_sci_e_publications": 23000.0,
+    "doctoral_graduates": 4900.0
+   },
+   "final_confidence": {
+    "faculty_appointments": 1.0,
+    "annual_sci_e_publications": 1.0,
+    "doctoral_graduates": 1.0
+   },
+   "phases": [
+    {
+     "phase": "Inputs",
+     "label_ko": "투입",
+     "label_en": "Inputs",
+     "desc": "정책에 투입되는 예산·정원·제도적 조건",
+     "summary": "",
+     "summary_ko": "연간 총 예산 · 교육연구단 수 · 대학원혁신지원대학은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "variables": [
+      {
+       "key": "total_annual_budget_krw",
+       "label": "연간 총 예산",
+       "unit": "원",
+       "fmt": "budget",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 408080000000,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 408080000000,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 408080000000,
+       "backward_agg": 408080000000.0,
+       "forward_agg": 408080000000.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 408080000000.0,
+       "dissent": []
+      },
+      {
+       "key": "number_of_research_groups",
+       "label": "교육연구단 수",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 577,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 577,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 577,
+       "backward_agg": 577.0,
+       "forward_agg": 577.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 577.0,
+       "dissent": []
+      },
+      {
+       "key": "graduate_innovation_universities",
+       "label": "대학원혁신지원대학",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 20,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 20,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 20,
+       "backward_agg": 20.0,
+       "forward_agg": 20.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 20.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "김도현",
+       "type": "GraduateStudent",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "나윤서",
+       "type": "EducationResearchGroup",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "서지호",
+       "type": "UniversityAdministration",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "임채원",
+       "type": "EarlyCareerResearcher",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "신진연구인력의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      },
+      {
+       "agent": "한석규",
+       "type": "MinistryOfEducation",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": "",
+       "rationale_ko": "교육부의 예측: 연간 총 예산 4080.8억원 · 교육연구단 수 577개 · 대학원혁신지원대학 20개",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "김도현",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "나윤서",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "서지호",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "임채원",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "한석규",
+       "values": {
+        "total_annual_budget_krw": 408080000000,
+        "number_of_research_groups": 577,
+        "graduate_innovation_universities": 20
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 1.0,
+     "contested_count": 0,
+     "posting_order": [
+      "김도현",
+      "나윤서",
+      "서지호",
+      "임채원",
+      "한석규"
+     ]
+    },
+    {
+     "phase": "Activities",
+     "label_ko": "활동",
+     "label_en": "Activities",
+     "desc": "선발·평가 등 정책이 수행하는 활동",
+     "summary": "",
+     "summary_ko": "자체평가 제출은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘성과 컨설팅 단’은(는) 임채원이 255개로 가장 낮게, 나윤서이 310개로 가장 높게 보아 갈렸지만, 토의 끝에 280개로 수렴했습니다. 이 과정에서 나윤서, 임채원의 이견(이상치)이 흡수되었습니다. ‘우수 참여인력 표창’은(는) 김도현이 32명로 가장 낮게, 나윤서이 40명로 가장 높게 보아 갈렸지만, 토의 끝에 32명로 수렴했습니다. 이 과정에서 나윤서의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 성과 컨설팅 단(forward 280개 ↔ backward 250개, 합의도 89%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "consulting_groups",
+       "label": "성과 컨설팅 단",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 280,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 310,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 280,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 255,
+         "outlier": true
+        },
+        {
+         "agent": "한석규",
+         "value": 280,
+         "outlier": false
+        }
+       ],
+       "spread": 55,
+       "consensus": 280,
+       "backward_agg": 250.0,
+       "forward_agg": 280.0,
+       "consistency": 0.8928571428571429,
+       "gap": -30.0,
+       "reconciled": 280.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "310개",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        },
+        {
+         "agent": "임채원",
+         "type_ko": "신진연구인력",
+         "value": "255개",
+         "direction": "다수보다 낮게",
+         "persona": "임채원 씨는 박사후연구원(신진연구인력)으로, 인건비와 고용 안정성에 민감하며 현장의 어려움을 반영해 다소 낮게 봅니다."
+        }
+       ]
+      },
+      {
+       "key": "self_evaluation_reports",
+       "label": "자체평가 제출",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 575,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 575,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 575,
+       "backward_agg": 575.0,
+       "forward_agg": 575.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 575.0,
+       "dissent": []
+      },
+      {
+       "key": "commendation_recipients",
+       "label": "우수 참여인력 표창",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 40,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 32,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 32,
+         "outlier": false
+        }
+       ],
+       "spread": 8,
+       "consensus": 32,
+       "backward_agg": 32.0,
+       "forward_agg": 32.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 32.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "40명",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        }
+       ]
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "김도현",
+       "type": "GraduateStudent",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "나윤서",
+       "type": "EducationResearchGroup",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 310,
+        "commendation_recipients": 40
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 성과 컨설팅 단 310개 · 자체평가 제출 575개 · 우수 참여인력 표창 40명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "서지호",
+       "type": "UniversityAdministration",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      },
+      {
+       "agent": "임채원",
+       "type": "EarlyCareerResearcher",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 255,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "신진연구인력의 예측: 성과 컨설팅 단 255개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "한석규",
+       "type": "MinistryOfEducation",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 280,
+        "commendation_recipients": 32
+       },
+       "rationale": "",
+       "rationale_ko": "교육부의 예측: 성과 컨설팅 단 280개 · 자체평가 제출 575개 · 우수 참여인력 표창 32명",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "김도현",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 250,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "나윤서",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 250,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "서지호",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 250,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "임채원",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 250,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "한석규",
+       "values": {
+        "self_evaluation_reports": 575,
+        "consulting_groups": 250,
+        "commendation_recipients": 32
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.964,
+     "contested_count": 1,
+     "posting_order": [
+      "김도현",
+      "나윤서",
+      "서지호",
+      "임채원",
+      "한석규"
+     ]
+    },
+    {
+     "phase": "Outputs",
+     "label_ko": "산출",
+     "label_en": "Outputs",
+     "desc": "활동의 직접적 산출물",
+     "summary": "",
+     "summary_ko": "협약해지 교육연구단은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘지원 대학원생’은(는) 서지호이 18,000명로 가장 낮게, 나윤서이 21,000명로 가장 높게 보아 갈렸지만, 토의 끝에 19,000명로 수렴했습니다. 이 과정에서 나윤서의 이견(이상치)이 흡수되었습니다. ‘신진연구인력 지원’은(는) 임채원이 2,100명로 가장 낮게, 나윤서이 2,800명로 가장 높게 보아 갈렸지만, 토의 끝에 2,400명로 수렴했습니다. 이 과정에서 나윤서, 임채원의 이견(이상치)이 흡수되었습니다. forward와 backward(상향식) 추정을 대조하면 지원 대학원생(forward 19,000명 ↔ backward 18,000명, 합의도 95%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "supported_grad_students",
+       "label": "지원 대학원생",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 19000,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 21000,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 18000,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 19000,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 19000,
+         "outlier": false
+        }
+       ],
+       "spread": 3000,
+       "consensus": 19000,
+       "backward_agg": 18000.0,
+       "forward_agg": 19000.0,
+       "consistency": 0.9473684210526315,
+       "gap": -1000.0,
+       "reconciled": 19000.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "21,000명",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        }
+       ]
+      },
+      {
+       "key": "new_researchers_supported",
+       "label": "신진연구인력 지원",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 2400,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 2800,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 2400,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 2100,
+         "outlier": true
+        },
+        {
+         "agent": "한석규",
+         "value": 2400,
+         "outlier": false
+        }
+       ],
+       "spread": 700,
+       "consensus": 2400,
+       "backward_agg": 2400.0,
+       "forward_agg": 2400.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 2400.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "2,800명",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        },
+        {
+         "agent": "임채원",
+         "type_ko": "신진연구인력",
+         "value": "2,100명",
+         "direction": "다수보다 낮게",
+         "persona": "임채원 씨는 박사후연구원(신진연구인력)으로, 인건비와 고용 안정성에 민감하며 현장의 어려움을 반영해 다소 낮게 봅니다."
+        }
+       ]
+      },
+      {
+       "key": "contract_terminations",
+       "label": "협약해지 교육연구단",
+       "unit": "개",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 1,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 1,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 1,
+       "backward_agg": 1.0,
+       "forward_agg": 1.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 1.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "김도현",
+       "type": "GraduateStudent",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      },
+      {
+       "agent": "나윤서",
+       "type": "EducationResearchGroup",
+       "values": {
+        "supported_grad_students": 21000,
+        "new_researchers_supported": 2800,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 지원 대학원생 21,000명 · 신진연구인력 지원 2,800명 · 협약해지 교육연구단 1개 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "서지호",
+       "type": "UniversityAdministration",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 지원 대학원생 18,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      },
+      {
+       "agent": "임채원",
+       "type": "EarlyCareerResearcher",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2100,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "신진연구인력의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,100명 · 협약해지 교육연구단 1개 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "한석규",
+       "type": "MinistryOfEducation",
+       "values": {
+        "supported_grad_students": 19000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": "",
+       "rationale_ko": "교육부의 예측: 지원 대학원생 19,000명 · 신진연구인력 지원 2,400명 · 협약해지 교육연구단 1개",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "김도현",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "나윤서",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "서지호",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "임채원",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "한석규",
+       "values": {
+        "supported_grad_students": 18000,
+        "new_researchers_supported": 2400,
+        "contract_terminations": 1
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.982,
+     "contested_count": 1,
+     "posting_order": [
+      "김도현",
+      "나윤서",
+      "서지호",
+      "임채원",
+      "한석규"
+     ]
+    },
+    {
+     "phase": "Outcomes",
+     "label_ko": "성과",
+     "label_en": "Outcomes",
+     "desc": "수혜자에게 나타나는 중기 성과",
+     "summary": "",
+     "summary_ko": "전임교수 강의비율은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘대학원생 취업률’은(는) 임채원이 67%로 가장 낮게, 나윤서이 84%로 가장 높게 보아 갈렸지만, 토의 끝에 74%로 수렴했습니다. 이 과정에서 나윤서, 임채원의 이견(이상치)이 흡수되었습니다. ‘취업 전공일치율’은(는) 김도현이 88.3%로 가장 낮게, 나윤서이 92%로 가장 높게 보아 갈렸지만, 토의 끝에 88.3%로 수렴했습니다. forward와 backward(상향식) 추정을 대조하면 대학원생 취업률(forward 74% ↔ backward 70%, 합의도 95%)에서 차이가 남아, 이 단계의 핵심 불확실성을 보여줍니다.",
+     "variables": [
+      {
+       "key": "employment_rate_pct",
+       "label": "대학원생 취업률",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 74,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 84,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 74,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 67,
+         "outlier": true
+        },
+        {
+         "agent": "한석규",
+         "value": 74,
+         "outlier": false
+        }
+       ],
+       "spread": 17,
+       "consensus": 74,
+       "backward_agg": 70.0,
+       "forward_agg": 74.0,
+       "consistency": 0.9459459459459459,
+       "gap": -4.0,
+       "reconciled": 74.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "84%",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        },
+        {
+         "agent": "임채원",
+         "type_ko": "신진연구인력",
+         "value": "67%",
+         "direction": "다수보다 낮게",
+         "persona": "임채원 씨는 박사후연구원(신진연구인력)으로, 인건비와 고용 안정성에 민감하며 현장의 어려움을 반영해 다소 낮게 봅니다."
+        }
+       ]
+      },
+      {
+       "key": "major_match_rate_pct",
+       "label": "취업 전공일치율",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 92,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 88.3,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 88.3,
+         "outlier": false
+        }
+       ],
+       "spread": 3.700000000000003,
+       "consensus": 88.3,
+       "backward_agg": 87.0,
+       "forward_agg": 88.3,
+       "consistency": 0.985277463193658,
+       "gap": -1.2999999999999972,
+       "reconciled": 88.3,
+       "dissent": []
+      },
+      {
+       "key": "faculty_lecture_ratio_pct",
+       "label": "전임교수 강의비율",
+       "unit": "%",
+       "fmt": "pct",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 90.4,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 90.4,
+         "outlier": false
+        }
+       ],
+       "spread": 0.0,
+       "consensus": 90.4,
+       "backward_agg": 90.4,
+       "forward_agg": 90.4,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 90.4,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "김도현",
+       "type": "GraduateStudent",
+       "values": {
+        "employment_rate_pct": 74,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 대학원생 취업률 74% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      },
+      {
+       "agent": "나윤서",
+       "type": "EducationResearchGroup",
+       "values": {
+        "employment_rate_pct": 84,
+        "major_match_rate_pct": 92,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 대학원생 취업률 84% · 취업 전공일치율 92% · 전임교수 강의비율 90.4% — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "서지호",
+       "type": "UniversityAdministration",
+       "values": {
+        "employment_rate_pct": 74,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 대학원생 취업률 74% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      },
+      {
+       "agent": "임채원",
+       "type": "EarlyCareerResearcher",
+       "values": {
+        "employment_rate_pct": 67,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "신진연구인력의 예측: 대학원생 취업률 67% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4% — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "한석규",
+       "type": "MinistryOfEducation",
+       "values": {
+        "employment_rate_pct": 74,
+        "major_match_rate_pct": 88.3,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": "",
+       "rationale_ko": "교육부의 예측: 대학원생 취업률 74% · 취업 전공일치율 88.3% · 전임교수 강의비율 90.4%",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "김도현",
+       "values": {
+        "employment_rate_pct": 70,
+        "major_match_rate_pct": 87,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "나윤서",
+       "values": {
+        "employment_rate_pct": 70,
+        "major_match_rate_pct": 87,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "서지호",
+       "values": {
+        "employment_rate_pct": 70,
+        "major_match_rate_pct": 87,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "임채원",
+       "values": {
+        "employment_rate_pct": 70,
+        "major_match_rate_pct": 87,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "한석규",
+       "values": {
+        "employment_rate_pct": 70,
+        "major_match_rate_pct": 87,
+        "faculty_lecture_ratio_pct": 90.4
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 0.977,
+     "contested_count": 1,
+     "posting_order": [
+      "김도현",
+      "나윤서",
+      "서지호",
+      "임채원",
+      "한석규"
+     ]
+    },
+    {
+     "phase": "Impact",
+     "label_ko": "영향",
+     "label_en": "Impact",
+     "desc": "사회·학계에 미치는 장기 영향",
+     "summary": "",
+     "summary_ko": "박사 배출은(는) 정책에 명시된 값으로 다섯 참여자의 이견이 없었습니다. ‘전임교원 임용’은(는) 임채원이 950명로 가장 낮게, 나윤서이 1,450명로 가장 높게 보아 갈렸지만, 토의 끝에 1,100명로 수렴했습니다. 이 과정에서 나윤서, 임채원의 이견(이상치)이 흡수되었습니다. ‘연간 SCI(E) 논문’은(는) 김도현이 23,000편로 가장 낮게, 나윤서이 26,500편로 가장 높게 보아 갈렸지만, 토의 끝에 23,000편로 수렴했습니다. 이 과정에서 나윤서의 이견(이상치)이 흡수되었습니다. forward와 backward 추정이 거의 일치해 이 단계의 결론은 견고합니다.",
+     "variables": [
+      {
+       "key": "faculty_appointments",
+       "label": "전임교원 임용",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 1100,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 1450,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 1100,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 950,
+         "outlier": true
+        },
+        {
+         "agent": "한석규",
+         "value": 1100,
+         "outlier": false
+        }
+       ],
+       "spread": 500,
+       "consensus": 1100,
+       "backward_agg": 1100.0,
+       "forward_agg": 1100.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 1100.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "1,450명",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        },
+        {
+         "agent": "임채원",
+         "type_ko": "신진연구인력",
+         "value": "950명",
+         "direction": "다수보다 낮게",
+         "persona": "임채원 씨는 박사후연구원(신진연구인력)으로, 인건비와 고용 안정성에 민감하며 현장의 어려움을 반영해 다소 낮게 봅니다."
+        }
+       ]
+      },
+      {
+       "key": "annual_sci_e_publications",
+       "label": "연간 SCI(E) 논문",
+       "unit": "편",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 23000,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 26500,
+         "outlier": true
+        },
+        {
+         "agent": "서지호",
+         "value": 23000,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 23000,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 23000,
+         "outlier": false
+        }
+       ],
+       "spread": 3500,
+       "consensus": 23000,
+       "backward_agg": 23000.0,
+       "forward_agg": 23000.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 23000.0,
+       "dissent": [
+        {
+         "agent": "나윤서",
+         "type_ko": "교육연구단",
+         "value": "26,500편",
+         "direction": "다수보다 높게",
+         "persona": "나윤서 씨는 신산업(바이오헬스) 혁신인재 교육연구단의 신임 단장으로, 산학협력 성과를 적극적으로 기대해 수치를 높게 잡는 편입니다."
+        }
+       ]
+      },
+      {
+       "key": "doctoral_graduates",
+       "label": "박사 배출",
+       "unit": "명",
+       "fmt": "count",
+       "initial": [
+        {
+         "agent": "김도현",
+         "value": 4900,
+         "outlier": false
+        },
+        {
+         "agent": "나윤서",
+         "value": 4900,
+         "outlier": false
+        },
+        {
+         "agent": "서지호",
+         "value": 4900,
+         "outlier": false
+        },
+        {
+         "agent": "임채원",
+         "value": 4900,
+         "outlier": false
+        },
+        {
+         "agent": "한석규",
+         "value": 4900,
+         "outlier": false
+        }
+       ],
+       "spread": 0,
+       "consensus": 4900,
+       "backward_agg": 4900.0,
+       "forward_agg": 4900.0,
+       "consistency": 1.0,
+       "gap": 0.0,
+       "reconciled": 4900.0,
+       "dissent": []
+      }
+     ],
+     "agent_posts": [
+      {
+       "agent": "김도현",
+       "type": "GraduateStudent",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": "",
+       "rationale_ko": "대학원생의 예측: 전임교원 임용 1,100명 · 연간 SCI(E) 논문 23,000편 · 박사 배출 4,900명",
+       "outlier": false
+      },
+      {
+       "agent": "나윤서",
+       "type": "EducationResearchGroup",
+       "values": {
+        "faculty_appointments": 1450,
+        "annual_sci_e_publications": 26500,
+        "doctoral_graduates": 4900
+       },
+       "rationale": "",
+       "rationale_ko": "교육연구단의 예측: 전임교원 임용 1,450명 · 연간 SCI(E) 논문 26,500편 · 박사 배출 4,900명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "서지호",
+       "type": "UniversityAdministration",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": "",
+       "rationale_ko": "대학 본부의 예측: 전임교원 임용 1,100명 · 연간 SCI(E) 논문 23,000편 · 박사 배출 4,900명",
+       "outlier": false
+      },
+      {
+       "agent": "임채원",
+       "type": "EarlyCareerResearcher",
+       "values": {
+        "faculty_appointments": 950,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": "",
+       "rationale_ko": "신진연구인력의 예측: 전임교원 임용 950명 · 연간 SCI(E) 논문 23,000편 · 박사 배출 4,900명 — 다수와 다른 추정(이상치)",
+       "outlier": true
+      },
+      {
+       "agent": "한석규",
+       "type": "MinistryOfEducation",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": "",
+       "rationale_ko": "교육부의 예측: 전임교원 임용 1,100명 · 연간 SCI(E) 논문 23,000편 · 박사 배출 4,900명",
+       "outlier": false
+      }
+     ],
+     "backward_posts": [
+      {
+       "agent": "김도현",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "나윤서",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "서지호",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "임채원",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": ""
+      },
+      {
+       "agent": "한석규",
+       "values": {
+        "faculty_appointments": 1100,
+        "annual_sci_e_publications": 23000,
+        "doctoral_graduates": 4900
+       },
+       "rationale": ""
+      }
+     ],
+     "avg_consistency": 1.0,
+     "contested_count": 0,
+     "posting_order": [
+      "김도현",
+      "나윤서",
+      "서지호",
+      "임채원",
+      "한석규"
      ]
     }
    ]

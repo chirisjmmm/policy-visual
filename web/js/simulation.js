@@ -9,7 +9,9 @@ const SimView = (() => {
   let steps = [], stepIdx = 0;
   let playing = false, timer = null;
   let svg, wrap, seats = [];
+  let policy = 'ssf';
   const AUTOPLAY_MS = 3600, REVEAL_MS = 1100;
+  const BADGE_NOTE = { ssf: '(macro-avg 최상)', bk21: '(BK21 대표 시나리오)' };
 
   const fmtVal = (v, fmt, unit) => {
     if (v === null || v === undefined) return '—';
@@ -23,16 +25,36 @@ const SimView = (() => {
     svg = document.getElementById('tableSvg');
     wrap = document.querySelector('.roundtable-wrap');
     const sel = document.getElementById('scenarioSel');
-    DATA.scenarios.forEach((s, i) => {
-      const o = document.createElement('option');
-      o.value = i; o.textContent = `${s.id} · ${s.agents.map(a => a.name).join(', ')}`;
-      sel.appendChild(o);
-    });
+    // policy toggle (BK21 / SSF)
+    const polWrap = document.getElementById('simPolicy');
+    const policies = DATA.policies || { ssf: '세종과학펠로우십' };
+    polWrap.innerHTML = Object.keys(policies).map(p =>
+      `<button class="spbtn ${p === policy ? 'active' : ''}" data-policy="${p}">${policies[p]}</button>`).join('');
+    polWrap.querySelectorAll('.spbtn').forEach(b => b.onclick = () => selectPolicy(b.dataset.policy));
     sel.onchange = () => loadScenario(+sel.value);
     document.getElementById('prevStep').onclick = () => { stop(); go(stepIdx - 1); };
     document.getElementById('nextStep').onclick = () => { stop(); go(stepIdx + 1); };
     document.getElementById('playPause').onclick = togglePlay;
-    loadScenario(0);
+    selectPolicy(policy);
+  }
+
+  function selectPolicy(p) {
+    stop();
+    policy = p;
+    document.querySelectorAll('.spbtn').forEach(b => b.classList.toggle('active', b.dataset.policy === p));
+    const sel = document.getElementById('scenarioSel');
+    sel.innerHTML = '';
+    let first = -1;
+    DATA.scenarios.forEach((s, i) => {
+      if (s.policy !== p) return;
+      if (first < 0) first = i;
+      const o = document.createElement('option');
+      o.value = i; o.textContent = `${s.id} · ${s.agents.map(a => a.name).join(', ')}`;
+      sel.appendChild(o);
+    });
+    const badge = document.getElementById('passBadge');
+    if (badge) badge.innerHTML = `진행 방식: <b>Forward → Backward</b> <i>${BADGE_NOTE[p] || ''}</i>`;
+    if (first >= 0) loadScenario(first);
   }
 
   function loadScenario(i) {
@@ -119,18 +141,20 @@ const SimView = (() => {
       const cl = document.createElementNS(SVGNS, 'line');
       cl.setAttribute('x1', 0); cl.setAttribute('y1', 0); cl.setAttribute('x2', ix); cl.setAttribute('y2', iy);
       cl.setAttribute('stroke', '#ccd4e1'); cl.setAttribute('stroke-width', 1.5); g.appendChild(cl);
-      const av = document.createElementNS(SVGNS, 'circle');
-      av.setAttribute('r', 30); av.setAttribute('fill', a.color);
-      av.setAttribute('stroke', '#ffffff'); av.setAttribute('stroke-width', 3); g.appendChild(av);
-      const ic = document.createElementNS(SVGNS, 'text');
-      ic.setAttribute('text-anchor', 'middle'); ic.setAttribute('y', 6); ic.setAttribute('font-size', 26);
-      ic.textContent = '👤'; g.appendChild(ic);
+      // plain colored person icon (head + shoulders silhouette)
+      const head = document.createElementNS(SVGNS, 'circle');
+      head.setAttribute('cx', 0); head.setAttribute('cy', -14); head.setAttribute('r', 11);
+      head.setAttribute('fill', a.color); head.setAttribute('stroke', '#ffffff'); head.setAttribute('stroke-width', 2.5);
+      const body = document.createElementNS(SVGNS, 'path');
+      body.setAttribute('d', 'M0,-2 C-12,-2 -19,8 -19,24 L19,24 C19,8 12,-2 0,-2 Z');
+      body.setAttribute('fill', a.color); body.setAttribute('stroke', '#ffffff'); body.setAttribute('stroke-width', 2.5);
+      g.appendChild(body); g.appendChild(head);
       const nm = document.createElementNS(SVGNS, 'text');
       nm.setAttribute('class', 'seat-name'); nm.setAttribute('text-anchor', 'middle');
-      nm.setAttribute('y', 50); nm.textContent = a.name; g.appendChild(nm);
+      nm.setAttribute('y', 46); nm.textContent = a.name; g.appendChild(nm);
       const rl = document.createElementNS(SVGNS, 'text');
       rl.setAttribute('class', 'seat-role'); rl.setAttribute('text-anchor', 'middle');
-      rl.setAttribute('y', 64); rl.setAttribute('fill', a.color); rl.textContent = a.type_ko; g.appendChild(rl);
+      rl.setAttribute('y', 60); rl.setAttribute('fill', a.color); rl.textContent = a.type_ko; g.appendChild(rl);
       // value chip
       const chipG = document.createElementNS(SVGNS, 'g');
       chipG.setAttribute('transform', `translate(${ix * 1.15},${iy * 1.15})`);
@@ -145,7 +169,7 @@ const SimView = (() => {
       chipG.style.opacity = 0; chipG.style.transition = 'opacity .4s';
       g.appendChild(chipG);
       svg.appendChild(g);
-      seats.push({ a, p, ix, iy, av, chipG, chipR, chipT });
+      seats.push({ a, p, ix, iy, chipG, chipR, chipT });
     });
   }
 

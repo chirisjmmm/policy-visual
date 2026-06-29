@@ -24,9 +24,24 @@ const GraphView = (() => {
       b.onclick = () => { document.querySelectorAll('.gbtn').forEach(x => x.classList.remove('active')); b.classList.add('active'); current = b.dataset.graph; closePanel(); render(); });
     document.getElementById('replayGraph').onclick = render;
     document.getElementById('toggleLabels').onchange = e => { showLabels = e.target.checked; render(); };
+    const fullBtn = document.getElementById('graphFull');
+    if (fullBtn) fullBtn.onclick = toggleFull;
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.querySelector('.graph-wrap.fullscreen')) toggleFull();
+    });
     // clicking empty svg closes panel
     svg.addEventListener('click', e => { if (e.target === svg) closePanel(); });
     render();
+  }
+
+  function toggleFull() {
+    const wrap = svg.closest('.graph-wrap');
+    const btn = document.getElementById('graphFull');
+    const on = wrap.classList.toggle('fullscreen');
+    document.body.classList.toggle('graph-full-open', on);
+    if (btn) btn.textContent = on ? '⤢ 닫기' : '⛶ 전체화면';
+    closePanel();
+    requestAnimationFrame(() => requestAnimationFrame(render));
   }
 
   function buildLegend(g) {
@@ -52,7 +67,7 @@ const GraphView = (() => {
     buildLegend(g);
 
     const rect = svg.getBoundingClientRect();
-    W = rect.width || 1000; H = 660;
+    W = rect.width || 1000; H = rect.height || 660;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
     svg.innerHTML = '';
 
@@ -86,7 +101,11 @@ const GraphView = (() => {
       const bidir = pairCount[key] > 1;
       // canonical sign so the two opposing edges bend to opposite sides
       const forward = e.source < e.target;
-      e.curve = bidir ? (forward ? 30 : -30) : 16;
+      e.curve = bidir ? (forward ? 46 : -46) : 24;
+    });
+    // stagger label positions along each curve so neighbouring labels don't stack
+    edges.forEach((e, i) => { e.lt = [0.40, 0.5, 0.60][i % 3]; });
+    edges.forEach(e => {
     });
 
     const layers = { edge: el('g', {}), elabel: el('g', {}), node: el('g', {}) };
@@ -108,8 +127,7 @@ const GraphView = (() => {
       n.r = 17 + (n.weight || 1) * 4 + n.deg * 1.0;
       const gEl = el('g', { class: 'gnode' });
       const col = groups[n.group] ? groups[n.group].color : '#64748b';
-      const ring = el('circle', { r: n.r + 4, fill: 'none', 'stroke-opacity': .4, 'stroke-width': 2,
-        stroke: n.group === 'track_future' ? '#1c64f2' : n.group === 'track_innov' ? '#e8590c' : col });
+      const ring = el('circle', { r: n.r + 4, fill: 'none', 'stroke-opacity': .4, 'stroke-width': 2, stroke: col });
       const c = el('circle', { r: n.r, fill: col, stroke: '#ffffff', 'stroke-width': 2.5 });
       gEl.appendChild(ring); gEl.appendChild(c);
       const lines = (n.label || n.id).split('\n');
@@ -214,15 +232,15 @@ const GraphView = (() => {
     step();
   }
   function physics() {
-    const k = 0.04, rep = 17000, cx = W / 2, cy = H / 2;
+    const k = 0.04, rep = 26000, cx = W / 2, cy = H / 2;
     for (let i = 0; i < nodes.length; i++) {
       const a = nodes[i];
       for (let j = i + 1; j < nodes.length; j++) {
         const b = nodes[j];
         let dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + .01, d = Math.sqrt(d2);
-        const mind = a.r + b.r + 50;
+        const mind = a.r + b.r + 72;
         let f = rep / d2;
-        if (d < mind) f += (mind - d) * 0.9 / d;
+        if (d < mind) f += (mind - d) * 0.95 / d;
         const fx = dx / d * f, fy = dy / d * f;
         a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
       }
@@ -230,7 +248,7 @@ const GraphView = (() => {
     }
     edges.forEach(e => {
       let dx = e.t.x - e.s.x, dy = e.t.y - e.s.y, d = Math.hypot(dx, dy) || 1;
-      const target = 158 + (e.s.r + e.t.r) * 0.6;
+      const target = 196 + (e.s.r + e.t.r) * 0.6;
       const f = (d - target) * k, fx = dx / d * f, fy = dy / d * f;
       e.s.vx += fx; e.s.vy += fy; e.t.vx -= fx; e.t.vy -= fy;
     });
@@ -258,8 +276,9 @@ const GraphView = (() => {
       const ex = p1.x + edx / ed * (e.t.r + 7), ey = p1.y + edy / ed * (e.t.r + 7);
       e.path.setAttribute('d', `M${sx.toFixed(1)},${sy.toFixed(1)} Q${cxp.toFixed(1)},${cyp.toFixed(1)} ${ex.toFixed(1)},${ey.toFixed(1)}`);
       if (e.lbl) {
-        // label at quadratic midpoint (t=0.5)
-        const lx = 0.25 * sx + 0.5 * cxp + 0.25 * ex, ly = 0.25 * sy + 0.5 * cyp + 0.25 * ey;
+        // label at a staggered point along the quadratic curve
+        const t = e.lt || 0.5, a = (1 - t) * (1 - t), bq = 2 * (1 - t) * t, cq = t * t;
+        const lx = a * sx + bq * cxp + cq * ex, ly = a * sy + bq * cyp + cq * ey;
         e.lbl.setAttribute('x', lx.toFixed(1)); e.lbl.setAttribute('y', (ly + 3).toFixed(1));
         const w = (e.label.length * 6.2) + 8, h = 15;
         e.lblBg.setAttribute('x', (lx - w / 2).toFixed(1)); e.lblBg.setAttribute('y', (ly - h + 4).toFixed(1));
