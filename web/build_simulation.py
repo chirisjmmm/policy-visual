@@ -36,6 +36,21 @@ VAR_META = {
     "former_fellows_in_tenure_track": ("정년트랙 진입 펠로우", "명", "count"),
     "regional_publication_share_growth": ("지역 논문 점유율 증가", "%p", "pct"),
     "independent_pi_count":         ("독립 연구책임자(PI) 수", "명", "count"),
+    # --- BK21 ---
+    "number_of_research_groups":    ("교육연구단 수", "개", "count"),
+    "graduate_innovation_universities": ("대학원혁신지원대학", "개", "count"),
+    "self_evaluation_reports":      ("자체평가 제출", "개", "count"),
+    "consulting_groups":            ("성과 컨설팅 단", "개", "count"),
+    "commendation_recipients":      ("우수 참여인력 표창", "명", "count"),
+    "supported_grad_students":      ("지원 대학원생", "명", "count"),
+    "new_researchers_supported":    ("신진연구인력 지원", "명", "count"),
+    "contract_terminations":        ("협약해지 교육연구단", "개", "count"),
+    "employment_rate_pct":          ("대학원생 취업률", "%", "pct"),
+    "major_match_rate_pct":         ("취업 전공일치율", "%", "pct"),
+    "faculty_lecture_ratio_pct":    ("전임교수 강의비율", "%", "pct"),
+    "faculty_appointments":         ("전임교원 임용", "명", "count"),
+    "annual_sci_e_publications":    ("연간 SCI(E) 논문", "편", "count"),
+    "doctoral_graduates":           ("박사 배출", "명", "count"),
 }
 
 PHASE_META = {
@@ -47,14 +62,30 @@ PHASE_META = {
 }
 
 STAKEHOLDER_KO = {
+    # SSF
     "EvaluationPanel": "평가위원",
     "PolicyRole": "정책담당자",
     "PostdoctoralResearcher": "박사후연구원",
+    # BK21
+    "GraduateStudent": "대학원생",
+    "EducationResearchGroup": "교육연구단",
+    "UniversityAdministration": "대학 본부",
+    "NationalResearchFoundation": "연구재단",
+    "ProjectOversightCommittee": "사업총괄위원",
+    "MinistryOfEducation": "교육부",
+    "EarlyCareerResearcher": "신진연구인력",
 }
 STAKEHOLDER_COLOR = {
-    "EvaluationPanel": "#6366f1",       # indigo
-    "PolicyRole": "#0ea5e9",            # sky
-    "PostdoctoralResearcher": "#f59e0b",# amber
+    "EvaluationPanel": "#6366f1",        # indigo
+    "PolicyRole": "#0ea5e9",             # sky
+    "PostdoctoralResearcher": "#f59e0b", # amber
+    "GraduateStudent": "#c2255c",        # rose
+    "EducationResearchGroup": "#1864ab", # blue
+    "UniversityAdministration": "#5c6b8a", # slate
+    "NationalResearchFoundation": "#0c8599", # teal
+    "ProjectOversightCommittee": "#6741d9",  # violet
+    "MinistryOfEducation": "#7048e8",    # purple
+    "EarlyCareerResearcher": "#e8590c",  # orange
 }
 
 
@@ -221,9 +252,10 @@ def detect_outliers(pairs):
     return out
 
 
-def build_scenario(d):
+def build_scenario(d, policy="ssf"):
     sid = d["scenario_id"]
-    short = sid.split("_")[0]
+    parts = sid.split("_")
+    short = parts[1] if (parts[0].upper() == "BK21" and len(parts) > 1) else parts[0]
     # agents / seating
     agents = []
     for i, p in enumerate(d["participants"]):
@@ -330,6 +362,7 @@ def build_scenario(d):
 
     return {
         "id": short,
+        "policy": policy,
         "scenario_id": sid,
         "agents": agents,
         "final_impact": d.get("scenario_impact", {}),
@@ -338,23 +371,33 @@ def build_scenario(d):
     }
 
 
+def load_glob(pattern, policy):
+    import glob
+    out = []
+    for path in sorted(glob.glob(os.path.join(RAW, pattern))):
+        d = json.load(open(path, encoding="utf-8"))
+        out.append(build_scenario(d, policy))
+    return out
+
+
 def main():
     scenarios = []
-    for i in range(1, 6):
-        path = os.path.join(RAW, f"scenario_{i}.json")
-        if not os.path.exists(path):
-            continue
-        d = json.load(open(path, encoding="utf-8"))
-        scenarios.append(build_scenario(d))
+    scenarios += load_glob("scenario_*.json", "ssf")
+    scenarios += load_glob("bk21_scenario_*.json", "bk21")
     out = {
-        "policy": "Sejong Science Fellowship (세종과학펠로우십)",
+        "policies": {
+            "ssf": "세종과학펠로우십 (SSF)",
+            "bk21": "두뇌한국21 (BK21)",
+        },
         "pass_type": "forward → backward",
         "var_meta": {k: {"label": v[0], "unit": v[1], "fmt": v[2]} for k, v in VAR_META.items()},
         "scenarios": scenarios,
     }
     outpath = os.path.join(HERE, "data", "simulation.json")
     json.dump(out, open(outpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print("wrote", outpath, "scenarios:", len(scenarios))
+    print("wrote", outpath, "scenarios:", len(scenarios),
+          "(ssf:", sum(1 for s in scenarios if s['policy'] == 'ssf'),
+          "bk21:", sum(1 for s in scenarios if s['policy'] == 'bk21'), ")")
 
 
 if __name__ == "__main__":

@@ -122,6 +122,10 @@ body.graph-full-open{overflow:hidden}
 /* ---------- simulation tab ---------- */
 .pass-badge{margin-left:8px;font-size:12.5px;color:var(--muted);background:var(--panel2);padding:7px 13px;border-radius:20px;border:1px solid var(--line)}
 .pass-badge b{color:var(--accent2)} .pass-badge i{color:var(--good);font-style:normal;font-size:11px}
+.sim-policy{display:flex;gap:6px;margin-right:6px}
+.spbtn{background:var(--panel);border:1px solid var(--line);color:var(--muted);padding:8px 14px;border-radius:9px;cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;transition:.15s}
+.spbtn:hover{border-color:var(--accent);color:var(--text)}
+.spbtn.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .sim-scenario label{font-size:13px;color:var(--muted)}
 #scenarioSel{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-family:inherit;font-size:13px}
 

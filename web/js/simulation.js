@@ -9,7 +9,9 @@ const SimView = (() => {
   let steps = [], stepIdx = 0;
   let playing = false, timer = null;
   let svg, wrap, seats = [];
+  let policy = 'ssf';
   const AUTOPLAY_MS = 3600, REVEAL_MS = 1100;
+  const BADGE_NOTE = { ssf: '(macro-avg 최상)', bk21: '(BK21 대표 시나리오)' };
 
   const fmtVal = (v, fmt, unit) => {
     if (v === null || v === undefined) return '—';
@@ -23,16 +25,36 @@ const SimView = (() => {
     svg = document.getElementById('tableSvg');
     wrap = document.querySelector('.roundtable-wrap');
     const sel = document.getElementById('scenarioSel');
-    DATA.scenarios.forEach((s, i) => {
-      const o = document.createElement('option');
-      o.value = i; o.textContent = `${s.id} · ${s.agents.map(a => a.name).join(', ')}`;
-      sel.appendChild(o);
-    });
+    // policy toggle (BK21 / SSF)
+    const polWrap = document.getElementById('simPolicy');
+    const policies = DATA.policies || { ssf: '세종과학펠로우십' };
+    polWrap.innerHTML = Object.keys(policies).map(p =>
+      `<button class="spbtn ${p === policy ? 'active' : ''}" data-policy="${p}">${policies[p]}</button>`).join('');
+    polWrap.querySelectorAll('.spbtn').forEach(b => b.onclick = () => selectPolicy(b.dataset.policy));
     sel.onchange = () => loadScenario(+sel.value);
     document.getElementById('prevStep').onclick = () => { stop(); go(stepIdx - 1); };
     document.getElementById('nextStep').onclick = () => { stop(); go(stepIdx + 1); };
     document.getElementById('playPause').onclick = togglePlay;
-    loadScenario(0);
+    selectPolicy(policy);
+  }
+
+  function selectPolicy(p) {
+    stop();
+    policy = p;
+    document.querySelectorAll('.spbtn').forEach(b => b.classList.toggle('active', b.dataset.policy === p));
+    const sel = document.getElementById('scenarioSel');
+    sel.innerHTML = '';
+    let first = -1;
+    DATA.scenarios.forEach((s, i) => {
+      if (s.policy !== p) return;
+      if (first < 0) first = i;
+      const o = document.createElement('option');
+      o.value = i; o.textContent = `${s.id} · ${s.agents.map(a => a.name).join(', ')}`;
+      sel.appendChild(o);
+    });
+    const badge = document.getElementById('passBadge');
+    if (badge) badge.innerHTML = `진행 방식: <b>Forward → Backward</b> <i>${BADGE_NOTE[p] || ''}</i>`;
+    if (first >= 0) loadScenario(first);
   }
 
   function loadScenario(i) {
