@@ -1,0 +1,2718 @@
+{
+  "graph_id": "local_policy_graph_20260515105046",
+  "ontology": {
+    "entity_types": [
+      {
+        "name": "PostdoctoralResearcher",
+        "description": "Early-career researcher eligible for the fellowship",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "position",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [
+          {
+            "name": "agent_modality",
+            "type": "text",
+            "description": "Individual person"
+          },
+          {
+            "name": "role_family",
+            "type": "text",
+            "description": "direct_beneficiary"
+          },
+          {
+            "name": "eligibility_criteria",
+            "type": "text",
+            "description": "PhD within 7 years or age under 39, non-tenure-track, domestic nationality"
+          },
+          {
+            "name": "exclusion_criteria",
+            "type": "text",
+            "description": "Foreign nationals, tenure-track faculty, PhD >7 years and age >39"
+          },
+          {
+            "name": "role_scope",
+            "type": "text",
+            "description": "Conducts independent research, may change lab once per year"
+          },
+          {
+            "name": "resources_accessed",
+            "type": "text",
+            "description": "Annual research grant up to 130 million KRW including indirect costs"
+          },
+          {
+            "name": "reporting_or_compliance_duties",
+            "type": "text",
+            "description": "Submit research plan, undergo stage evaluation at year 3"
+          }
+        ],
+        "examples": [
+          "Domestic postdoc within 7 years of PhD",
+          "Non-tenure-track researcher under 39"
+        ],
+        "rationale": "Central beneficiary actor; occupies the fellow position and drives the policy's impact simulation."
+      },
+      {
+        "name": "HostInstitution",
+        "description": "Domestic research institution that employs the fellow",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "position",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [
+          {
+            "name": "agent_modality",
+            "type": "text",
+            "description": "Organization"
+          },
+          {
+            "name": "role_family",
+            "type": "text",
+            "description": "host_organization"
+          },
+          {
+            "name": "eligibility_criteria",
+            "type": "text",
+            "description": "Domestic institution capable of managing research funds"
+          },
+          {
+            "name": "role_scope",
+            "type": "text",
+            "description": "Employs fellow, manages grant, provides research environment"
+          },
+          {
+            "name": "resources_accessed",
+            "type": "text",
+            "description": "Indirect cost reimbursement"
+          },
+          {
+            "name": "reporting_or_compliance_duties",
+            "type": "text",
+            "description": "Sign employment contract before research start date"
+          }
+        ],
+        "examples": [
+          "Government-funded research institute",
+          "Private research lab",
+          "University (non-tenure-track)"
+        ],
+        "rationale": "Key organizational actor that hosts the fellow and manages the grant; essential for resource flow and compliance."
+      },
+      {
+        "name": "MinistryOfScienceAndICT",
+        "description": "Government ministry that funds and oversees the fellowship",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "aggregation",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [
+          {
+            "name": "agent_modality",
+            "type": "text",
+            "description": "Government agency"
+          },
+          {
+            "name": "role_family",
+            "type": "text",
+            "description": "policy_administrator"
+          },
+          {
+            "name": "decision_authority",
+            "type": "text",
+            "description": "Approves selected projects via Basic Research Promotion Committee"
+          },
+          {
+            "name": "resources_accessed",
+            "type": "text",
+            "description": "Annual budget for 200 fellowships"
+          },
+          {
+            "name": "reporting_or_compliance_duties",
+            "type": "text",
+            "description": "Announce support plan, oversee program"
+          }
+        ],
+        "examples": [
+          "Ministry of Science and ICT (MSIT)"
+        ],
+        "rationale": "Funder and final approval authority; central to governance and resource allocation."
+      },
+      {
+        "name": "NationalResearchFoundation",
+        "description": "Agency that manages evaluation and administration",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "aggregation",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [
+          {
+            "name": "agent_modality",
+            "type": "text",
+            "description": "Organization"
+          },
+          {
+            "name": "role_family",
+            "type": "text",
+            "description": "policy_administrator"
+          },
+          {
+            "name": "decision_authority",
+            "type": "text",
+            "description": "Conducts eligibility review and online evaluation"
+          },
+          {
+            "name": "resources_accessed",
+            "type": "text",
+            "description": "Operates dedicated evaluation panel"
+          },
+          {
+            "name": "reporting_or_compliance_duties",
+            "type": "text",
+            "description": "Manage evaluation process, notify results"
+          }
+        ],
+        "examples": [
+          "National Research Foundation of Korea (NRF)"
+        ],
+        "rationale": "Key administrative actor that executes evaluation and selection; essential for process flow."
+      },
+      {
+        "name": "EvaluationPanel",
+        "description": "Dedicated panel of experts that evaluates research proposals",
+        "iad_category": "Information",
+        "node_family": "PositionRole",
+        "iad_rule_type": "aggregation",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [
+          {
+            "name": "agent_modality",
+            "type": "text",
+            "description": "Committee"
+          },
+          {
+            "name": "role_family",
+            "type": "text",
+            "description": "evaluator"
+          },
+          {
+            "name": "role_scope",
+            "type": "text",
+            "description": "Online evaluation of proposals, stage evaluation at year 3"
+          },
+          {
+            "name": "decision_authority",
+            "type": "text",
+            "description": "Scores proposals, recommends selection"
+          },
+          {
+            "name": "reporting_or_compliance_duties",
+            "type": "text",
+            "description": "Provide evaluation results to NRF"
+          }
+        ],
+        "examples": [
+          "RB (Research Board) panel of 5 experts per field"
+        ],
+        "rationale": "Formal position that performs evaluation; critical for selection and stage-gate decisions."
+      },
+      {
+        "name": "ResearchGrant",
+        "description": "Annual funding package including direct and indirect costs",
+        "iad_category": "Costs_and_Benefits",
+        "node_family": "ResourceBenefitCost",
+        "iad_rule_type": "payoff",
+        "is_actor": false,
+        "persona_eligible": false,
+        "attributes": [
+          {
+            "name": "amount",
+            "type": "text",
+            "description": "Approximately 130 million KRW per year"
+          },
+          {
+            "name": "components",
+            "type": "text",
+            "description": "Direct cost 100M (salary 65M+research 35M) + indirect cost ~30M"
+          },
+          {
+            "name": "duration",
+            "type": "text",
+            "description": "Up to 5 years (3+2 with stage evaluation)"
+          }
+        ],
+        "examples": [
+          "Annual grant of 130M KRW",
+          "Salary 65M KRW plus research funds"
+        ],
+        "rationale": "Primary resource that enables the fellow's research; central to payoff rules and incentive structure."
+      },
+      {
+        "name": "EligibilityCriteria",
+        "description": "Conditions that determine who can apply for the fellowship",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "boundary",
+        "is_actor": false,
+        "persona_eligible": false,
+        "attributes": [
+          {
+            "name": "criteria_type",
+            "type": "text",
+            "description": "Degree timing, age, employment status, nationality"
+          },
+          {
+            "name": "details",
+            "type": "text",
+            "description": "PhD within 7 years or age under 39, non-tenure-track, domestic nationality"
+          }
+        ],
+        "examples": [
+          "PhD within 7 years",
+          "Under 39 years old",
+          "Non-tenure-track researcher"
+        ],
+        "rationale": "Defines boundary rules for entry into the program; essential for eligibility simulation."
+      },
+      {
+        "name": "ResearchProposal",
+        "description": "Document submitted by the applicant describing research plan",
+        "iad_category": "Costs_and_Benefits",
+        "node_family": "ResourceBenefitCost",
+        "iad_rule_type": "information",
+        "is_actor": false,
+        "persona_eligible": false,
+        "attributes": [
+          {
+            "name": "content",
+            "type": "text",
+            "description": "Research topic, methodology, expected outcomes"
+          },
+          {
+            "name": "purpose",
+            "type": "text",
+            "description": "Used for online evaluation and selection"
+          }
+        ],
+        "examples": [
+          "Research plan for fellowship application"
+        ],
+        "rationale": "Key information object that triggers evaluation; central to information flow."
+      },
+      {
+        "name": "StageEvaluation",
+        "description": "Mid-term assessment after 3 years to decide continuation",
+        "iad_category": "Actions",
+        "node_family": "PolicyActionProcess",
+        "iad_rule_type": "choice",
+        "is_actor": false,
+        "persona_eligible": false,
+        "attributes": [
+          {
+            "name": "timing",
+            "type": "text",
+            "description": "After 3 years of research"
+          },
+          {
+            "name": "focus",
+            "type": "text",
+            "description": "Process-oriented, faithful performance"
+          },
+          {
+            "name": "outcome",
+            "type": "text",
+            "description": "Determines entry into second phase (2 more years)"
+          }
+        ],
+        "examples": [
+          "3-year stage evaluation"
+        ],
+        "rationale": "Critical action that governs continuation; shapes the temporal structure of the fellowship."
+      },
+      {
+        "name": "RegionalAllocationQuota",
+        "description": "30% selection ratio reserved for researchers in regional institutions",
+        "iad_category": "Participants",
+        "node_family": "ActorParticipant",
+        "iad_rule_type": "scope",
+        "is_actor": false,
+        "persona_eligible": false,
+        "attributes": [
+          {
+            "name": "quota",
+            "type": "text",
+            "description": "30% of selected fellows"
+          },
+          {
+            "name": "enforcement",
+            "type": "text",
+            "description": "Additional selection if quota not met"
+          }
+        ],
+        "examples": [
+          "30% regional selection ratio"
+        ],
+        "rationale": "Scope rule that shapes distribution of benefits; important for equity simulation."
+      },
+      {
+        "name": "PolicyRole",
+        "description": "Official role slot in the policy process.",
+        "iad_category": "Positions",
+        "node_family": "PositionRole",
+        "iad_rule_type": "position",
+        "is_actor": true,
+        "persona_eligible": true,
+        "attributes": [],
+        "examples": [],
+        "rationale": "Auto-recovered IAD Positions coverage because the LLM output omitted it."
+      }
+    ],
+    "edge_types": [
+      {
+        "name": "ELIGIBLE_FOR",
+        "description": "Postdoc meets criteria to apply for fellowship",
+        "edge_category": "regulative",
+        "edge_family": "EligibilityExclusion",
+        "ig_deontic": "can",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "EligibilityCriteria"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Regulative permission edge: eligible postdocs can apply if they meet criteria."
+      },
+      {
+        "name": "INELIGIBLE_FOR",
+        "description": "Postdoc is excluded from fellowship due to criteria",
+        "edge_category": "regulative",
+        "edge_family": "EligibilityExclusion",
+        "ig_deontic": "cannot",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "EligibilityCriteria"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Regulative prohibition edge: foreign nationals and tenure-track faculty cannot apply."
+      },
+      {
+        "name": "SUBMITS",
+        "description": "Postdoc submits research proposal to NRF",
+        "edge_category": "structural",
+        "edge_family": "ProcessSequence",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "ResearchProposal"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural process edge: applicant submits proposal as part of application."
+      },
+      {
+        "name": "EVALUATES",
+        "description": "Evaluation panel reviews research proposal",
+        "edge_category": "structural",
+        "edge_family": "EvaluationSelection",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "EvaluationPanel",
+            "target": "ResearchProposal"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural evaluation edge: panel scores proposals for selection."
+      },
+      {
+        "name": "APPROVES",
+        "description": "Ministry approves selected projects",
+        "edge_category": "structural",
+        "edge_family": "AuthorityGovernance",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "MinistryOfScienceAndICT",
+            "target": "PostdoctoralResearcher"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural authority edge: ministry gives final approval via committee."
+      },
+      {
+        "name": "FUNDS",
+        "description": "Ministry provides research grant to host institution for fellow",
+        "edge_category": "structural",
+        "edge_family": "ResourceIncentive",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "MinistryOfScienceAndICT",
+            "target": "ResearchGrant"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural resource edge: ministry allocates budget to fund the grant."
+      },
+      {
+        "name": "RECEIVES",
+        "description": "Postdoc receives research grant through host institution",
+        "edge_category": "structural",
+        "edge_family": "ResourceIncentive",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "ResearchGrant"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural benefit edge: fellow receives salary and research funds."
+      },
+      {
+        "name": "MUST_SUBMIT",
+        "description": "Postdoc must undergo stage evaluation after 3 years",
+        "edge_category": "regulative",
+        "edge_family": "ProcessSequence",
+        "ig_deontic": "must",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "StageEvaluation"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Regulative obligation edge: fellow must pass stage evaluation to continue."
+      },
+      {
+        "name": "CAN_CHOOSE",
+        "description": "Postdoc may change host institution once per year",
+        "edge_category": "regulative",
+        "edge_family": "PermissionConstraint",
+        "ig_deontic": "can",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "HostInstitution"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Regulative permission edge: fellow can move to another lab, subject to limits."
+      },
+      {
+        "name": "CANNOT_CHANGE",
+        "description": "Postdoc cannot change institution more than once per year without approval",
+        "edge_category": "regulative",
+        "edge_family": "PermissionConstraint",
+        "ig_deontic": "cannot",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "HostInstitution"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Regulative prohibition edge: limits mobility to prevent research discontinuity."
+      },
+      {
+        "name": "TARGETS",
+        "description": "Regional allocation quota targets 30% selection from regional institutions",
+        "edge_category": "structural",
+        "edge_family": "OutcomeCausalMechanism",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "MinistryOfScienceAndICT",
+            "target": "RegionalAllocationQuota"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Structural scope edge: ministry sets quota to promote regional researcher support."
+      },
+      {
+        "name": "DEFINED_AS",
+        "description": "Eligibility criteria define what counts as a qualifying postdoc",
+        "edge_category": "constitutive",
+        "edge_family": "DefinitionQualification",
+        "ig_deontic": null,
+        "source_targets": [
+          {
+            "source": "EligibilityCriteria",
+            "target": "PostdoctoralResearcher"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "source_text"
+        ],
+        "rationale": "Constitutive definition edge: criteria constitute the institutional category of eligible fellow."
+      },
+      {
+        "name": "REQUIRES_DOCUMENT",
+        "description": "Actor or process requires a specific document or evidence.",
+        "edge_category": "regulative",
+        "edge_family": "InformationEvidence",
+        "ig_deontic": "must",
+        "source_targets": [
+          {
+            "source": "PostdoctoralResearcher",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "HostInstitution",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "MinistryOfScienceAndICT",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "NationalResearchFoundation",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "EligibilityCriteria",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "RegionalAllocationQuota",
+            "target": "EvaluationPanel"
+          },
+          {
+            "source": "PolicyRole",
+            "target": "EvaluationPanel"
+          }
+        ],
+        "attributes": [],
+        "required_attributes": [
+          "deontic",
+          "activation_condition",
+          "execution_constraint",
+          "or_else_text",
+          "source_text"
+        ],
+        "rationale": "Auto-added to preserve InformationEvidence coverage for IAD/IG policy simulation."
+      }
+    ],
+    "analysis_summary": "The Sejong Science Fellowship policy creates a 5-year (3+2) research grant program for early-career postdoctoral researchers in South Korea, administered by the Ministry of Science and ICT and the National Research Foundation. It targets non-tenure-track domestic researchers within 7 years of PhD or under age 39, providing annual funding of ~130M KRW. The policy includes eligibility boundaries, a dedicated evaluation panel, stage-gate evaluation at year 3, mobility allowances, and a 30% regional allocation quota. The ontology captures key actors (postdoc, host institution, ministry, NRF, evaluation panel), resources (research grant), information (eligibility criteria, research proposal), processes (stage evaluation), and scope rules (regional quota) to support stakeholder-centered impact simulation."
+  },
+  "nodes": [
+    {
+      "id": "PolicyRole:PolicyRole",
+      "name": "PolicyRole",
+      "type": "PolicyRole",
+      "iad_category": "Positions",
+      "node_family": "PositionRole",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Direct beneficiary actor role in the policy; repaired from a program-label extraction.",
+      "attributes": {
+        "agent_modality": "individual",
+        "role_family": "direct_beneficiary"
+      },
+      "rationale": "Auto-recovered IAD Positions coverage because the LLM output omitted it.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_001",
+          "text": "Sejong Science Fellowship (SSF) promotion plan for nurturing excellent young scientists."
+        }
+      ]
+    },
+    {
+      "id": "PostdoctoralResearcher:Excellent Young Scientist",
+      "name": "Excellent Young Scientist",
+      "type": "PostdoctoralResearcher",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Target beneficiary of the fellowship program.",
+      "attributes": {
+        "agent_modality": "individual",
+        "role_family": "direct_beneficiary"
+      },
+      "rationale": "Central beneficiary actor; occupies the fellow position and drives the policy's impact simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_001",
+          "text": "Promotion plan for nurturing excellent young scientists."
+        }
+      ]
+    },
+    {
+      "id": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "name": "PostdoctoralResearcher",
+      "type": "PostdoctoralResearcher",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Young scientist who is a postdoctoral researcher or equivalent, eligible for the fellowship. Early-career researcher eligible for the fellowship; non-tenure-track, within 7 years of PhD or under 39. Early-career researcher eligible for the fellowship; includes domestic nationals and PhD candidates who will obtain degree before research start date. Early-career researcher eligible for the fellowship; must start research after contract negotiation with host institution. Early-career researcher eligible for the fellowship; can move to desired lab for career development.",
+      "attributes": {
+        "agent_modality": "organization",
+        "role_family": "host_organization",
+        "eligibility_criteria": "Must negotiate employment date, salary, and treatment with host institution before applying; cannot apply if project ends in August of current year",
+        "exclusion_criteria": "Foreign nationals (during initial 3 years); PhD not obtained by research start date",
+        "role_scope": "May change lab once per year; can change research topic and goal upon lab move",
+        "resources_accessed": "Annual research grant up to 130 million KRW including indirect costs",
+        "reporting_or_compliance_duties": "Employment contract must be signed before research start date"
+      },
+      "rationale": "Central beneficiary actor; occupies the fellow position and drives the policy's impact simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_002",
+          "text": "Postdoctoral researchers and other young scientists are core research personnel who have difficulty conducting independent research due to low salary and research funding levels."
+        },
+        {
+          "chunk_id": "chunk_003",
+          "text": "Postdoctoral researchers within 7 years of PhD or under 39, who are not full-time faculty, are eligible; foreign nationals cannot apply."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "Domestic nationals are supported during the initial three years; PhD candidates who will obtain degree before research start date may apply."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "Before applying, the researcher must complete consultation with the host institution on employment date, salary, and treatment."
+        },
+        {
+          "chunk_id": "chunk_006",
+          "text": "Postdoctoral researchers are encouraged to move to a lab other than their PhD advisor's lab to strengthen creative research capabilities."
+        }
+      ]
+    },
+    {
+      "id": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "name": "MinistryOfScienceAndICT",
+      "type": "MinistryOfScienceAndICT",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "aggregation",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Government ministry that funds and oversees the Sejong Science Fellowship. Government ministry that funds and oversees the fellowship program. Government ministry that selects and approves funded projects via the Basic Research Project Promotion Committee.",
+      "attributes": {
+        "agent_modality": "organization",
+        "role_family": "policy_administrator",
+        "decision_authority": "Selects and approves supported projects through the Basic Research Project Promotion Committee",
+        "resources_accessed": "Annual budget for 200 fellowships",
+        "reporting_or_compliance_duties": "Announce support plan, oversee program"
+      },
+      "rationale": "Funder and final approval authority; central to governance and resource allocation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_002",
+          "text": "The Ministry of Science and ICT announced the Sejong Science Fellowship support plan to expand support for young scientists."
+        },
+        {
+          "chunk_id": "chunk_003",
+          "text": "The Ministry of Science and ICT oversees the fellowship program and approves selections."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "The Ministry of Science and ICT funds the fellowship program with an annual budget for about 200 fellows."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "The Ministry of Science and ICT selects supported projects through the Basic Research Project Promotion Committee."
+        }
+      ]
+    },
+    {
+      "id": "RegionalAllocationQuota:Annual Fellowship Quota",
+      "name": "Annual Fellowship Quota",
+      "type": "RegionalAllocationQuota",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "scope",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Approximately 200 fellows are selected annually. Approximately 200 fellows selected annually, with a total of 1,000 over 5 years.",
+      "attributes": {
+        "target_quota": "about 200 fellows per year, total 1,000 over 5 years"
+      },
+      "rationale": "Scope rule that shapes distribution of benefits; important for equity simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_002",
+          "text": "Support includes salary and research funding of about 100 million KRW (excluding indirect costs) for about 200 fellows per year."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "About 200 fellows per year, total 1,000 over 5 years."
+        }
+      ]
+    },
+    {
+      "id": "ResearchGrant:Research Grant",
+      "name": "Research Grant",
+      "type": "ResearchGrant",
+      "iad_category": "Costs_and_Benefits",
+      "node_family": "ResourceBenefitCost",
+      "iad_rule_type": "payoff",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Annual funding package including salary and research costs, approximately 100 million KRW plus indirect costs. Annual funding package of approximately 130 million KRW including direct and indirect costs. Annual funding package including direct and indirect costs; up to 5 years with stage evaluation. Continued research funding up to 100 million KRW for research expenses when fellow becomes tenure-track faculty or moves to a research-continuable institution.",
+      "attributes": {
+        "amount": "up to 100 million KRW",
+        "components": "Research expenses only (no salary)",
+        "duration": "Continued support during research",
+        "role_family": "affected_actor"
+      },
+      "rationale": "Primary resource that enables the fellow's research; central to payoff rules and incentive structure.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_002",
+          "text": "Support includes salary and research funding of about 100 million KRW (excluding indirect costs) for about 200 fellows per year."
+        },
+        {
+          "chunk_id": "chunk_003",
+          "text": "Annual research grant is about 130 million KRW including indirect costs."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "After Phase 1 ends (3 years), entry into Phase 2 is decided based on stage evaluation results."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "Annual research grant of about 130 million KRW per year, comprising salary of 65 million KRW plus research funds of 35 million KRW and indirect costs of about 30 million KRW."
+        },
+        {
+          "chunk_id": "chunk_006",
+          "text": "If the fellow is hired as a tenure-track faculty or moves to an institution where research can continue, support continues with up to 100 million KRW in research funds (no salary)."
+        }
+      ]
+    },
+    {
+      "id": "HostInstitution:HostInstitution",
+      "name": "HostInstitution",
+      "type": "HostInstitution",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Domestic research institution that employs the fellow and manages the grant. Domestic research institution that employs the fellow and manages the research grant.",
+      "attributes": {
+        "agent_modality": "organization",
+        "role_family": "host_organization",
+        "role_scope": "Employs fellow, manages grant, provides research environment",
+        "eligibility_criteria": "Domestic institution capable of managing research funds",
+        "resources_accessed": "Indirect cost reimbursement",
+        "reporting_or_compliance_duties": "Sign employment contract before research start date"
+      },
+      "rationale": "Key organizational actor that hosts the fellow and manages the grant; essential for resource flow and compliance.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "The host institution employs the fellow and manages the research grant."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "A domestic affiliated research institution capable of managing research funds is required when applying."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "The host institution decides whether to sign an employment contract contingent on project selection."
+        },
+        {
+          "chunk_id": "chunk_006",
+          "text": "The fellow may change host institution up to once per year to prevent research discontinuity."
+        }
+      ]
+    },
+    {
+      "id": "NationalResearchFoundation:NationalResearchFoundation",
+      "name": "NationalResearchFoundation",
+      "type": "NationalResearchFoundation",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "aggregation",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Agency that manages evaluation and administration of the fellowship. Agency that manages eligibility review and online evaluation.",
+      "attributes": {
+        "agent_modality": "organization",
+        "role_family": "policy_administrator",
+        "decision_authority": "Conducts eligibility review and online evaluation via dedicated panel",
+        "resources_accessed": "Operates dedicated evaluation panel",
+        "reporting_or_compliance_duties": "Manage evaluation process, notify results"
+      },
+      "rationale": "Key administrative actor that executes evaluation and selection; essential for process flow.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "The National Research Foundation manages the evaluation and selection process."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "The National Research Foundation manages the evaluation process and selection of fellows."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "The National Research Foundation conducts eligibility review and online evaluation."
+        }
+      ]
+    },
+    {
+      "id": "EvaluationPanel:Evaluation Panel",
+      "name": "Evaluation Panel",
+      "type": "EvaluationPanel",
+      "iad_category": "Positions",
+      "node_family": "PositionRole",
+      "iad_rule_type": "aggregation",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Dedicated panel of experts that evaluates research proposals for selection. Dedicated panel of experts that evaluates research proposals online.",
+      "attributes": {
+        "agent_modality": "committee_member",
+        "role_family": "evaluator",
+        "role_scope": "About 5 experts per field (RB); field and size may be adjusted by merging similar fields"
+      },
+      "rationale": "Formal position that performs evaluation; critical for selection and stage-gate decisions.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "A dedicated evaluation panel reviews research proposals and recommends selections."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "A dedicated evaluation panel of about 5 experts per field operates for online evaluation."
+        }
+      ]
+    },
+    {
+      "id": "EligibilityCriteria:Eligibility Criteria",
+      "name": "Eligibility Criteria",
+      "type": "EligibilityCriteria",
+      "iad_category": "Information",
+      "node_family": "EligibilityCondition",
+      "iad_rule_type": "boundary",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Conditions that determine who can apply: PhD within 7 years or age under 39, non-tenure-track, domestic nationality. Conditions that determine who can apply: domestic nationality, PhD obtained before research start date, and employment contract signed before start. Conditions that determine who can apply: must negotiate with host institution before applying; cannot apply if project ends in August of current year.",
+      "attributes": {
+        "criteria_type": "Application timing and employment negotiation",
+        "details": "Must complete consultation with host institution on employment date, salary, and treatment before applying; projects ending in August of current year are ineligible"
+      },
+      "rationale": "Defines boundary rules for entry into the program; essential for eligibility simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "Eligibility: PhD within 7 years or under 39, non-tenure-track, domestic nationality; foreign nationals excluded."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "Domestic nationals are supported during the initial three years; PhD candidates who will obtain degree before research start date may apply."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "Before applying, the researcher must complete consultation with the host institution on employment date, salary, and treatment; projects ending in August of current year cannot apply."
+        }
+      ]
+    },
+    {
+      "id": "ResearchProposal:Research Proposal",
+      "name": "Research Proposal",
+      "type": "ResearchProposal",
+      "iad_category": "Information",
+      "node_family": "InformationEvidence",
+      "iad_rule_type": "information",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Document submitted by the applicant describing the research plan. Document submitted by applicant describing research plan; used for online evaluation.",
+      "attributes": {
+        "content": "Research plan, expected outcomes",
+        "purpose": "used for online evaluation and selection"
+      },
+      "rationale": "Key information object that triggers evaluation; central to information flow.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "Applicants submit a research proposal for evaluation."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "Applicants submit a research proposal as part of the application process."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "The research proposal is evaluated during online evaluation."
+        }
+      ]
+    },
+    {
+      "id": "StageEvaluation:StageEvaluation",
+      "name": "StageEvaluation",
+      "type": "StageEvaluation",
+      "iad_category": "Actions",
+      "node_family": "PolicyActionProcess",
+      "iad_rule_type": "choice",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Mid-term assessment after 3 years to decide continuation for the remaining 2 years. Mid-term assessment after 3 years to decide continuation into the second phase. Mid-term assessment after 3 years to decide continuation into second phase.",
+      "attributes": {
+        "timing": "After 3 years (end of Phase 1)",
+        "focus": "Process-oriented, faithful performance",
+        "outcome": "determines entry into second phase (2 more years)"
+      },
+      "rationale": "Critical action that governs continuation; shapes the temporal structure of the fellowship.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "After 3 years, a stage evaluation determines continuation for the remaining 2 years."
+        },
+        {
+          "chunk_id": "chunk_004",
+          "text": "After the first stage ends (3 years), a stage evaluation (process-oriented, faithful performance) determines entry into the second stage."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "After Phase 1 ends (3 years), entry into Phase 2 is decided based on stage evaluation results (process-oriented, faithful performance)."
+        }
+      ]
+    },
+    {
+      "id": "RegionalAllocationQuota:RegionalAllocationQuota",
+      "name": "RegionalAllocationQuota",
+      "type": "RegionalAllocationQuota",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "scope",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "30% selection ratio reserved for researchers in regional institutions. 30% selection ratio reserved for researchers in regional institutions; additional selection if quota not met.",
+      "attributes": {
+        "quota": "30% of selected fellows",
+        "enforcement": "Additional selection if 30% not achieved"
+      },
+      "rationale": "Scope rule that shapes distribution of benefits; important for equity simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "30% of selections are reserved for researchers at regional institutions."
+        },
+        {
+          "chunk_id": "chunk_005",
+          "text": "A regional selection ratio of 30% is applied to support outstanding young regional scientists; additional selection if the ratio is not met."
+        }
+      ]
+    },
+    {
+      "id": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+      "name": "Graduation Expectancy Applicant",
+      "type": "PostdoctoralResearcher",
+      "iad_category": "Participants",
+      "node_family": "ActorParticipant",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Applicant who expects to obtain PhD before research start date; excluded if degree not completed by start date.",
+      "attributes": {
+        "agent_modality": "individual",
+        "role_family": "direct_beneficiary",
+        "eligibility_criteria": "Can apply if PhD expected before research start date",
+        "exclusion_criteria": "Excluded from selection if degree not completed by research start date"
+      },
+      "rationale": "Central beneficiary actor; occupies the fellow position and drives the policy's impact simulation.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_003",
+          "text": "Graduation expectancy applicants may apply but are excluded if degree is not completed by the research start date."
+        }
+      ]
+    },
+    {
+      "id": "PolicyRole:Basic Research Project Promotion Committee",
+      "name": "Basic Research Project Promotion Committee",
+      "type": "PolicyRole",
+      "iad_category": "Positions",
+      "node_family": "PositionRole",
+      "iad_rule_type": "position",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Committee under the Ministry that approves selected projects.",
+      "attributes": {
+        "agent_modality": "committee_member",
+        "role_family": "evaluator",
+        "decision_authority": "Approves selection of supported projects"
+      },
+      "rationale": "Auto-recovered IAD Positions coverage because the LLM output omitted it.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_005",
+          "text": "The Basic Research Project Promotion Committee selects supported projects."
+        }
+      ]
+    },
+    {
+      "id": "EvaluationPanel:Evaluation Panel (RB",
+      "name": "Evaluation Panel (RB",
+      "type": "EvaluationPanel",
+      "iad_category": "Positions",
+      "node_family": "PositionRole",
+      "iad_rule_type": "aggregation",
+      "is_actor": true,
+      "persona_eligible": true,
+      "summary": "Dedicated panel of experts that evaluates research proposals and provides mentoring.",
+      "attributes": {
+        "agent_modality": "committee_member",
+        "role_family": "evaluator",
+        "role_scope": "Stage evaluation at year 3; mentoring support linked to stage evaluation"
+      },
+      "rationale": "Formal position that performs evaluation; critical for selection and stage-gate decisions.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_006",
+          "text": "The dedicated evaluation panel and mid-career/leader researcher mentoring provide advice and support for lab change."
+        }
+      ]
+    },
+    {
+      "id": "StageEvaluation:Overseas Visiting Research",
+      "name": "Overseas Visiting Research",
+      "type": "StageEvaluation",
+      "iad_category": "Actions",
+      "node_family": "PolicyActionProcess",
+      "iad_rule_type": "choice",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Fellow may conduct overseas visiting research for up to 6 months without separate approval.",
+      "attributes": {
+        "timing": "Within 6 months",
+        "focus": "Overseas research visit"
+      },
+      "rationale": "Critical action that governs continuation; shapes the temporal structure of the fellowship.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_006",
+          "text": "Overseas visiting research is possible within 6 months without separate approval, same as other programs."
+        }
+      ]
+    },
+    {
+      "id": "ResearchProposal:Mentoring Support",
+      "name": "Mentoring Support",
+      "type": "ResearchProposal",
+      "iad_category": "Information",
+      "node_family": "InformationEvidence",
+      "iad_rule_type": "information",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Mentoring provided by a desired mentor or the foundation's RB, offering research know-how and network support.",
+      "attributes": {
+        "content": "Mentoring Day at Annual Forum, mentoring linked to stage evaluation"
+      },
+      "rationale": "Key information object that triggers evaluation; central to information flow.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_006",
+          "text": "Mentoring is provided by designating a desired mentor or the foundation's RB, supporting research know-how and networks."
+        }
+      ]
+    },
+    {
+      "id": "StageEvaluation:Stage Evaluation (Year 3",
+      "name": "Stage Evaluation (Year 3",
+      "type": "StageEvaluation",
+      "iad_category": "Actions",
+      "node_family": "PolicyActionProcess",
+      "iad_rule_type": "choice",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Comprehensive evaluation of research process at year 3 to determine continuation.",
+      "attributes": {
+        "timing": "After 3 years",
+        "focus": "Research process and faithful performance"
+      },
+      "rationale": "Critical action that governs continuation; shapes the temporal structure of the fellowship.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_006",
+          "text": "At the stage evaluation, the research process is comprehensively evaluated."
+        }
+      ]
+    },
+    {
+      "id": "StageEvaluation:Fellowship Announcement and Selection Schedule",
+      "name": "Fellowship Announcement and Selection Schedule",
+      "type": "StageEvaluation",
+      "iad_category": "Actions",
+      "node_family": "PolicyActionProcess",
+      "iad_rule_type": "scope",
+      "is_actor": false,
+      "persona_eligible": false,
+      "summary": "Support plan announcement in November 2020, selection evaluation by February 2021, and support start from March 2021.",
+      "attributes": {
+        "timing": "Announcement: Nov 2020; Selection: ~Feb 2021; Start: Mar 2021"
+      },
+      "rationale": "Critical action that governs continuation; shapes the temporal structure of the fellowship.",
+      "source_spans": [
+        {
+          "chunk_id": "chunk_006",
+          "text": "The support plan for basic research projects including Sejong Science Fellowship will be announced in November 2020, selection evaluation by February 2021, and support will start from March 2021."
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0001",
+      "type": "ELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:Excellent Young Scientist",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Excellent young scientists are eligible for the Sejong Science Fellowship.",
+      "deontic": "can",
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Sejong Science Fellowship (SSF) aims to nurture excellent young scientists.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0002",
+      "type": "DEFINED_AS",
+      "edge_category": "constitutive",
+      "edge_family": "DefinitionQualification",
+      "source": "EligibilityCriteria:Eligibility Criteria",
+      "target": "PostdoctoralResearcher:Excellent Young Scientist",
+      "fact": "The fellowship defines its target as excellent young scientists.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Sejong Science Fellowship (SSF) aims to nurture excellent young scientists.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0003",
+      "type": "FUNDS",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The Ministry funds the research grant for the fellowship.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Sejong Science Fellowship (SSF) is a program to nurture excellent young scientists, funded by the Ministry of Science and ICT.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0004",
+      "type": "APPROVES",
+      "edge_category": "structural",
+      "edge_family": "AuthorityGovernance",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "PolicyRole:PolicyRole",
+      "fact": "The Ministry approves the fellowship plan.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The document is a promotion plan for the Sejong Science Fellowship, submitted for approval by the Ministry of Science and ICT.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0005",
+      "type": "ELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Postdoctoral researchers are eligible for the Sejong Science Fellowship.",
+      "deontic": "can",
+      "activation_condition": "Applicant is a postdoctoral researcher or equivalent young scientist.",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers and other young scientists are core research personnel starting creative and challenging research.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0006",
+      "type": "INELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Postdoctoral researchers are ineligible if they cannot conduct independent research due to low salary and lack of research funds.",
+      "deontic": "cannot",
+      "activation_condition": "Researcher is bound to a lab and cannot conduct desired research due to low salary and research funds.",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers are bound to their labs and find it difficult to conduct the research they want, with low salary and research fund levels.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0007",
+      "type": "FUNDS",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The Ministry of Science and ICT funds the research grant for the fellowship.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Ministry of Science and ICT announced the Sejong Science Fellowship support plan to provide stable salary and research funds.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0008",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "Selected postdoctoral researchers receive the research grant.",
+      "deontic": null,
+      "activation_condition": "Researcher is selected as a fellow.",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers need stable salary and research fund support to grow into excellent researchers.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0009",
+      "type": "TARGETS",
+      "edge_category": "structural",
+      "edge_family": "OutcomeCausalMechanism",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "RegionalAllocationQuota:Annual Fellowship Quota",
+      "fact": "The Ministry targets approximately 200 fellows per year.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": "Annual selection of about 200 fellows.",
+      "or_else_text": null,
+      "source_text": "Support content: salary plus research funds of about 100 million won (indirect costs separate), about 200 fellows per year.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0010",
+      "type": "SUBMITS",
+      "edge_category": "structural",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "Postdoctoral researchers submit a research proposal as part of the application.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers need to conduct independent research, implying submission of a research plan.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0011",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "EvaluationPanel:Evaluation Panel",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "The evaluation panel evaluates research proposals for selection.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The evaluation panel evaluates research proposals for selection.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0012",
+      "type": "APPROVES",
+      "edge_category": "structural",
+      "edge_family": "AuthorityGovernance",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "The Ministry approves selected postdoctoral researchers as fellows.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Ministry of Science and ICT announced the Sejong Science Fellowship support plan.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0013",
+      "type": "MUST_SUBMIT",
+      "edge_category": "regulative",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "StageEvaluation:StageEvaluation",
+      "fact": "Postdoctoral researchers must undergo stage evaluation after 3 years.",
+      "deontic": "must",
+      "activation_condition": "Fellow has been selected and is in the program.",
+      "execution_constraint": "Evaluation occurs after 3 years of research.",
+      "or_else_text": null,
+      "source_text": "Stage evaluation at year 3 to decide continuation.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0014",
+      "type": "CAN_CHOOSE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Postdoctoral researchers may change host institution once per year.",
+      "deontic": "can",
+      "activation_condition": "Fellow is in the program.",
+      "execution_constraint": "Limited to once per year.",
+      "or_else_text": null,
+      "source_text": "Fellow may change lab up to once per year to prevent research discontinuity.",
+      "attributes": {
+        "evidence_alignment": "supported",
+        "duplicate_edge_ids": [
+          "edge_0047"
+        ],
+        "merged_duplicate_edge_count": 1
+      }
+    },
+    {
+      "id": "edge_0015",
+      "type": "CANNOT_CHANGE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Postdoctoral researchers cannot change institution more than once per year without approval.",
+      "deontic": "cannot",
+      "activation_condition": "Fellow attempts to change lab more than once per year.",
+      "execution_constraint": "Additional changes require prior review and approval.",
+      "or_else_text": null,
+      "source_text": "Additional changes require prior review and approval.",
+      "attributes": {
+        "evidence_alignment": "supported",
+        "duplicate_edge_ids": [
+          "edge_0048",
+          "edge_0067"
+        ],
+        "merged_duplicate_edge_count": 2
+      }
+    },
+    {
+      "id": "edge_0016",
+      "type": "DEFINED_AS",
+      "edge_category": "constitutive",
+      "edge_family": "DefinitionQualification",
+      "source": "EligibilityCriteria:Eligibility Criteria",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "Eligibility criteria define what counts as a qualifying postdoctoral researcher.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers and other young scientists are core research personnel starting creative and challenging research.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0017",
+      "type": "REQUIRES_DOCUMENT",
+      "edge_category": "regulative",
+      "edge_family": "InformationEvidence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EvaluationPanel:Evaluation Panel",
+      "fact": "Postdoctoral researchers must submit a research proposal for evaluation by the panel.",
+      "deontic": "must",
+      "activation_condition": "Applicant is applying for the fellowship.",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Postdoctoral researchers need to submit a research plan for evaluation.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0018",
+      "type": "ELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Postdoctoral researchers within 7 years of PhD or under 39 years old are eligible for the fellowship.",
+      "deontic": "can",
+      "activation_condition": "PhD obtained within 7 years (excluding maternity/childcare leave) or age under 39",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Target: Postdoctoral researchers within 7 years of PhD or under 39 years old.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0019",
+      "type": "INELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Foreign nationals and foreign passport holders cannot apply.",
+      "deontic": "cannot",
+      "activation_condition": "Foreign nationality or foreign passport holder",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Foreign nationals and foreign passport holders cannot apply.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0020",
+      "type": "INELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Tenure-track university faculty cannot apply.",
+      "deontic": "cannot",
+      "activation_condition": "Applicant is a tenure-track university faculty member",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Target: Non-tenure-track researchers in science and engineering fields.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0021",
+      "type": "ELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Applicants expecting to obtain a PhD before the research start date may apply.",
+      "deontic": "can",
+      "activation_condition": "Applicant expects to obtain PhD before research start date",
+      "execution_constraint": null,
+      "or_else_text": "Excluded from selection if degree not completed by research start date",
+      "source_text": "Graduation expectancy applicants may apply, but are excluded from selection if degree not completed by research start date.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0022",
+      "type": "SUBMITS",
+      "edge_category": "structural",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "Postdoctoral researcher submits a research proposal as part of the application.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The fellowship encourages young scientists to conduct desired research through a fellowship.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0023",
+      "type": "FUNDS",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The Ministry funds the research grant of approximately 130 million KRW per year.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": "Annual funding of approximately 130 million KRW including indirect costs",
+      "or_else_text": null,
+      "source_text": "Annual research funding: approximately 130 million KRW per year (direct cost 100M + indirect cost 30M).",
+      "attributes": {
+        "amount": "130M KRW/yr",
+        "components": "Direct cost 100M (salary 65M+research 35M) + indirect cost 30M",
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0024",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "Selected postdoctoral researchers receive the annual research grant.",
+      "deontic": null,
+      "activation_condition": "Researcher has been selected as a fellow",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Selected fellows receive annual research funding of approximately 130 million KRW.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0025",
+      "type": "MUST_SUBMIT",
+      "edge_category": "regulative",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "StageEvaluation:StageEvaluation",
+      "fact": "Fellow must undergo a stage evaluation after 3 years to continue for the remaining 2 years.",
+      "deontic": "must",
+      "activation_condition": "After 3 years of research",
+      "execution_constraint": "Stage evaluation at year 3 determines continuation",
+      "or_else_text": null,
+      "source_text": "Research period: 5 years (3+2 years) with stage evaluation after 3 years.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0026",
+      "type": "CAN_CHOOSE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Fellow may freely choose a research institution according to their career path.",
+      "deontic": "can",
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Fellows can freely choose research institutions according to their career path to conduct challenging and creative research.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0027",
+      "type": "CANNOT_CHANGE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Fellow cannot conduct joint research; only individual research is allowed.",
+      "deontic": "cannot",
+      "activation_condition": null,
+      "execution_constraint": "Individual research only, joint research not permitted",
+      "or_else_text": null,
+      "source_text": "Research type: Individual research (joint research not permitted).",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0028",
+      "type": "TARGETS",
+      "edge_category": "structural",
+      "edge_family": "OutcomeCausalMechanism",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "RegionalAllocationQuota:Annual Fellowship Quota",
+      "fact": "The program targets approximately 200 fellows annually, with a total of 1,000 over 5 years.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": "Approximately 200 fellows selected annually",
+      "or_else_text": null,
+      "source_text": "The fellowship aims to nurture excellent young scientists through continuous support.",
+      "attributes": {
+        "annual_quota": "about 200",
+        "total_over_5_years": "1000",
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0029",
+      "type": "DEFINED_AS",
+      "edge_category": "constitutive",
+      "edge_family": "DefinitionQualification",
+      "source": "EligibilityCriteria:Eligibility Criteria",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "Eligibility criteria define the target as postdoctoral researchers within 7 years of PhD or under 39, non-tenure-track.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Target: Postdoctoral researchers within 7 years of PhD or under 39 years old, non-tenure-track researchers in science and engineering.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0030",
+      "type": "CAN_APPLY",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+      "target": "PolicyRole:PolicyRole",
+      "fact": "Applicants expecting to obtain a PhD before the research start date may apply.",
+      "deontic": "can",
+      "activation_condition": "Applicant expects to obtain PhD before research start date",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Applicants expecting to obtain a PhD before the research start date may apply.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0031",
+      "type": "INELIGIBLE_FOR",
+      "edge_category": "regulative",
+      "edge_family": "EligibilityExclusion",
+      "source": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "Applicants who do not complete their PhD by the research start date are excluded from selection.",
+      "deontic": "cannot",
+      "activation_condition": "PhD not completed by research start date",
+      "execution_constraint": null,
+      "or_else_text": "Excluded from selection",
+      "source_text": "If the degree is not completed by the research start date, the applicant is excluded from selection.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0032",
+      "type": "FUNDS",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The Ministry funds an annual research grant of approximately 130 million KRW per fellow.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Annual research grant of approximately 130 million KRW.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0033",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The fellow receives an annual research grant of approximately 130 million KRW.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Annual research grant of approximately 130 million KRW.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0034",
+      "type": "MUST_SUBMIT",
+      "edge_category": "regulative",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "StageEvaluation:Stage Evaluation (Year 3",
+      "fact": "Postdoctoral researcher must undergo stage evaluation after the first phase (3 years) to enter the second phase.",
+      "deontic": "must",
+      "activation_condition": "after completion of the first phase (3 years)",
+      "execution_constraint": "evaluation is process-oriented and based on faithful performance",
+      "or_else_text": null,
+      "source_text": "After the first phase ends (3 years), entry into the second phase is determined based on stage evaluation (process-oriented, faithful performance).",
+      "attributes": {
+        "evidence_alignment": "supported",
+        "duplicate_edge_ids": [
+          "edge_0044"
+        ],
+        "merged_duplicate_edge_count": 1
+      }
+    },
+    {
+      "id": "edge_0035",
+      "type": "CANNOT_APPLY",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "PolicyRole:PolicyRole",
+      "fact": "Projects ending in August of the current year cannot apply.",
+      "deontic": "cannot",
+      "activation_condition": "Project ends in August of the current year",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Projects ending in August of the current year cannot apply.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0036",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "The fellow may receive continued research funding up to 100 million KRW for research expenses when becoming tenure-track faculty or moving to a research-continuable institution.",
+      "deontic": null,
+      "activation_condition": "Fellow becomes tenure-track faculty or moves to a research-continuable institution",
+      "execution_constraint": "Funding up to 100 million KRW for research expenses",
+      "or_else_text": null,
+      "source_text": "Continued research funding up to 100 million KRW for research expenses when fellow becomes tenure-track faculty or moves to a research-continuable institution.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0037",
+      "type": "CAN_CHOOSE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "StageEvaluation:Overseas Visiting Research",
+      "fact": "The fellow may conduct overseas visiting research for up to 6 months without separate approval.",
+      "deontic": "can",
+      "activation_condition": null,
+      "execution_constraint": "Up to 6 months, no separate approval required",
+      "or_else_text": null,
+      "source_text": "Fellow may conduct overseas visiting research for up to 6 months without separate approval.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0038",
+      "type": "SUBMITS",
+      "edge_category": "structural",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "The fellow submits a research proposal as part of the application.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The fellow submits a research proposal as part of the application.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0039",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "EvaluationPanel:Evaluation Panel (RB",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "The evaluation panel evaluates research proposals for selection.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The evaluation panel evaluates research proposals for selection.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0040",
+      "type": "APPROVES",
+      "edge_category": "structural",
+      "edge_family": "AuthorityGovernance",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "PolicyRole:Basic Research Project Promotion Committee",
+      "fact": "The Ministry approves selected projects via the Basic Research Project Promotion Committee.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The Ministry approves selected projects via the Basic Research Project Promotion Committee.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0041",
+      "type": "DEFINED_AS",
+      "edge_category": "constitutive",
+      "edge_family": "DefinitionQualification",
+      "source": "EligibilityCriteria:Eligibility Criteria",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "Eligibility criteria define what counts as a qualifying postdoc: domestic nationality, PhD obtained before research start date, and employment contract.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Eligibility criteria: domestic nationality, PhD obtained before research start date, and employment contract.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0042",
+      "type": "TARGETS",
+      "edge_category": "structural",
+      "edge_family": "OutcomeCausalMechanism",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "RegionalAllocationQuota:RegionalAllocationQuota",
+      "fact": "The Ministry sets a 30% selection ratio reserved for researchers in regional institutions.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "30% selection ratio reserved for researchers in regional institutions.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0043",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchProposal:Mentoring Support",
+      "fact": "The fellow receives mentoring support from a desired mentor or the foundation's RB.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Mentoring provided by a desired mentor or the foundation's RB, offering research know-how and network support.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0044",
+      "type": "CANNOT_APPLY",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "Postdoctoral researcher cannot apply for a research grant if the project is scheduled to end in August of the current year.",
+      "deontic": "cannot",
+      "activation_condition": "project is scheduled to end in August of the current year",
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Projects scheduled to end in August of the current year cannot be applied for.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0045",
+      "type": "TARGETS",
+      "edge_category": "structural",
+      "edge_family": "OutcomeCausalMechanism",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "RegionalAllocationQuota:RegionalAllocationQuota",
+      "fact": "Ministry applies a 30% regional selection ratio to support regional excellent young scientists.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "A 30% regional selection ratio is applied to support regional excellent young scientists.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0046",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "EvaluationPanel:Evaluation Panel (RB",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "The dedicated evaluation panel (RB) evaluates research proposals online for selection.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": "online evaluation",
+      "or_else_text": null,
+      "source_text": "Selection is done through online evaluation, and a dedicated evaluation panel (RB) operates to produce excellent research outcomes until the end of the research.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0047",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "EvaluationPanel:Evaluation Panel (RB",
+      "target": "ResearchProposal:Research Proposal",
+      "fact": "For the follow-up research track, the panel comprehensively reviews the research proposal and the training outcome report to evaluate long-term development potential.",
+      "deontic": null,
+      "activation_condition": "for the follow-up research track",
+      "execution_constraint": "comprehensive review of research proposal and training outcome report",
+      "or_else_text": null,
+      "source_text": "For the follow-up research track, the research proposal and training outcome report are comprehensively reviewed to evaluate long-term development potential.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0048",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "NationalResearchFoundation:NationalResearchFoundation",
+      "target": "EligibilityCriteria:Eligibility Criteria",
+      "fact": "The National Research Foundation reviews eligibility requirements for the principal investigator.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "The National Research Foundation reviews eligibility requirements for the principal investigator.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0049",
+      "type": "APPROVES",
+      "edge_category": "structural",
+      "edge_family": "AuthorityGovernance",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "The Ministry of Science and ICT selects and notifies supported projects through the Basic Research Project Promotion Committee.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": "through the Basic Research Project Promotion Committee",
+      "or_else_text": null,
+      "source_text": "Supported projects are selected (Basic Research Project Promotion Committee) and notified by the Ministry of Science and ICT.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0050",
+      "type": "CAN_CHOOSE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Postdoctoral researcher can move to a desired lab considering their career.",
+      "deontic": "can",
+      "activation_condition": null,
+      "execution_constraint": "considering career",
+      "or_else_text": null,
+      "source_text": "It is possible to move to a desired lab considering one's career.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0051",
+      "type": "DEFINED_AS",
+      "edge_category": "constitutive",
+      "edge_family": "DefinitionQualification",
+      "source": "EligibilityCriteria:Eligibility Criteria",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "Eligibility criteria define what counts as a qualifying postdoctoral researcher for the fellowship.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Eligibility requirements for the principal investigator are reviewed by the National Research Foundation.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0052",
+      "type": "REQUIRES_DOCUMENT",
+      "edge_category": "regulative",
+      "edge_family": "InformationEvidence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "EvaluationPanel:Evaluation Panel (RB",
+      "fact": "For the follow-up research track, postdoctoral researcher must submit both a research proposal and a training outcome report.",
+      "deontic": "must",
+      "activation_condition": "for the follow-up research track",
+      "execution_constraint": "comprehensive review of both documents",
+      "or_else_text": null,
+      "source_text": "For the follow-up research track, the research proposal and training outcome report are comprehensively reviewed.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0053",
+      "type": "CAN_CHOOSE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Fellow may move to a desired lab considering career.",
+      "deontic": "can",
+      "activation_condition": null,
+      "execution_constraint": "up to once per year",
+      "or_else_text": null,
+      "source_text": "Fellow may move to a desired lab considering career, up to once per year.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0054",
+      "type": "CANNOT_CHANGE",
+      "edge_category": "regulative",
+      "edge_family": "PermissionConstraint",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "HostInstitution:HostInstitution",
+      "fact": "Additional lab changes require prior review and approval.",
+      "deontic": "cannot",
+      "activation_condition": "more than one change per year",
+      "execution_constraint": "prior review and approval required",
+      "or_else_text": null,
+      "source_text": "Additional changes require prior review and approval.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0055",
+      "type": "RECEIVES",
+      "edge_category": "structural",
+      "edge_family": "ResourceIncentive",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchGrant:Research Grant",
+      "fact": "Fellow receives continued research funding up to 100 million KRW when becoming tenure-track or moving to a research-continuable institution.",
+      "deontic": null,
+      "activation_condition": "fellow becomes tenure-track faculty or moves to a research-continuable institution",
+      "execution_constraint": "salary not paid, research expenses only up to 100 million KRW",
+      "or_else_text": null,
+      "source_text": "Continued support: even if hired as tenure-track faculty or employed by a research-continuable institution during research, support continues; salary not paid, research expenses up to 100 million KRW.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0056",
+      "type": "SUBMITS",
+      "edge_category": "structural",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "ResearchProposal:Mentoring Support",
+      "fact": "Fellow receives mentoring from a desired mentor or the foundation's RB.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Mentoring provided by a desired mentor or the foundation's RB, offering research know-how and network support.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0057",
+      "type": "EVALUATES",
+      "edge_category": "structural",
+      "edge_family": "EvaluationSelection",
+      "source": "EvaluationPanel:Evaluation Panel (RB",
+      "target": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "fact": "The RB panel provides mentoring and evaluates stage evaluation.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Mentoring provided by a desired mentor or the foundation's RB, and mentoring support linked to stage evaluation.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0058",
+      "type": "MUST_SUBMIT",
+      "edge_category": "regulative",
+      "edge_family": "ProcessSequence",
+      "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+      "target": "StageEvaluation:Stage Evaluation (Year 3",
+      "fact": "Fellow must undergo comprehensive stage evaluation at year 3.",
+      "deontic": "must",
+      "activation_condition": "at year 3 of research",
+      "execution_constraint": "comprehensive evaluation of research process",
+      "or_else_text": null,
+      "source_text": "Stage evaluation: comprehensive evaluation of research process at year 3.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    },
+    {
+      "id": "edge_0059",
+      "type": "TARGETS",
+      "edge_category": "structural",
+      "edge_family": "OutcomeCausalMechanism",
+      "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+      "target": "StageEvaluation:Fellowship Announcement and Selection Schedule",
+      "fact": "Ministry announces support plan in November 2020, selection by February 2021, support start from March 2021.",
+      "deontic": null,
+      "activation_condition": null,
+      "execution_constraint": null,
+      "or_else_text": null,
+      "source_text": "Support plan announcement in November 2020, selection evaluation by February 2021, and support start from March 2021.",
+      "attributes": {
+        "evidence_alignment": "supported"
+      }
+    }
+  ],
+  "metadata": {
+    "builder": "local_iad_ig",
+    "created_at": "2026-05-15T10:50:46",
+    "chunk_count": 6,
+    "chunk_size": 1200,
+    "chunk_overlap": 200,
+    "max_workers": 1,
+    "simulation_requirement": "Sejong Science Fellowship policy impact",
+    "validation": {
+      "initial_node_count": 25,
+      "validated_node_count": 20,
+      "pre_merge_node_count": 25,
+      "initial_edge_count": 86,
+      "validated_edge_count": 59,
+      "node_merge_count": 7,
+      "orphan_node_drop_count": 3,
+      "deduplicated_edge_count": 4,
+      "evidence_alignment_warning_count": 0,
+      "role_assignment_warning_count": 0,
+      "dropped_edge_count": 23,
+      "dropped_unsupported_evidence_edge_count": 23,
+      "dropped_role_scope_edge_count": 0,
+      "warnings_added": 51,
+      "policy": "Conservative validation: preserve source-backed nodes, repair schema/category mismatches, merge alias nodes, deduplicate semantically repeated edges, prune unreferenced non-authoritative nodes, and exclude unsupported or role-misaligned edges from the authoritative KG while retaining rejected candidates in the validation audit."
+    },
+    "validation_audit": {
+      "dropped_edges": [
+        {
+          "edge_id": "edge_0018",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "HostInstitution:HostInstitution",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "Host institution must provide employment contract for evaluation.",
+          "activation_condition": "Fellow is selected and before research start date.",
+          "execution_constraint": "Contract must be signed before research start date.",
+          "source_text": "Sign employment contract before research start date.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0019",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "Ministry requires evaluation results from the panel for approval.",
+          "activation_condition": "After evaluation is completed.",
+          "source_text": "The Ministry approves selected projects via the Basic Research Promotion Committee.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0020",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "NationalResearchFoundation:NationalResearchFoundation",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "NRF requires evaluation results from the panel for administration.",
+          "activation_condition": "During the evaluation process.",
+          "source_text": "NRF manages the evaluation process and notifies results.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0021",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "EligibilityCriteria:EligibilityCriteria",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "Eligibility criteria require verification documents for evaluation.",
+          "activation_condition": "During eligibility review.",
+          "source_text": "Eligibility criteria include PhD within 7 years or age under 39, non-tenure-track, domestic nationality.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0022",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "RegionalAllocationQuota:RegionalAllocationQuota",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "Regional allocation quota requires documentation of researcher's institution location.",
+          "activation_condition": "During selection to ensure quota is met.",
+          "source_text": "30% selection ratio reserved for researchers in regional institutions.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0023",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PolicyRole:Sejong Science Fellowship",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "The fellowship program requires evaluation by the panel.",
+          "activation_condition": "During the selection process.",
+          "source_text": "The Sejong Science Fellowship program includes evaluation by a dedicated panel.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0036",
+          "type": "DEFINED_AS",
+          "source": "EligibilityCriteria:EligibilityCriteria",
+          "target": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+          "fact": "Graduation expectancy applicants are defined as those who expect to obtain a PhD before the research start date.",
+          "source_text": "Graduation expectancy applicants: those expecting to obtain a PhD before the research start date may apply.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0039",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PostdoctoralResearcher:Graduation Expectancy Applicant",
+          "target": "EvaluationPanel:EvaluationPanel",
+          "deontic": "must",
+          "fact": "Applicants must have a domestic research institution capable of managing research funds.",
+          "activation_condition": "When applying for research",
+          "execution_constraint": "Affiliated research institution must be a domestic institution capable of managing research funds",
+          "source_text": "When applying for research, an affiliated domestic research institution capable of managing research funds is required.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0040",
+          "type": "CAN_APPLY",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "PolicyRole:Sejong Science Fellowship",
+          "deontic": "can",
+          "fact": "Domestic nationality holders are supported for the first three years of the program.",
+          "activation_condition": "Domestic nationality holder, first three years of program",
+          "source_text": "Only domestic nationality holders are supported for the first three years of the program.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0041",
+          "type": "TARGETS",
+          "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+          "target": "RegionalAllocationQuota:Annual Fellowship Quota",
+          "fact": "Approximately 200 fellows are selected annually, totaling 1,000 over 5 years.",
+          "source_text": "Approximately 200 fellows per year, totaling 1,000 over 5 years.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0045",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "PolicyRole:Employment Contract",
+          "deontic": "must",
+          "fact": "The fellow must complete an employment contract with the host institution before the research start date.",
+          "activation_condition": "Before research start date (March 1, 2021)",
+          "execution_constraint": "Employment contract must be completed before research start date",
+          "source_text": "An employment contract must be completed before the research start date (March 1, 2021).",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0058",
+          "type": "MUST_SUBMIT",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "PolicyRole:Employment Contract",
+          "deontic": "must",
+          "fact": "Postdoctoral researcher must complete consultation with the host institution on employment date, salary, and treatment before applying.",
+          "activation_condition": "before applying for the project",
+          "execution_constraint": "consultation must be completed on employment date, salary, and treatment",
+          "source_text": "Before applying, complete consultation with the host institution on employment date, salary, and treatment.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0061",
+          "type": "CANNOT_APPLY",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "RegionalAllocationQuota:RegionalAllocationQuota",
+          "deontic": "cannot",
+          "fact": "If the 30% regional selection ratio is not met, additional selection is made.",
+          "activation_condition": "regional selection ratio is below 30%",
+          "source_text": "If the 30% selection ratio is not achieved, additional selection is made.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0069",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Postdoctoral researcher must submit a research proposal for online evaluation by the dedicated evaluation panel.",
+          "execution_constraint": "online evaluation",
+          "source_text": "The research proposal is evaluated online by the National Research Foundation (dedicated evaluation panel).",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0071",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "HostInstitution:HostInstitution",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Host institution must provide employment contract details before the postdoctoral researcher applies.",
+          "activation_condition": "before the postdoctoral researcher applies",
+          "execution_constraint": "consultation on employment date, salary, and treatment must be completed",
+          "source_text": "Before applying, complete consultation with the host institution on employment date, salary, and treatment.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0072",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "NationalResearchFoundation:NationalResearchFoundation",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "National Research Foundation requires eligibility review documents for the principal investigator.",
+          "source_text": "The National Research Foundation reviews eligibility requirements for the principal investigator.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0073",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "MinistryOfScienceAndICT:MinistryOfScienceAndICT",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Ministry requires selection results from the Basic Research Project Promotion Committee for final approval.",
+          "execution_constraint": "through the Basic Research Project Promotion Committee",
+          "source_text": "Supported projects are selected (Basic Research Project Promotion Committee) and notified by the Ministry of Science and ICT.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0074",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "EligibilityCriteria:EligibilityCriteria",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Eligibility criteria require documentation of the principal investigator's qualifications.",
+          "source_text": "Eligibility requirements for the principal investigator are reviewed by the National Research Foundation.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0075",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "RegionalAllocationQuota:RegionalAllocationQuota",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Regional allocation quota requires documentation of the researcher's regional affiliation.",
+          "source_text": "A 30% regional selection ratio is applied to support regional excellent young scientists.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0076",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PolicyRole:Sejong Science Fellowship",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "The fellowship program requires research proposals for evaluation by the dedicated panel.",
+          "execution_constraint": "online evaluation",
+          "source_text": "Selection is done through online evaluation, and a dedicated evaluation panel (RB) operates.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0080",
+          "type": "CAN_CHOOSE",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "StageEvaluation:Overseas Visiting Research",
+          "deontic": "can",
+          "fact": "Fellow may conduct overseas visiting research for up to 6 months without separate approval.",
+          "execution_constraint": "up to 6 months, no separate approval needed",
+          "source_text": "Overseas visiting research: same as other programs, possible within 6 months without separate approval.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0081",
+          "type": "SUBMITS",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "ResearchProposal:Research Network (Annual Forum",
+          "fact": "Fellow participates in offline exchange including Annual Forum and performance presentation.",
+          "source_text": "Offline exchange support including Annual Forum and performance presentation, and online channel for sharing outcomes.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        },
+        {
+          "edge_id": "edge_0086",
+          "type": "REQUIRES_DOCUMENT",
+          "source": "PostdoctoralResearcher:PostdoctoralResearcher",
+          "target": "EvaluationPanel:Evaluation Panel (RB",
+          "deontic": "must",
+          "fact": "Fellow must submit to stage evaluation which is linked to mentoring.",
+          "activation_condition": "at year 3",
+          "execution_constraint": "comprehensive evaluation of research process",
+          "source_text": "Stage evaluation: comprehensive evaluation of research process at year 3, and mentoring support linked to stage evaluation.",
+          "reason_code": "unsupported_source_evidence",
+          "reason": "source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit."
+        }
+      ],
+      "dropped_nodes": [
+        {
+          "node_id": "PolicyRole:Employment Contract",
+          "name": "Employment Contract",
+          "type": "PolicyRole",
+          "iad_category": "Positions",
+          "node_family": "PositionRole",
+          "is_actor": true,
+          "persona_eligible": true,
+          "source_spans": [
+            {
+              "chunk_id": "chunk_004",
+              "text": "An employment contract must be signed with the host institution before the research start date."
+            }
+          ],
+          "reason_code": "unreferenced_by_supported_edges",
+          "reason": "Node was not connected to any validation-supported edge, so it is not part of the authoritative Stage 1 KG."
+        },
+        {
+          "node_id": "ResearchProposal:Research Network (Annual Forum",
+          "name": "Research Network (Annual Forum",
+          "type": "ResearchProposal",
+          "iad_category": "Information",
+          "node_family": "InformationEvidence",
+          "is_actor": false,
+          "persona_eligible": false,
+          "source_spans": [
+            {
+              "chunk_id": "chunk_006",
+              "text": "Offline exchange support such as Annual Forum and performance presentation, and an online channel for sharing outcomes and communication are provided."
+            }
+          ],
+          "reason_code": "unreferenced_by_supported_edges",
+          "reason": "Node was not connected to any validation-supported edge, so it is not part of the authoritative Stage 1 KG."
+        },
+        {
+          "node_id": "EligibilityCriteria:Lab Change Permission (Once per Year",
+          "name": "Lab Change Permission (Once per Year",
+          "type": "EligibilityCriteria",
+          "iad_category": "Information",
+          "node_family": "EligibilityCondition",
+          "is_actor": false,
+          "persona_eligible": false,
+          "source_spans": [
+            {
+              "chunk_id": "chunk_006",
+              "text": "To prevent research discontinuity due to frequent institution changes, lab change is allowed up to once per year."
+            }
+          ],
+          "reason_code": "unreferenced_by_supported_edges",
+          "reason": "Node was not connected to any validation-supported edge, so it is not part of the authoritative Stage 1 KG."
+        }
+      ],
+      "merged_nodes": [
+        {
+          "node_id": "PolicyRole:Sejong Science Fellowship",
+          "name": "Policy Role",
+          "type": "PolicyRole",
+          "merged_into": "PolicyRole:PolicyRole",
+          "reason_code": "canonical_name_repair"
+        },
+        {
+          "node_id": "ResearchGrant:ResearchGrant",
+          "name": "ResearchGrant",
+          "type": "ResearchGrant",
+          "merged_into": "ResearchGrant:Research Grant",
+          "reason_code": "canonical_name_repair"
+        },
+        {
+          "node_id": "EvaluationPanel:EvaluationPanel",
+          "name": "EvaluationPanel",
+          "type": "EvaluationPanel",
+          "merged_into": "EvaluationPanel:Evaluation Panel",
+          "reason_code": "canonical_name_repair"
+        },
+        {
+          "node_id": "EligibilityCriteria:EligibilityCriteria",
+          "name": "EligibilityCriteria",
+          "type": "EligibilityCriteria",
+          "merged_into": "EligibilityCriteria:Eligibility Criteria",
+          "reason_code": "canonical_name_repair"
+        },
+        {
+          "node_id": "ResearchProposal:ResearchProposal",
+          "name": "ResearchProposal",
+          "type": "ResearchProposal",
+          "merged_into": "ResearchProposal:Research Proposal",
+          "reason_code": "canonical_name_repair"
+        },
+        {
+          "node_id": "ResearchGrant:Annual Research Grant",
+          "name": "Annual Research Grant",
+          "type": "ResearchGrant",
+          "merged_into": "ResearchGrant:Research Grant",
+          "reason_code": "alias_duplicate"
+        },
+        {
+          "node_id": "ResearchGrant:Research Grant (Continued Support",
+          "name": "Research Grant (Continued Support",
+          "type": "ResearchGrant",
+          "merged_into": "ResearchGrant:Research Grant",
+          "reason_code": "alias_duplicate"
+        }
+      ],
+      "audit_policy": "Dropped and merged candidates are not part of the final authoritative KG. They are retained only for inspection and prompt/ontology improvement."
+    }
+  },
+  "validation_warnings": [
+    "Chunk contains only a title and subtitle; no detailed policy rules, actors, or constraints are provided. Extraction is limited to the program name and a generic beneficiary label. No persona-eligible actor with full attributes can be extracted from this fragment alone.",
+    "No explicit mention of EvaluationPanel in this chunk; panel is referenced in ontology but not in text.",
+    "No explicit mention of RegionalAllocationQuota in this chunk; quota is referenced in ontology but not in text.",
+    "No explicit mention of PostdoctoralResearcher mobility (change lab) in this chunk.",
+    "The chunk does not explicitly mention the 30% regional allocation quota or the specific eligibility criteria (PhD within 7 years, age under 39, non-tenure-track, domestic nationality). Those details are absent from this chunk and should not be inferred.",
+    "The chunk does not name the Ministry of Science and ICT or the National Research Foundation explicitly; only a fragment '과학기술정보통신부|' appears in the header. No direct action by these bodies is described in the chunk text, so they are not extracted as separate nodes.",
+    "The chunk does not provide the exact funding amount for the main research grant (130M KRW) or the breakdown of direct/indirect costs. Only the continued support amount (up to 100M KRW for research expenses) is given.",
+    "The chunk does not mention the annual fellowship quota (200 fellows) or the specific number of fellows selected per year.",
+    "Kept edge with non-ontology type in chunk_004: {'type': 'CAN_APPLY', 'edge_category': 'regulative', 'edge_family': 'PermissionConstraint', 'source': 'PostdoctoralResearcher:Graduation Expectancy Applicant', 'target': 'PolicyRole:Sejong Science Fellowship', 'fact': 'Applicants expecting to obtain a PhD before the research start date may apply.', 'deontic': 'can', 'activation_condition': 'Applicant expects to obtain PhD before research start date', 'execution_constraint': None, 'or_else_text': None, 'source_text': 'Applicants expecting to obtain a PhD before the research start date may apply.', 'attributes': {}, 'confidence': 0.95}",
+    "Kept edge with non-ontology type in chunk_004: {'type': 'CAN_APPLY', 'edge_category': 'regulative', 'edge_family': 'PermissionConstraint', 'source': 'PostdoctoralResearcher:PostdoctoralResearcher', 'target': 'PolicyRole:Sejong Science Fellowship', 'fact': 'Domestic nationality holders are supported for the first three years of the program.', 'deontic': 'can', 'activation_condition': 'Domestic nationality holder, first three years of program', 'execution_constraint': None, 'or_else_text': None, 'source_text': 'Only domestic nationality holders are supported for the first three years of the program.', 'attributes': {}, 'confidence': 0.9}",
+    "Kept edge with non-ontology type in chunk_004: {'type': 'CANNOT_APPLY', 'edge_category': 'regulative', 'edge_family': 'PermissionConstraint', 'source': 'PostdoctoralResearcher:PostdoctoralResearcher', 'target': 'PolicyRole:Sejong Science Fellowship', 'fact': 'Projects ending in August of the current year cannot apply.', 'deontic': 'cannot', 'activation_condition': 'Project ends in August of the current year', 'execution_constraint': None, 'or_else_text': None, 'source_text': 'Projects ending in August of the current year cannot apply.', 'attributes': {}, 'confidence': 0.95}",
+    "Kept edge with non-ontology type in chunk_005: {'type': 'CANNOT_APPLY', 'edge_category': 'regulative', 'edge_family': 'PermissionConstraint', 'source': 'PostdoctoralResearcher:PostdoctoralResearcher', 'target': 'ResearchGrant:ResearchGrant', 'fact': 'Postdoctoral researcher cannot apply for a research grant if the project is scheduled to end in August of the current year.', 'deontic': 'cannot', 'activation_condition': 'project is scheduled to end in August of the current year', 'execution_constraint': None, 'or_else_text': None, 'source_text': 'Projects scheduled to end in August of the current year cannot be applied for.', 'attributes': {}, 'confidence': 0.95}",
+    "Kept edge with non-ontology type in chunk_005: {'type': 'CANNOT_APPLY', 'edge_category': 'regulative', 'edge_family': 'PermissionConstraint', 'source': 'PostdoctoralResearcher:PostdoctoralResearcher', 'target': 'RegionalAllocationQuota:RegionalAllocationQuota', 'fact': 'If the 30% regional selection ratio is not met, additional selection is made.', 'deontic': 'cannot', 'activation_condition': 'regional selection ratio is below 30%', 'execution_constraint': None, 'or_else_text': None, 'source_text': 'If the 30% selection ratio is not achieved, additional selection is made.', 'attributes': {}, 'confidence': 0.9}",
+    "Repaired IAD category for EvaluationPanel:EvaluationPanel: Information -> Positions",
+    "Repaired non-actor node family for EligibilityCriteria:EligibilityCriteria: Participants/ActorParticipant -> Costs_and_Benefits/EligibilityCondition",
+    "Repaired IAD category for EligibilityCriteria:EligibilityCriteria: Costs_and_Benefits -> Information",
+    "Repaired non-actor node family for ResearchProposal:ResearchProposal: Costs_and_Benefits/ResourceBenefitCost -> Information/InformationEvidence",
+    "Repaired IAD category for EvaluationPanel:Evaluation Panel (RB: Information -> Positions",
+    "Repaired non-actor node family for ResearchProposal:Research Network (Annual Forum: Costs_and_Benefits/ResourceBenefitCost -> Information/InformationEvidence",
+    "Repaired non-actor node family for ResearchProposal:Mentoring Support: Costs_and_Benefits/ResourceBenefitCost -> Information/InformationEvidence",
+    "Repaired non-actor node family for EligibilityCriteria:Lab Change Permission (Once per Year: Participants/ActorParticipant -> Costs_and_Benefits/EligibilityCondition",
+    "Repaired IAD category for EligibilityCriteria:Lab Change Permission (Once per Year: Costs_and_Benefits -> Information",
+    "Dropped edge edge_0018 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0019 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0020 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0021 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0022 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0023 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0036 DEFINED_AS: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Kept edge with non-ontology type: CAN_APPLY",
+    "Dropped edge edge_0039 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Kept edge with non-ontology type: CAN_APPLY",
+    "Dropped edge edge_0040 CAN_APPLY: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0041 TARGETS: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0045 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Kept edge with non-ontology type: CANNOT_APPLY",
+    "Kept edge with non-ontology type: CANNOT_APPLY",
+    "Dropped edge edge_0058 MUST_SUBMIT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Kept edge with non-ontology type: CANNOT_APPLY",
+    "Dropped edge edge_0061 CANNOT_APPLY: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0069 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0071 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0072 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0073 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0074 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0075 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0076 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0080 CAN_CHOOSE: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0081 SUBMITS: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Dropped edge edge_0086 REQUIRES_DOCUMENT: source_text does not contain direct cues for this edge type; the relation is retained only in the validation audit.",
+    "Canonicalized node PolicyRole:Sejong Science Fellowship -> PolicyRole:PolicyRole",
+    "Canonicalized node ResearchGrant:ResearchGrant -> ResearchGrant:Research Grant",
+    "Canonicalized node EvaluationPanel:EvaluationPanel -> EvaluationPanel:Evaluation Panel",
+    "Canonicalized node EligibilityCriteria:EligibilityCriteria -> EligibilityCriteria:Eligibility Criteria",
+    "Canonicalized node ResearchProposal:ResearchProposal -> ResearchProposal:Research Proposal",
+    "Merged alias node ResearchGrant:Annual Research Grant into ResearchGrant:Research Grant",
+    "Merged alias node ResearchGrant:Research Grant (Continued Support into ResearchGrant:Research Grant",
+    "Merged duplicate edge edge_0047 into edge_0014: CAN_CHOOSE PostdoctoralResearcher:PostdoctoralResearcher -> HostInstitution:HostInstitution",
+    "Merged duplicate edge edge_0048 into edge_0015: CANNOT_CHANGE PostdoctoralResearcher:PostdoctoralResearcher -> HostInstitution:HostInstitution",
+    "Merged duplicate edge edge_0044 into edge_0059: MUST_SUBMIT PostdoctoralResearcher:PostdoctoralResearcher -> StageEvaluation:Stage Evaluation (Year 3",
+    "Merged duplicate edge edge_0067 into edge_0015: CANNOT_CHANGE PostdoctoralResearcher:PostdoctoralResearcher -> HostInstitution:HostInstitution",
+    "Dropped unreferenced node from authoritative KG: PolicyRole:Employment Contract",
+    "Dropped unreferenced node from authoritative KG: ResearchProposal:Research Network (Annual Forum",
+    "Dropped unreferenced node from authoritative KG: EligibilityCriteria:Lab Change Permission (Once per Year"
+  ]
+}
