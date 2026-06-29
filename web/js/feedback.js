@@ -1,65 +1,64 @@
-/* Expert feedback as a checklist, grouped under real R&D evaluation criteria.
-   Each check shows: aspect (what kind of issue) + target (structure / simulation). */
+/* Feedback as an evaluation-framework checklist:
+   left = criteria nav (with checked/total counts), right = checklist of items
+   with interactive checkboxes, under an R&D logic-model evaluation framework. */
 const FeedbackView = (() => {
-  let DATA = null, filter = 'all';
+  let DATA = null, sel = 0;
+  const checked = {};   // key `${ci}:${ii}` -> bool
 
   async function init() {
     DATA = await fetch('data/feedback.json').then(r => r.json());
+    document.getElementById('fbTitle').textContent = DATA.title;
     document.getElementById('fbIntro').textContent = DATA.intro;
-    document.querySelectorAll('.fbf').forEach(b =>
-      b.onclick = () => {
-        document.querySelectorAll('.fbf').forEach(x => x.classList.remove('active'));
-        b.classList.add('active'); filter = b.dataset.filter; render();
-      });
-    render();
+    document.getElementById('fbBasis').textContent = DATA.basis || '';
+    renderNav();
+    renderChecklist();
   }
 
-  function matches(c) {
-    if (filter === 'all') return true;
-    if (filter === 'kg') return c.target === 'kg' || c.target === 'both';
-    return c.target === 'sim' || c.target === 'both';
+  function countChecked(ci) {
+    const items = DATA.criteria[ci].items;
+    let c = 0;
+    items.forEach((_, ii) => { if (checked[`${ci}:${ii}`]) c++; });
+    return c;
   }
 
-  function render() {
-    const body = document.getElementById('feedbackBody');
-    body.innerHTML = '';
-    let total = 0;
-    DATA.frameworks.forEach(fw => {
-      const srcHtml = fw.url ? `<a href="${fw.url}" target="_blank" rel="noopener">${fw.source}</a>` : fw.source;
-      let crits = '';
-      fw.criteria.forEach(cr => {
-        const checks = cr.checks.filter(matches);
-        if (!checks.length) return;
-        const inds = cr.indicators.map(i => `<span class="ind-chip">${i}</span>`).join('');
-        const rows = checks.map(c => {
-          total++;
-          const ac = DATA.aspects[c.aspect] || '#64748b';
-          const tcls = c.target === 'both' ? 'kg' : c.target;
-          return `<li class="ck-item">
-            <span class="ck-box">✓</span>
-            <div class="ck-body">
-              <div class="ck-tags">
-                <span class="ck-aspect" style="background:${ac}">${c.aspect}</span>
-                <span class="target-tag ${tcls}">${DATA.targets[c.target]}</span>
-              </div>
-              <div class="ck-text">${c.text}</div>
-            </div></li>`;
-        }).join('');
-        crits += `<div class="crit-row">
-          <div class="crit-name"><h4>${cr.name}</h4><span class="crit-count">${checks.length}개 점검</span></div>
-          <div class="crit-ind">${inds}</div>
-          <ul class="ck-list">${rows}</ul></div>`;
-      });
-      if (!crits) return;
-      const block = document.createElement('div');
-      block.className = 'fw-block';
-      block.innerHTML = `<div class="fw-header">
-          <h3>${fw.name}</h3>
-          <div class="fw-source">기준 출처: ${srcHtml}</div>
-        </div><div class="crit">${crits}</div>`;
-      body.appendChild(block);
+  function renderNav() {
+    const nav = document.getElementById('fbNav');
+    nav.innerHTML = DATA.criteria.map((cr, ci) => `
+      <button class="fbnav-item ${ci === sel ? 'active' : ''}" data-ci="${ci}">
+        <div class="fbnav-top"><span class="fbnav-name">${cr.name}</span>
+          <span class="fbnav-count">${countChecked(ci)}/${cr.items.length}</span></div>
+        <div class="fbnav-short">${cr.short}</div>
+      </button>`).join('');
+    nav.querySelectorAll('.fbnav-item').forEach(b => b.onclick = () => {
+      sel = +b.dataset.ci; renderNav(); renderChecklist();
     });
-    document.getElementById('fbCount').textContent = `점검 항목 ${total}개`;
+  }
+
+  function renderChecklist() {
+    const cr = DATA.criteria[sel];
+    const box = document.getElementById('fbChecklist');
+    box.innerHTML = `
+      <div class="fbck-head"><h3>${cr.name}</h3><span class="fbck-desc">${cr.short}</span></div>
+      <ul class="fbck-list">${cr.items.map((it, ii) => {
+        const key = `${sel}:${ii}`, on = checked[key];
+        const tcls = it.target === 'both' ? 'kg' : it.target;
+        return `<li class="fbck-item ${on ? 'checked' : ''}" data-ii="${ii}">
+          <button class="fbck-box" aria-label="체크">${on ? '✓' : ''}</button>
+          <div class="fbck-body">
+            <div class="fbck-titlerow">
+              <span class="fbck-title">${it.title}</span>
+              <span class="target-tag ${tcls}">${DATA.targets[it.target]}</span>
+            </div>
+            <div class="fbck-text">${it.body}</div>
+          </div></li>`;
+      }).join('')}</ul>`;
+    box.querySelectorAll('.fbck-item').forEach(li => {
+      li.querySelector('.fbck-box').onclick = () => {
+        const ii = li.dataset.ii, key = `${sel}:${ii}`;
+        checked[key] = !checked[key];
+        renderNav(); renderChecklist();
+      };
+    });
   }
 
   return { init };

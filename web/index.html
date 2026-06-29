@@ -35,6 +35,7 @@
       <div class="graph-controls">
         <label class="chk"><input type="checkbox" id="toggleLabels" checked> 관계 설명</label>
         <button id="replayGraph" class="ghost-btn">↻ 재배치</button>
+        <button id="graphFull" class="ghost-btn">⛶ 전체화면</button>
       </div>
     </div>
     <div class="graph-meta">
@@ -60,9 +61,6 @@
       </div>
     </div>
 
-    <!-- forward -> backward U-turn flow map -->
-    <div class="flow-map" id="flowMap"></div>
-
     <div class="sim-layout">
       <!-- left: round table -->
       <div class="table-col">
@@ -80,6 +78,9 @@
           <button id="nextStep" class="ctrl">다음 ▸</button>
         </div>
         <div class="step-caption" id="stepCaption"></div>
+        <!-- forward -> backward U-turn flow map (below the round table) -->
+        <div class="flow-label">전체 진행 흐름 <span class="muted-sm">(forward 전 과정 → backward 전 과정)</span></div>
+        <div class="flow-map" id="flowMap"></div>
       </div>
 
       <!-- right: compact results + detail -->
@@ -93,18 +94,15 @@
 
   <!-- ============ TAB 3: FEEDBACK ============ -->
   <section id="tab-feedback" class="tab-panel">
-    <div class="panel-head fb-head">
+    <div class="fb-head">
+      <h2 class="fb-title" id="fbTitle"></h2>
       <p id="fbIntro" class="fb-intro"></p>
-      <div class="fb-bar">
-        <div class="fb-filters" id="fbFilters">
-          <button class="fbf active" data-filter="all">전체</button>
-          <button class="fbf" data-filter="kg">정책 구조</button>
-          <button class="fbf" data-filter="sim">시뮬레이션</button>
-        </div>
-        <span class="fb-count" id="fbCount"></span>
-      </div>
     </div>
-    <div id="feedbackBody" class="feedback-body"></div>
+    <div class="fb-layout">
+      <aside class="fb-nav" id="fbNav"></aside>
+      <div class="fb-checklist" id="fbChecklist"></div>
+    </div>
+    <p class="fb-basis" id="fbBasis"></p>
   </section>
 </main>
 

@@ -119,18 +119,20 @@ const SimView = (() => {
       const cl = document.createElementNS(SVGNS, 'line');
       cl.setAttribute('x1', 0); cl.setAttribute('y1', 0); cl.setAttribute('x2', ix); cl.setAttribute('y2', iy);
       cl.setAttribute('stroke', '#ccd4e1'); cl.setAttribute('stroke-width', 1.5); g.appendChild(cl);
-      const av = document.createElementNS(SVGNS, 'circle');
-      av.setAttribute('r', 30); av.setAttribute('fill', a.color);
-      av.setAttribute('stroke', '#ffffff'); av.setAttribute('stroke-width', 3); g.appendChild(av);
-      const ic = document.createElementNS(SVGNS, 'text');
-      ic.setAttribute('text-anchor', 'middle'); ic.setAttribute('y', 6); ic.setAttribute('font-size', 26);
-      ic.textContent = '👤'; g.appendChild(ic);
+      // plain colored person icon (head + shoulders silhouette)
+      const head = document.createElementNS(SVGNS, 'circle');
+      head.setAttribute('cx', 0); head.setAttribute('cy', -14); head.setAttribute('r', 11);
+      head.setAttribute('fill', a.color); head.setAttribute('stroke', '#ffffff'); head.setAttribute('stroke-width', 2.5);
+      const body = document.createElementNS(SVGNS, 'path');
+      body.setAttribute('d', 'M0,-2 C-12,-2 -19,8 -19,24 L19,24 C19,8 12,-2 0,-2 Z');
+      body.setAttribute('fill', a.color); body.setAttribute('stroke', '#ffffff'); body.setAttribute('stroke-width', 2.5);
+      g.appendChild(body); g.appendChild(head);
       const nm = document.createElementNS(SVGNS, 'text');
       nm.setAttribute('class', 'seat-name'); nm.setAttribute('text-anchor', 'middle');
-      nm.setAttribute('y', 50); nm.textContent = a.name; g.appendChild(nm);
+      nm.setAttribute('y', 46); nm.textContent = a.name; g.appendChild(nm);
       const rl = document.createElementNS(SVGNS, 'text');
       rl.setAttribute('class', 'seat-role'); rl.setAttribute('text-anchor', 'middle');
-      rl.setAttribute('y', 64); rl.setAttribute('fill', a.color); rl.textContent = a.type_ko; g.appendChild(rl);
+      rl.setAttribute('y', 60); rl.setAttribute('fill', a.color); rl.textContent = a.type_ko; g.appendChild(rl);
       // value chip
       const chipG = document.createElementNS(SVGNS, 'g');
       chipG.setAttribute('transform', `translate(${ix * 1.15},${iy * 1.15})`);
@@ -145,7 +147,7 @@ const SimView = (() => {
       chipG.style.opacity = 0; chipG.style.transition = 'opacity .4s';
       g.appendChild(chipG);
       svg.appendChild(g);
-      seats.push({ a, p, ix, iy, av, chipG, chipR, chipT });
+      seats.push({ a, p, ix, iy, chipG, chipR, chipT });
     });
   }
 
