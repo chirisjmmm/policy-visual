@@ -18,6 +18,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 RAW = os.path.join(ROOT, "raw_data")
 
+# Korean translations of the English scenario excerpts (dissent reasons + phase
+# consensus basis). Built once by hand; lookup falls back to the original text.
+TRANS = {}
+_tp = os.path.join(HERE, "data", "translations_ko.json")
+if os.path.exists(_tp):
+    TRANS = json.load(open(_tp, encoding="utf-8"))
+
 # Human-readable labels / units for every prediction variable seen in the logs.
 VAR_META = {
     "total_annual_budget_krw":      ("연간 총 예산", "원", "budget"),
@@ -124,9 +131,54 @@ def persona_short(text, max_len=95):
     return text[:max_len].rstrip() + "…"
 
 
-def variable_dissent(var, agents_meta):
-    """Outlier agents on this variable, with direction and persona, for the
-    clickable 'why did they differ' detail."""
+def excerpt(text, maxlen=320):
+    """Clean a model narrative into a short readable excerpt: drop the
+    'As a/an <role>,' framing and take the first couple of sentences."""
+    if not text:
+        return ""
+    t = text.strip().replace("\n", " ")
+    t = re.sub(r"^As an? [^,]{0,70},\s*", "", t)
+    out = ""
+    for sent in re.split(r"(?<=[.!?])\s+", t):
+        if out and len(out) + len(sent) > maxlen:
+            break
+        out = (out + " " + sent).strip() if out else sent
+    return out
+
+
+def relevant_excerpt(text, value, label, maxlen=320):
+    """Prefer sentences that actually mention this variable's number/keyword,
+    so the dissent reason is about the contested variable, not generic."""
+    if not text:
+        return ""
+    t = text.strip().replace("\n", " ")
+    t = re.sub(r"^As an? [^,]{0,70},\s*", "", t)
+    sents = re.split(r"(?<=[.!?])\s+", t)
+    keys = []
+    if value is not None:
+        iv = int(round(value))
+        keys += [str(iv), f"{iv:,}"]
+        if abs(value - iv) > 1e-9:
+            keys.append(str(value))
+    label_words = [w for w in re.split(r"[ ·/()]", label) if len(w) > 1]
+    scored = []
+    for i, s in enumerate(sents):
+        sc = sum(2 for k in keys if k and k in s) + sum(1 for w in label_words if w in s)
+        scored.append((sc, i, s))
+    hits = [s for sc, i, s in sorted(scored, key=lambda x: (-x[0], x[1])) if sc > 0]
+    if hits:
+        out = ""
+        for s in hits[:2]:
+            if out and len(out) + len(s) > maxlen:
+                break
+            out = (out + " " + s).strip() if out else s
+        return out
+    return excerpt(text, maxlen)
+
+
+def variable_dissent(var, agents_meta, narr_map):
+    """Outlier agents on this variable, with direction, persona, and an excerpt
+    of their actual argument from the scenario for the clickable detail."""
     cons = var.get("consensus")
     out = []
     for o in var["initial"]:
@@ -137,12 +189,15 @@ def variable_dissent(var, agents_meta):
             direction = "다수보다 높게" if o["value"] > cons else "다수보다 낮게"
         else:
             direction = "다른 값으로"
+        reason = relevant_excerpt(narr_map.get(o["agent"], ""), o["value"], var["label"])
         out.append({
             "agent": o["agent"],
             "type_ko": a.get("type_ko", ""),
             "value": fmt_ko(o["value"], var["fmt"], var["unit"]),
             "direction": direction,
             "persona": a.get("persona", ""),
+            "reason": reason,
+            "reason_ko": TRANS.get(reason, ""),
         })
     return out
 
@@ -336,8 +391,9 @@ def build_scenario(d, policy="ssf"):
             })
         # sort: most-contested variable first (largest backward/forward disagreement)
         variables.sort(key=lambda v: (v["consistency"] if v["consistency"] is not None else 1))
+        narr_map = {p["persona_name"]: p.get("narrative", "") for p in (fp.get("initial_posts") or [])}
         for v in variables:
-            v["dissent"] = variable_dissent(v, agents_meta)
+            v["dissent"] = variable_dissent(v, agents_meta, narr_map)
 
         # per-agent posts (initial forward) for speech bubbles
         agent_posts = []
@@ -382,6 +438,8 @@ def build_scenario(d, policy="ssf"):
             "desc": pmeta[2],
             "summary": fp.get("phase_summary", ""),
             "summary_ko": phase_summary_ko(variables, agents_meta),
+            "basis": excerpt(fp.get("phase_summary", ""), 360),
+            "basis_ko": TRANS.get(excerpt(fp.get("phase_summary", ""), 360), ""),
             "variables": variables,
             "agent_posts": agent_posts,
             "backward_posts": backward_posts,
