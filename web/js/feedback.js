@@ -25,7 +25,8 @@ const FeedbackView = (() => {
     const nav = document.getElementById('fbNav');
     nav.innerHTML = DATA.criteria.map((cr, ci) => `
       <button class="fbnav-item ${ci === sel ? 'active' : ''}" data-ci="${ci}">
-        <div class="fbnav-top"><span class="fbnav-name">${cr.name}</span>
+        <div class="fbnav-top">
+          <span class="fbnav-name">${cr.bumun ? `<span class="fbnav-bumun">${cr.bumun}</span>` : ''}${cr.name}</span>
           <span class="fbnav-count">${countChecked(ci)}/${cr.items.length}</span></div>
         <div class="fbnav-short">${cr.short}</div>
       </button>`).join('');
@@ -38,7 +39,7 @@ const FeedbackView = (() => {
     const cr = DATA.criteria[sel];
     const box = document.getElementById('fbChecklist');
     box.innerHTML = `
-      <div class="fbck-head"><h3>${cr.name}</h3><span class="fbck-desc">${cr.short}</span></div>
+      <div class="fbck-head"><h3>${cr.bumun ? `<span class="fbck-bumun">${cr.bumun}</span>` : ''}${cr.name}</h3><span class="fbck-desc">${cr.short}</span></div>
       <ul class="fbck-list">${cr.items.map((it, ii) => {
         const key = `${sel}:${ii}`, on = checked[key];
         const tcls = it.target === 'both' ? 'kg' : it.target;

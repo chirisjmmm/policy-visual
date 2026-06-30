@@ -11,7 +11,7 @@ const SimView = (() => {
   let svg, wrap, seats = [];
   let policy = 'ssf';
   const AUTOPLAY_MS = 5200, REVEAL_MS = 1100;
-  const BADGE_NOTE = { ssf: '(macro-avg 최상)', bk21: '(BK21 대표 시나리오)' };
+  const BADGE_NOTE = { ssf: '', bk21: '' };
 
   const fmtVal = (v, fmt, unit) => {
     if (v === null || v === undefined) return '—';

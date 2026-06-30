@@ -265,7 +265,9 @@ body.graph-full-open{overflow:hidden}
 .fbnav-item:hover{border-color:var(--accent);background:#fbfbff}
 .fbnav-item.active{border-color:var(--accent);border-left-color:var(--accent);background:#f3f2fe;box-shadow:var(--shadow)}
 .fbnav-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.fbnav-name{font-size:14.5px;font-weight:700;color:var(--text)}
+.fbnav-name{font-size:14px;font-weight:700;color:var(--text)}
+.fbnav-bumun{display:inline-block;font-size:9.5px;font-weight:700;color:#fff;background:var(--accent2);border-radius:6px;padding:1px 6px;margin-right:6px;vertical-align:1.5px}
+.fbck-bumun{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--accent2);border-radius:7px;padding:2px 8px;margin-right:8px;vertical-align:2px}
 .fbnav-count{font-size:11px;font-weight:700;color:var(--muted);background:var(--panel2);border:1px solid var(--line);
   padding:1px 8px;border-radius:11px;font-variant-numeric:tabular-nums}
 .fbnav-item.active .fbnav-count{color:var(--accent);border-color:var(--accent)}
